@@ -1,0 +1,77 @@
+// font-family
+$font-family-base: 'Manrope', serif;
+// font-family end
+
+// paragraph
+$paragraph-margin-bottom: 0rem !default;
+// paragraph end
+
+// colors
+$them-lightblue: #f9fafb;
+$primary: #5e88fe;
+$primarylight: #5e89fe42;
+$secondary: #0e10259c;
+$white: white;
+$green: #22C55E;
+$red: #EF4444;
+$theme-colors: (
+  'them-lightblue': $them-lightblue,
+  'primary': $primary,
+  'primarylight': $primarylight,
+  'secondary': $secondary,
+  'white': $white,
+  'green': $green,
+  'red': $red
+) !default;
+// colors end
+
+// Define custom colors for the navbar-links
+// $navbar-light-color: $dark;
+// $navbar-light-hover-color: $primary;
+// Define custom colors for the navbar-links end
+
+// navlink-active
+$nav-pills-link-active-color: $primary;
+$nav-pills-link-active-bg: $primarylight;
+// navlink-active end
+
+// a tag link color
+$link-color: $secondary;
+$link-hover-color: $primary;
+// a tag link color end
+
+// Position
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%,
+  17: 17%,
+  9: 9%,
+  260: 260px,
+);
+// Position end
+
+// font-size
+$font-sizes: (
+  14: 14px,
+  12: 12px,
+  16: 16px,
+  18: 18px,
+  20: 20px,
+) !default;
+$font-size-base: 1rem !default;
+// font-size end
+
+// Spacer
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  12: 12px,
+  256: 256px,
+) !default;
+// Spacer end

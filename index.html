@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CipherX</title>
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-them-lightblue">
+    <!--  -->
+    <!-- Sidebar -->
+    <!--  -->
+    <div class="sidebar z-1 bg-white position-fixed top-0 start-0 overflow-y-auto vh-100 w-256 px-4 border-end">
+        <div class="d-flex align-items-center justify-content-between border-bottom py-4">
+            <div class="d-flex align-items-center justify-content-center gap-2">
+                <div><img src="./dist/images/sidebar/main-logo.png" alt="logo" class="img-fluid"></div>
+                <p class="text-center fs-20 fw-bold">CipherX</p>
+            </div>
+            <div>
+                <i class="bi bi-layout-sidebar fs-5"></i>
+            </div>
+        </div>
+        <div class="py-4 border-bottom">
+            <p class="text-muted fs-14 mb-12">Dashboard</p>
+            <ul class="nav nav-pills flex-column fs-16 gap-2">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active"><i class="bi bi-bag me-1"></i> Modern</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-bar-chart me-1"></i> Analytical</span>
+                            <div>
+                                <span class="badge text-bg-primary text-white rounded-pill">9</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> <i class="bi bi-cart me-1"></i> eCommerce</a>
+                </li>
+            </ul>
+        </div>
+        <div class="py-4 border-bottom">
+            <h6 class="text-muted fs-14 mb-12">Applications</h6>
+            <ul class="nav nav-pills flex-column fs-16 gap-2">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-chat-dots me-1"></i> Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-people me-1"></i> Users</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-journals me-1"></i> Note</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-calendar me-1"></i> Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-x-octagon me-1"></i> Disable</a>
+                </li>
+            </ul>
+        </div>
+        <div class="py-4 border-bottom">
+            <h6 class="text-muted fs-14 mb-12">Others</h6>
+            <ul class="nav nav-pills flex-column fs-16 gap-2">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-person-circle me-1"></i> Avatar</span>
+                            <div>
+                                <span class="badge text-bg-primary text-white rounded-pill">coded</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-pencil-square me-1"></i> Outline</span>
+                            <div>
+                                <span class="badge border border-primary text-primary rounded-pill">outline</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-x-diamond me-1"></i> Basic</span>
+                            <div>
+                                <span class="badge text-bg-primary text-white rounded-pill">9</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="py-4 position-relative">
+            <div><img src="./dist/images/sidebar/Upgrade now banner.png" alt="upgrade" class="img-fluid"></div>
+            <button class="btn btn-white btn-sm rounded fw-medium position-absolute bottom-17 start-9">Upgrade
+                now</button>
+        </div>
+    </div>
+    <!--  -->
+    <!-- Sidebar end -->
+    <!--  -->
+
+    <!--  -->
+    <!-- topbar -->
+    <!--  -->
+    <header>
+        <nav>
+            <div class="d-flex z-0 justify-content-between align-items-center bg-white border-bottom  position-fixed top-0 end-0 start-260 px-4 py-3"
+                style="height: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div class="input-group w-50" style="max-width: 400px;">
+                    <button class="btn border" type="button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-4">
+                    <div class="d-flex gap-3 fs-20 pe-4 border-end">
+                        <a href="#"><i class="bi bi-bell"></i></a>
+                        <a href="#"><i class="bi bi-cart"></i></a>
+                        <a href="#"><i class="bi bi-translate"></i></a>
+                        <a href="#"><i class="bi bi-grid"></i></a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <div><img src="./dist/images/topbar/Ellipse 2.png" alt="user" class="img-fluid"></div>
+                        <div class="fs-14">
+                            <p>Chedo Nasevski<br><span class="text-muted">Busniess</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--  -->
+    <!-- topbar end -->
+    <!--  -->
+
+    <!--  -->
+    <!-- main -->
+    <!--  -->
+    <main class="body-wrapper">
+        <!-- digits -->
+        <section>
+            <div class="container-fluid mb-4">
+                <div class="row gap-3">
+                    <div class="col bg-white rounded" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="d-flex align-items-center gap-2 px-1 py-3">
+                            <div><img src="./dist/images/main-digits/employee.png" alt="employee" class="img-fluid">
+                            </div>
+                            <div>
+                                <p class="fs-18 fw-bold">96</p>
+                                <p class="fs-14 text-muted">Employees</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col bg-white rounded" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="d-flex align-items-center gap-2 px-1 py-3">
+                            <div><img src="./dist/images/main-digits/clients.png" alt="clients" class="img-fluid"></div>
+                            <div>
+                                <p class="fs-18 fw-bold">3,650</p>
+                                <p class="fs-14 text-muted">Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col bg-white rounded" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="d-flex align-items-center gap-2 px-1 py-3">
+                            <div><img src="./dist/images/main-digits/projects.png" alt="projects" class="img-fluid">
+                            </div>
+                            <div>
+                                <p class="fs-18 fw-bold">356</p>
+                                <p class="fs-14 text-muted">Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col bg-white rounded" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="d-flex align-items-center gap-2 px-1 py-3">
+                            <div><img src="./dist/images/main-digits/events.png" alt="events" class="img-fluid"></div>
+                            <div>
+                                <p class="fs-18 fw-bold">696</p>
+                                <p class="fs-14 text-muted">Events</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col bg-white rounded" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="d-flex align-items-center gap-2 px-1 py-3">
+                            <div><img src="./dist/images/main-digits/payroll.png" alt="payroll" class="img-fluid"></div>
+                            <div>
+                                <p class="fs-18 fw-bold">$96K</p>
+                                <p class="fs-14 text-muted">Payroll</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col bg-white rounded" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="d-flex align-items-center gap-2 px-1 py-3">
+                            <div><img src="./dist/images/main-digits/reports.png" alt="payroll" class="img-fluid"></div>
+                            <div>
+                                <p class="fs-18 fw-bold">59</p>
+                                <p class="fs-14 text-muted">Reports</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- digits end -->
+
+        
+    </main>
+    <!--  -->
+    <!-- main end -->
+    <!--  -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./dist/js/script.js"></script>
+</body>
+
+</html>

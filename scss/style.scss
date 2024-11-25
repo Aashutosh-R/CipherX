@@ -1,0 +1,43 @@
+@import './variables';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+//-----------------------
+// container max-width
+//-----------------------
+.container-fluid {
+  max-width: 1184px;
+}
+//-----------------------
+// container max-width end
+//-----------------------
+
+
+//-----------------------
+// side-scrollbar hide
+//-----------------------
+.sidebar {
+  scrollbar-width: none; /* For Firefox */
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+//-----------------------
+// side-scrollbar hide end
+//-----------------------
+
+
+
+ /* Added styles for main content */
+ .body-wrapper {
+  margin-left: 256px; /* Account for the sidebar width */
+  margin-top: 80px; /* Account for the topbar height */
+  min-height: calc(100vh - 80px); /* Ensure content stretches vertically */
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+ 
+
