@@ -247,7 +247,7 @@ var options = {
 var chart = new ApexCharts(document.querySelector('#customer'), options)
 chart.render()
 
-// 
+//
 // project chart
 var options = {
   chart: {
@@ -299,39 +299,40 @@ var options = {
 var chart = new ApexCharts(document.querySelector('#project'), options)
 chart.render()
 
-
 // Monthly earning
 var options = {
   chart: {
     type: 'area',
     height: 240,
     toolbar: {
-      show: false // Hides the toolbar for a cleaner look
-    }
+      show: false, // Hides the toolbar for a cleaner look
+    },
   },
-  series: [{
-    name: 'Data',
-    data: [60, 30, 60, 30, 60, 25, 55] // Example data points
-  }],
+  series: [
+    {
+      name: 'Data',
+      data: [60, 30, 60, 30, 60, 25, 55], // Example data points
+    },
+  ],
   xaxis: {
     categories: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'], // Days of the week
     labels: {
       style: {
         colors: '#aaa',
-        fontSize: '12px'
-      }
+        fontSize: '12px',
+      },
     },
     axisBorder: {
-      show: false
+      show: false,
     },
     axisTicks: {
-      show: false
-    }
+      show: false,
+    },
   },
   yaxis: {
     min: 0, // Ensures the y-axis starts from 0
     max: 100,
-    show: false // Hides the y-axis labels
+    show: false, // Hides the y-axis labels
   },
   grid: {
     show: true,
@@ -339,14 +340,14 @@ var options = {
     strokeDashArray: 0,
     xaxis: {
       lines: {
-        show: true // Shows grid lines for the x-axis
-      }
+        show: true, // Shows grid lines for the x-axis
+      },
     },
     yaxis: {
       lines: {
-        show: false // Hides grid lines for the y-axis
-      }
-    }
+        show: false, // Hides grid lines for the y-axis
+      },
+    },
   },
   colors: ['#00c853'], // Green color for the line
   fill: {
@@ -357,29 +358,29 @@ var options = {
       shadeIntensity: 0.3,
       gradientToColors: ['#a5d6a7'], // Light green gradient fill
       opacityFrom: 0.6,
-      opacityTo: 0.2
-    }
+      opacityTo: 0.2,
+    },
   },
   markers: {
     size: 5, // Marker size
     colors: ['#00c853'], // Marker color
     strokeWidth: 2,
     hover: {
-      size: 7
-    }
+      size: 7,
+    },
   },
   stroke: {
     curve: 'smooth',
-    width: 2
+    width: 2,
   },
   tooltip: {
     enabled: true,
-    theme: 'light'
+    theme: 'light',
   },
   dataLabels: {
-    enabled: false
-  }
-};
+    enabled: false,
+  },
+}
 
-var chart = new ApexCharts(document.querySelector("#mearning"), options);
-chart.render();
+var chart = new ApexCharts(document.querySelector('#mearning'), options)
+chart.render()

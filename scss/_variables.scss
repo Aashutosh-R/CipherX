@@ -9,19 +9,33 @@ $paragraph-margin-bottom: 0rem !default;
 // colors
 $them-lightblue: #f9fafb;
 $primary: #5e88fe;
+$primary-50: #bbcdff;
 $primarylight: #5e89fe42;
 $secondary: #0e10259c;
 $white: white;
-$green: #22C55E;
-$red: #EF4444;
+$green: #22c55e;
+$green-50: #d2ffe2;
+$red: #ef4444;
+$red-50: #ffe2e2;
+$blue: #0ea5e9;
+$lightblue: #bde0ef;
+$warning: #F59E0B;
+$warning-50: #fff4e2;
 $theme-colors: (
   'them-lightblue': $them-lightblue,
   'primary': $primary,
+  'primary-50': $primary-50,
   'primarylight': $primarylight,
   'secondary': $secondary,
   'white': $white,
   'green': $green,
-  'red': $red
+  'green-50': $green-50,
+  'red': $red,
+  'red-50': $red-50,
+  'blue': $blue,
+  'lightblue': $lightblue,
+  'warning': $warning,
+  'warning-50': $warning-50 
 ) !default;
 // colors end
 
@@ -46,6 +60,7 @@ $position-values: (
   50: 50%,
   100: 100%,
   17: 17%,
+  3: 3.5%,
   9: 9%,
   260: 260px,
 );
