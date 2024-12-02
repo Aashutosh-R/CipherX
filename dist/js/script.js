@@ -384,3 +384,42 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector('#mearning'), options)
 chart.render()
+
+// --------------------------------------------
+// RTL logic
+// dist/js/main.js
+
+// Get the button and the link to the CSS file
+const toggleButton = document.getElementById('toggleDirection')
+const themeLink = document.getElementById('theme-style')
+
+// Check if there's already a saved theme preference in localStorage
+let isRtl = localStorage.getItem('rtl') === 'true'
+
+// Set the initial direction based on the stored preference
+if (isRtl) {
+  document.documentElement.setAttribute('dir', 'rtl')
+  themeLink.href = 'dist/css/style-rtl.css'
+  toggleButton.textContent = 'Switch to LTR'
+} else {
+  document.documentElement.setAttribute('dir', 'ltr')
+  themeLink.href = 'dist/css/style-ltr.css'
+  toggleButton.textContent = 'Switch to RTL'
+}
+
+// Toggle the direction and save the preference in localStorage
+toggleButton.addEventListener('click', function () {
+  isRtl = !isRtl // Toggle RTL/LTR
+  if (isRtl) {
+    document.documentElement.setAttribute('dir', 'rtl')
+    themeLink.href = 'dist/css/style-rtl.css'
+    toggleButton.textContent = 'Switch to LTR'
+  } else {
+    document.documentElement.setAttribute('dir', 'ltr')
+    themeLink.href = 'dist/css/style-ltr.css'
+    toggleButton.textContent = 'Switch to RTL'
+  }
+
+  // Save the user preference in localStorage
+  localStorage.setItem('rtl', isRtl)
+})

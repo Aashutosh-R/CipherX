@@ -1,27 +1,44 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
 const sourcemaps = require('gulp-sourcemaps')
-
+const cleanCSS = require('gulp-clean-css')
+const rtlcss = require('gulp-rtlcss')
+const rename = require('gulp-rename')
 // Paths
 const paths = {
   scss: 'scss/*.scss', // Source SCSS files
-  css: 'dist/css/', // Output CSS folder
+  cssDest: 'dist/css/', // Output CSS folder
 }
 
-// Compile SCSS to CSS and generate source maps
-function compileSass() {
+// Compile LTR CSS
+function compileLTR() {
   return gulp
-    .src(paths.scss) // Get all SCSS files
-    .pipe(sourcemaps.init()) // Initialize sourcemaps before the compilation
+    .src(paths.scss)
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError)) // Compile SCSS to CSS
-    .pipe(sourcemaps.write('./')) // Write sourcemaps to the same folder as CSS
-    .pipe(gulp.dest(paths.css)) // Output the compiled CSS and map files
+    .pipe(cleanCSS()) // Minify the CSS
+    .pipe(rename({ suffix: '-ltr' })) // Rename for LTR CSS
+    .pipe(sourcemaps.write('.')) // Write sourcemaps
+    .pipe(gulp.dest(paths.cssDest)) // Output to dist/css
 }
 
-// Watch for changes in SCSS files
+// Compile RTL CSS
+function compileRTL() {
+  return gulp
+    .src(paths.scss)
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError)) // Compile SCSS to CSS
+    .pipe(rtlcss()) // Convert to RTL
+    .pipe(cleanCSS()) // Minify the CSS
+    .pipe(rename({ suffix: '-rtl' })) // Rename for RTL CSS
+    .pipe(sourcemaps.write('.')) // Write sourcemaps
+    .pipe(gulp.dest(paths.cssDest)) // Output to dist/css
+}
+
+// Watch task
 function watchFiles() {
-  gulp.watch(paths.scss, compileSass)
+  gulp.watch(paths.scss, gulp.series(compileLTR, compileRTL)) // Watch for changes in SCSS files
 }
 
-// Default task: Compile SCSS and watch for changes
-exports.default = gulp.series(compileSass, watchFiles)
+// Default Gulp task
+gulp.task('default', gulp.series(compileLTR, compileRTL, watchFiles))
