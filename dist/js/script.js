@@ -446,12 +446,31 @@ const toggleButton2 = document.getElementById('themeToggle')
 const themeIcon = document.getElementById('themeIcon')
 const bodyElement = document.body
 
+// Function to apply the theme
+const applyTheme = (theme) => {
+  bodyElement.setAttribute('data-bs-theme', theme)
+
+  // Update icon
+  themeIcon.className = theme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'
+}
+
+// Check localStorage for the saved theme
+const savedTheme = localStorage.getItem('theme')
+if (savedTheme) {
+  applyTheme(savedTheme) // Apply the saved theme
+} else {
+  // Default to 'light' theme if no preference is saved
+  applyTheme('light')
+}
+
+// Add event listener to the toggle button
 toggleButton2.addEventListener('click', () => {
   const currentTheme = bodyElement.getAttribute('data-bs-theme')
   const newTheme = currentTheme === 'light' ? 'dark' : 'light'
-  bodyElement.setAttribute('data-bs-theme', newTheme)
 
-  // Update icon
-  themeIcon.className =
-    newTheme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'
+  // Apply the new theme
+  applyTheme(newTheme)
+
+  // Save the user's choice in localStorage
+  localStorage.setItem('theme', newTheme)
 })
