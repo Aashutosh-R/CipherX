@@ -57,6 +57,12 @@ var options = {
       '9 Oct',
       '10 Oct',
     ],
+    labels: {
+      style: {
+        colors: '#aaa', // Set your desired x-axis label color here
+        fontSize: '12px', // Optional: Set font size
+      },
+    },
   },
   yaxis: {
     min: -3000, // Set minimum value
@@ -68,7 +74,7 @@ var options = {
         return `${(value / 1000).toFixed(1)}k`
       },
       style: {
-        colors: '#333', // Customize label color
+        colors: '#aaa', // Customize label color
         fontSize: '12px',
       },
     },
@@ -119,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
             show: true,
             label: '$36,358', // Main text in the center
             fontSize: '20px', // Ensure proper size for the text
-            color: '#333', // Center text color
+            color: '#aaa', // Center text color
             formatter: function () {
               return '+9% than last year ↑' // Secondary text below the main label
             },
@@ -178,6 +184,12 @@ var options = {
     axisTicks: {
       show: false, // Hide x-axis ticks
     },
+    labels: {
+      style: {
+        colors: '#aaa', // Set your desired x-axis label color here
+        fontSize: '12px', // Optional: Set font size
+      },
+    },
   },
   yaxis: {
     show: false, // Show y-axis
@@ -190,6 +202,9 @@ var options = {
   },
   tooltip: {
     enabled: true, // Enable tooltips for interaction
+  },
+  legend: {
+    show: false, // Hide the legend that displays Salary and Expense labels
   },
 }
 
@@ -422,4 +437,21 @@ toggleButton.addEventListener('click', function () {
 
   // Save the user preference in localStorage
   localStorage.setItem('rtl', isRtl)
+})
+
+//
+// dark
+//
+const toggleButton2 = document.getElementById('themeToggle')
+const themeIcon = document.getElementById('themeIcon')
+const bodyElement = document.body
+
+toggleButton2.addEventListener('click', () => {
+  const currentTheme = bodyElement.getAttribute('data-bs-theme')
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light'
+  bodyElement.setAttribute('data-bs-theme', newTheme)
+
+  // Update icon
+  themeIcon.className =
+    newTheme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'
 })

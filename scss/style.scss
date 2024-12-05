@@ -1,4 +1,5 @@
 @import './variables';
+@import './dark';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 //-----------------------
@@ -56,4 +57,9 @@
   border: 1px solid #e2e8f0;
   border-radius: 10px; /* Adjust the value as needed */
   overflow: hidden; /* Ensure the content doesn't overflow */
+}
+
+// dark mode
+.sidebar, .topbar, .drk {
+  background-color: $body-bg;
 }
