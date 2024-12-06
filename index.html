@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="./dist/font/bootstrap-icons.css">
 </head>
 
-<body data-bs-theme="light">
+<body>
 
     <!-- Toggle button to switch LTR/RTL -->
-    <button id="toggleDirection" class="btn btn-primary position-fixed bottom-0 end-0 z-3 mb-4 me-4">Switch to
-        RTL</button>
+    <button id="toggleDirection" class="btn btn-primary position-fixed bottom-0 end-0 z-3 mb-4 me-4"><span><i id="themeIcon2" class="bi bi-arrow-bar-left"></i></span></button>
 
     <!--  -->
     <!-- Sidebar -->
@@ -121,13 +120,12 @@
     <header>
         <nav>
             <div class="topbar d-flex z-2 justify-content-between align-items-center border-bottom  position-fixed top-0 end-0 start-256 px-4 py-3"
-                style="height: 80px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                style="height: 80px;">
                 <div class="input-group w-50" style="max-width: 400px;">
                     <button class="btn border" type="button">
                         <i class="bi bi-search"></i>
                     </button>
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control drk" placeholder="Search">
                 </div>
                 <div class="d-flex align-items-center justify-content-center gap-4">
                     <div class="d-flex gap-3 fs-20 pe-4 border-end">

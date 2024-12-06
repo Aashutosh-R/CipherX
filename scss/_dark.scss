@@ -1,11 +1,13 @@
-$body-bg-dark: #2a3447 !default;
+$body-bg-dark: #17192c !default;
 $body-color-dark: white !default;
 $link-color-dark: #7c8fac !default;
 $body-secondary-color-dark: rgba($body-color-dark, 1) !default;
+$Dark-Bg: #0e1025;
 
-
-[data-bs-theme="dark"] {
-    .sidebar, .topbar, .drk {
-        background-color: $body-bg-dark;
-    }
+[data-bs-theme='dark'] {
+  .sidebar,
+  .topbar,
+  .drk {
+    background-color: $Dark-Bg;
+  }
 }

@@ -1,5 +1,92 @@
-// revenueChart
+// --------------------------------------------
+// RTL logic
+// --------------------------------------------
 
+// Get the button and the link to the CSS file
+const toggleButton = document.getElementById('toggleDirection')
+const themeLink = document.getElementById('theme-style')
+const themeIcon2 = document.getElementById('themeIcon2')
+
+// Check if there's already a saved theme preference in localStorage
+let isRtl = localStorage.getItem('rtl') === 'true'
+
+// Set the initial direction and icon based on the stored preference
+if (isRtl) {
+  document.documentElement.setAttribute('dir', 'rtl')
+  themeLink.href = 'dist/css/style-rtl.css'
+  themeIcon2.classList.replace('bi-arrow-bar-left', 'bi-arrow-bar-right')
+} else {
+  document.documentElement.setAttribute('dir', 'ltr')
+  themeLink.href = 'dist/css/style-ltr.css'
+  themeIcon2.classList.replace('bi-arrow-bar-right', 'bi-arrow-bar-left')
+}
+
+// Toggle the direction and save the preference in localStorage
+toggleButton.addEventListener('click', function () {
+  isRtl = !isRtl // Toggle RTL/LTR
+
+  if (isRtl) {
+    document.documentElement.setAttribute('dir', 'rtl')
+    themeLink.href = 'dist/css/style-rtl.css'
+    themeIcon2.classList.replace('bi-arrow-bar-left', 'bi-arrow-bar-right')
+  } else {
+    document.documentElement.setAttribute('dir', 'ltr')
+    themeLink.href = 'dist/css/style-ltr.css'
+    themeIcon2.classList.replace('bi-arrow-bar-right', 'bi-arrow-bar-left')
+  }
+
+  // Save the user preference in localStorage
+  localStorage.setItem('rtl', isRtl)
+})
+
+// --------------------------------------------
+// RTL logic end
+// --------------------------------------------
+
+
+// --------------------------------------------
+// dark logic
+// --------------------------------------------
+const toggleButton2 = document.getElementById('themeToggle')
+const themeIcon = document.getElementById('themeIcon')
+const htmlElement = document.documentElement // Target the <html> tag instead of <body>
+
+// Function to apply the theme
+const applyTheme = (theme) => {
+  htmlElement.setAttribute('data-bs-theme', theme) // Apply theme to <html> instead of <body>
+
+  // Update icon
+  themeIcon.className = theme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'
+}
+
+// Check localStorage for the saved theme
+const savedTheme = localStorage.getItem('theme')
+if (savedTheme) {
+  applyTheme(savedTheme) // Apply the saved theme
+} else {
+  // Default to 'light' theme if no preference is saved
+  applyTheme('light')
+}
+
+// Add event listener to the toggle button
+toggleButton2.addEventListener('click', () => {
+  const currentTheme = htmlElement.getAttribute('data-bs-theme') // Get theme from <html> tag
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light'
+
+  // Apply the new theme
+  applyTheme(newTheme)
+
+  // Save the user's choice in localStorage
+  localStorage.setItem('theme', newTheme)
+})
+// --------------------------------------------
+// dark logic end
+// --------------------------------------------
+
+
+// --------------------------------------------
+// revenueChart
+// --------------------------------------------
 var options = {
   series: [
     {
@@ -96,7 +183,13 @@ var options = {
 var chart = new ApexCharts(document.querySelector('#revenueChart'), options)
 chart.render()
 
+// --------------------------------------------
+// revenueChart end
+// --------------------------------------------
+
+// --------------------------------------------
 // YearlyBackupChart
+// --------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
   const options = {
@@ -143,7 +236,13 @@ document.addEventListener('DOMContentLoaded', function () {
   chart.render()
 })
 
+// --------------------------------------------
+// YearlyBackupChart end
+// --------------------------------------------
+
+// --------------------------------------------
 // salary chart
+// --------------------------------------------
 
 var options = {
   chart: {
@@ -211,7 +310,13 @@ var options = {
 var chart = new ApexCharts(document.querySelector('#salary'), options)
 chart.render()
 
+// --------------------------------------------
+// salary chart end
+// --------------------------------------------
+
+// --------------------------------------------
 // Customer chart
+// --------------------------------------------
 var options = {
   chart: {
     type: 'bar',
@@ -262,8 +367,13 @@ var options = {
 var chart = new ApexCharts(document.querySelector('#customer'), options)
 chart.render()
 
-//
+// --------------------------------------------
+// Customer chart end
+// --------------------------------------------
+
+// --------------------------------------------
 // project chart
+// --------------------------------------------
 var options = {
   chart: {
     type: 'bar',
@@ -314,7 +424,13 @@ var options = {
 var chart = new ApexCharts(document.querySelector('#project'), options)
 chart.render()
 
+// --------------------------------------------
+// project chart end
+// --------------------------------------------
+
+// --------------------------------------------
 // Monthly earning
+// --------------------------------------------
 var options = {
   chart: {
     type: 'area',
@@ -401,76 +517,5 @@ var chart = new ApexCharts(document.querySelector('#mearning'), options)
 chart.render()
 
 // --------------------------------------------
-// RTL logic
-// dist/js/main.js
-
-// Get the button and the link to the CSS file
-const toggleButton = document.getElementById('toggleDirection')
-const themeLink = document.getElementById('theme-style')
-
-// Check if there's already a saved theme preference in localStorage
-let isRtl = localStorage.getItem('rtl') === 'true'
-
-// Set the initial direction based on the stored preference
-if (isRtl) {
-  document.documentElement.setAttribute('dir', 'rtl')
-  themeLink.href = 'dist/css/style-rtl.css'
-  toggleButton.textContent = 'Switch to LTR'
-} else {
-  document.documentElement.setAttribute('dir', 'ltr')
-  themeLink.href = 'dist/css/style-ltr.css'
-  toggleButton.textContent = 'Switch to RTL'
-}
-
-// Toggle the direction and save the preference in localStorage
-toggleButton.addEventListener('click', function () {
-  isRtl = !isRtl // Toggle RTL/LTR
-  if (isRtl) {
-    document.documentElement.setAttribute('dir', 'rtl')
-    themeLink.href = 'dist/css/style-rtl.css'
-    toggleButton.textContent = 'Switch to LTR'
-  } else {
-    document.documentElement.setAttribute('dir', 'ltr')
-    themeLink.href = 'dist/css/style-ltr.css'
-    toggleButton.textContent = 'Switch to RTL'
-  }
-
-  // Save the user preference in localStorage
-  localStorage.setItem('rtl', isRtl)
-})
-
-//
-// dark
-//
-const toggleButton2 = document.getElementById('themeToggle')
-const themeIcon = document.getElementById('themeIcon')
-const bodyElement = document.body
-
-// Function to apply the theme
-const applyTheme = (theme) => {
-  bodyElement.setAttribute('data-bs-theme', theme)
-
-  // Update icon
-  themeIcon.className = theme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'
-}
-
-// Check localStorage for the saved theme
-const savedTheme = localStorage.getItem('theme')
-if (savedTheme) {
-  applyTheme(savedTheme) // Apply the saved theme
-} else {
-  // Default to 'light' theme if no preference is saved
-  applyTheme('light')
-}
-
-// Add event listener to the toggle button
-toggleButton2.addEventListener('click', () => {
-  const currentTheme = bodyElement.getAttribute('data-bs-theme')
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light'
-
-  // Apply the new theme
-  applyTheme(newTheme)
-
-  // Save the user's choice in localStorage
-  localStorage.setItem('theme', newTheme)
-})
+// Monthly earning end
+// --------------------------------------------
