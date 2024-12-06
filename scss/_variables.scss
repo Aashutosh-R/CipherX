@@ -6,6 +6,8 @@ $font-family-base: 'Plus Jakarta Sans', serif;
 $paragraph-margin-bottom: 0rem !default;
 // paragraph end
 
+$box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
 // colors
 $them-lightblue: #f9fafb;
 $primary: #5e88fe;
@@ -21,6 +23,7 @@ $blue: #0ea5e9;
 $lightblue: #bde0ef;
 $warning: #F59E0B;
 $warning-50: #fff4e2;
+$pink: #EC4899;
 $theme-colors: (
   'them-lightblue': $them-lightblue,
   'primary': $primary,
@@ -35,7 +38,8 @@ $theme-colors: (
   'blue': $blue,
   'lightblue': $lightblue,
   'warning': $warning,
-  'warning-50': $warning-50 
+  'warning-50': $warning-50,
+  'pink': $pink 
 ) !default;
 // colors end
 

@@ -43,7 +43,6 @@ toggleButton.addEventListener('click', function () {
 // RTL logic end
 // --------------------------------------------
 
-
 // --------------------------------------------
 // dark logic
 // --------------------------------------------
@@ -83,7 +82,6 @@ toggleButton2.addEventListener('click', () => {
 // dark logic end
 // --------------------------------------------
 
-
 // --------------------------------------------
 // revenueChart
 // --------------------------------------------
@@ -91,16 +89,17 @@ var options = {
   series: [
     {
       name: 'Earnings',
-      data: [1500, 1200, 1300, 1400, 1600, 1700, 1800, 1500, 1600, 1700],
+      data: [1500, 2200, 1300, 2000, 2600, 1700, 2000, 1500, 2000, 1700],
     },
     {
       name: 'Expenses',
-      data: [-1000, -1100, -900, -950, -1200, -1000, -950, -1100, -1050, -980],
+      data: [-1000, -1100, -1400, -950, -1200, -1000, -950, -1100, -1050, -980],
     },
   ],
   chart: {
     type: 'bar',
     height: 300,
+    width: 500,
     stacked: true, // Enables stacking
     toolbar: {
       show: false,
@@ -109,7 +108,7 @@ var options = {
   grid: {
     show: true, // Enable the grid
     borderColor: '#e0e0e0', // Color of the grid lines
-    strokeDashArray: 4, // Dashed grid lines (use 0 for solid lines)
+    strokeDashArray: 0, // Dashed grid lines (use 0 for solid lines)
     xaxis: {
       lines: {
         show: true, // Show vertical grid lines
@@ -124,8 +123,8 @@ var options = {
   plotOptions: {
     bar: {
       horizontal: false, // Vertical bars
-      borderRadius: 4,
-      columnWidth: '40%',
+      borderRadius: 6,
+      columnWidth: '30%',
     },
   },
   dataLabels: {
@@ -171,6 +170,15 @@ var options = {
       formatter: function (value) {
         return `$${(value / 1000).toFixed(1)}k` // Tooltip formatting
       },
+    },
+    theme: 'dark', // Set the tooltip theme to dark
+    style: {
+      fontSize: '12px', // Optional: Set font size for tooltip text
+      fontFamily: 'Arial, sans-serif', // Optional: Set font family
+      color: '#fff', // Text color (white)
+      background: '#333', // Background color (dark)
+      borderRadius: '4px', // Optional: Add rounded corners
+      padding: '8px', // Optional: Adjust padding inside the tooltip
     },
   },
   colors: ['#3b82f6', '#0EA5E9'], // Custom colors for Earnings and Expenses
@@ -226,6 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       },
     },
+    stroke: { width: 1, lineCap: "round" },
     colors: ['#3b82f6', '#0EA5E9'], // Colors for the segments
   }
 
@@ -264,8 +273,8 @@ var options = {
   ],
   plotOptions: {
     bar: {
-      columnWidth: '60%', // Adjust width of bars
-      borderRadius: 4, // Rounded edges
+      columnWidth: '50%', // Adjust width of bars
+      borderRadius: 6, // Rounded edges
       dataLabels: {
         position: 'top', // Position labels on top of the bars
       },
@@ -301,6 +310,15 @@ var options = {
   },
   tooltip: {
     enabled: true, // Enable tooltips for interaction
+    theme: 'dark', // Set the tooltip theme to dark
+    style: {
+      fontSize: '12px', // Optional: Set font size for tooltip text
+      fontFamily: 'Arial, sans-serif', // Optional: Set font family
+      color: '#fff', // Text color (white)
+      background: '#333', // Background color (dark)
+      borderRadius: '4px', // Optional: Add rounded corners
+      padding: '8px', // Optional: Adjust padding inside the tooltip
+    },
   },
   legend: {
     show: false, // Hide the legend that displays Salary and Expense labels
@@ -358,6 +376,15 @@ var options = {
   },
   tooltip: {
     enabled: true, // Disables tooltips
+    theme: 'dark', // Set the tooltip theme to dark
+    style: {
+      fontSize: '12px', // Optional: Set font size for tooltip text
+      fontFamily: 'Arial, sans-serif', // Optional: Set font family
+      color: '#fff', // Text color (white)
+      background: '#333', // Background color (dark)
+      borderRadius: '4px', // Optional: Add rounded corners
+      padding: '8px', // Optional: Adjust padding inside the tooltip
+    },
   },
   dataLabels: {
     enabled: false, // Hides the numbers on top of the bars
@@ -415,6 +442,15 @@ var options = {
   },
   tooltip: {
     enabled: true, // Disables tooltips
+    theme: 'dark', // Set the tooltip theme to dark
+    style: {
+      fontSize: '12px', // Optional: Set font size for tooltip text
+      fontFamily: 'Arial, sans-serif', // Optional: Set font family
+      color: '#fff', // Text color (white)
+      background: '#333', // Background color (dark)
+      borderRadius: '4px', // Optional: Add rounded corners
+      padding: '8px', // Optional: Adjust padding inside the tooltip
+    },
   },
   dataLabels: {
     enabled: false, // Hides the numbers on top of the bars
@@ -506,7 +542,15 @@ var options = {
   },
   tooltip: {
     enabled: true,
-    theme: 'light',
+    theme: 'dark', // Set the tooltip theme to dark
+    style: {
+      fontSize: '12px', // Optional: Set font size for tooltip text
+      fontFamily: 'Arial, sans-serif', // Optional: Set font family
+      color: '#fff', // Text color (white)
+      background: '#333', // Background color (dark)
+      borderRadius: '4px', // Optional: Add rounded corners
+      padding: '8px', // Optional: Adjust padding inside the tooltip
+    },
   },
   dataLabels: {
     enabled: false,

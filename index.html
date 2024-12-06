@@ -13,12 +13,14 @@
 <body>
 
     <!-- Toggle button to switch LTR/RTL -->
-    <button id="toggleDirection" class="btn btn-primary position-fixed bottom-0 end-0 z-3 mb-4 me-4"><span><i id="themeIcon2" class="bi bi-arrow-bar-left"></i></span></button>
+    <button id="toggleDirection" class="btn btn-primary position-fixed bottom-0 end-0 z-3 mb-4 me-4"><span><i
+                id="themeIcon2" class="bi bi-arrow-bar-left"></i></span></button>
 
     <!--  -->
     <!-- Sidebar -->
     <!--  -->
-    <div class="sidebar z-3  position-fixed top-0 start-0 overflow-y-auto vh-100  px-4 border-end">
+    <div class="sidebar z-3  position-fixed top-0 start-0 overflow-y-auto vh-100  px-4 border-end"
+        style="width: 256px;">
         <div class="d-flex align-items-center justify-content-between border-bottom py-4">
             <div class="d-flex align-items-center justify-content-center gap-2">
                 <div><img src="./dist/images/sidebar/main-logo.png" alt="logo" class="img-fluid"></div>
@@ -35,7 +37,7 @@
                     <a href="#" class="nav-link active"><i class="bi bi-bag me-1"></i> Modern</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link hover-bg">
                         <div class="d-flex justify-content-between align-items-center">
                             <span><i class="bi bi-bar-chart me-1"></i> Analytical</span>
                             <div>
@@ -45,7 +47,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link"> <i class="bi bi-cart me-1"></i> eCommerce</a>
+                    <a href="#" class="nav-link hover-bg"> <i class="bi bi-cart me-1"></i> eCommerce</a>
                 </li>
             </ul>
         </div>
@@ -53,19 +55,19 @@
             <h6 class="text-muted fs-14 mb-12">Applications</h6>
             <ul class="nav nav-pills flex-column fs-16 gap-2">
                 <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="bi bi-chat-dots me-1"></i> Chat</a>
+                    <a href="#" class="nav-link hover-bg"><i class="bi bi-chat-dots me-1"></i> Chat</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="bi bi-people me-1"></i> Users</a>
+                    <a href="#" class="nav-link hover-bg"><i class="bi bi-people me-1"></i> Users</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="bi bi-journals me-1"></i> Note</a>
+                    <a href="#" class="nav-link hover-bg"><i class="bi bi-journals me-1"></i> Note</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="bi bi-calendar me-1"></i> Calendar</a>
+                    <a href="#" class="nav-link hover-bg"><i class="bi bi-calendar me-1"></i> Calendar</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="bi bi-x-octagon me-1"></i> Disable</a>
+                    <a href="#" class="nav-link hover-bg"><i class="bi bi-x-octagon me-1"></i> Disable</a>
                 </li>
             </ul>
         </div>
@@ -73,7 +75,7 @@
             <h6 class="text-muted fs-14 mb-12">Others</h6>
             <ul class="nav nav-pills flex-column fs-16 gap-2">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link hover-bg">
                         <div class="d-flex justify-content-between align-items-center">
                             <span><i class="bi bi-person-circle me-1"></i> Avatar</span>
                             <div>
@@ -83,7 +85,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link hover-bg">
                         <div class="d-flex justify-content-between align-items-center">
                             <span><i class="bi bi-pencil-square me-1"></i> Outline</span>
                             <div>
@@ -93,7 +95,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link hover-bg">
                         <div class="d-flex justify-content-between align-items-center">
                             <span><i class="bi bi-x-diamond me-1"></i> Basic</span>
                             <div>
@@ -121,15 +123,18 @@
         <nav>
             <div class="topbar d-flex z-2 justify-content-between align-items-center border-bottom  position-fixed top-0 end-0 start-256 px-4 py-3"
                 style="height: 80px;">
-                <div class="input-group w-50" style="max-width: 400px;">
-                    <button class="btn border" type="button">
+                <div class="input-group" style="max-width: 350px; position: relative;">
+                    <input type="text" class="form-control rounded drk" placeholder="Search"
+                        style="padding-left: 50px; position: relative; z-index: 1;">
+                    <button class="btn border-0"
+                        style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 2;"
+                        type="button">
                         <i class="bi bi-search"></i>
                     </button>
-                    <input type="text" class="form-control drk" placeholder="Search">
                 </div>
                 <div class="d-flex align-items-center justify-content-center gap-4">
-                    <div class="d-flex gap-3 fs-20 pe-4 border-end">
-                        <a id="themeToggle" style="cursor: pointer;"><i id="themeIcon"  class="bi bi-moon-fill"></i></a>
+                    <div class="d-flex gap-4 fs-20 pe-4 border-end">
+                        <a id="themeToggle" style="cursor: pointer;"><i id="themeIcon" class="bi bi-moon-fill"></i></a>
                         <a href="#"><i class="bi bi-bell"></i></a>
                         <a href="#"><i class="bi bi-cart"></i></a>
                         <a href="#"><i class="bi bi-translate"></i></a>
@@ -138,7 +143,9 @@
                     <div class="d-flex align-items-center justify-content-center gap-2">
                         <div><img src="./dist/images/topbar/Ellipse 2.png" alt="user" class="img-fluid"></div>
                         <div>
-                            <p class="fs-14 fw-medium">Chedo Nasevski</p>
+                            <a href="#" class="text-decoration-none">
+                                <p class="fs-14 fw-medium">Chedo Nasevski</p>
+                            </a>
                             <p class="fs-12 text-muted">Busniess</p>
                         </div>
                     </div>
@@ -159,9 +166,9 @@
             <div class="container-fluid mb-4">
                 <div class="row">
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded drk"
-                            style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            <div><img src="./dist/images/main-digits/employee.png" alt="employee" class="img-fluid">
+                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">
+                            <div>
+                                <i class="bi bi-person-square p-2 bg-primary rounded text-white fs-18"></i>
                             </div>
                             <div>
                                 <p class="fs-18 fw-medium">96</p>
@@ -170,9 +177,10 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded drk"
-                            style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            <div><img src="./dist/images/main-digits/clients.png" alt="clients" class="img-fluid"></div>
+                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">
+                            <div>
+                                <i class="bi bi-briefcase p-2 bg-green rounded text-white fs-18"></i>
+                            </div>
                             <div>
                                 <p class="fs-18 fw-medium">3,650</p>
                                 <p class="fs-14 text-muted">Clients</p>
@@ -180,9 +188,9 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded drk"
-                            style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            <div><img src="./dist/images/main-digits/projects.png" alt="projects" class="img-fluid">
+                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">                            
+                            <div>
+                                <i class="bi bi-clipboard2-minus p-2 bg-warning rounded text-white fs-18"></i>
                             </div>
                             <div>
                                 <p class="fs-18 fw-medium">356</p>
@@ -191,9 +199,10 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded drk"
-                            style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            <div><img src="./dist/images/main-digits/events.png" alt="events" class="img-fluid"></div>
+                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">
+                            <div>
+                                <i class="bi bi-calendar2-date p-2 bg-primary rounded text-white fs-18"></i>
+                            </div> 
                             <div>
                                 <p class="fs-18 fw-medium">696</p>
                                 <p class="fs-14 text-muted">Events</p>
@@ -201,9 +210,10 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded drk"
-                            style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            <div><img src="./dist/images/main-digits/payroll.png" alt="payroll" class="img-fluid"></div>
+                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">
+                            <div>
+                                <i class="bi bi-coin p-2 bg-red rounded text-white fs-18"></i>
+                            </div>  
                             <div>
                                 <p class="fs-18 fw-medium">$96K</p>
                                 <p class="fs-14 text-muted">Payroll</p>
@@ -211,9 +221,10 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded drk"
-                            style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                            <div><img src="./dist/images/main-digits/reports.png" alt="payroll" class="img-fluid"></div>
+                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">
+                            <div>
+                                <i class="bi bi-pie-chart p-2 bg-pink rounded text-white fs-18"></i>
+                            </div> 
                             <div>
                                 <p class="fs-18 fw-medium">59</p>
                                 <p class="fs-14 text-muted">Reports</p>
@@ -230,14 +241,18 @@
             <div class="container-fluid mb-4">
                 <div class="row">
                     <div class="col-8">
-                        <div class="drk rounded p-4" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="drk rounded p-4 shadow">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div>
                                     <p class="fs-16 fw-medium">Revenue updates</p>
                                     <p class="fs-12 text-muted">Overview of profit</p>
                                 </div>
                                 <div>
-                                    <select id="month-selector" class="text-muted border-muted rounded px-1 py-1 drk">
+                                    <select id="month-selector"
+                                        class="text-muted border-muted rounded px-2 py-2 fs-14 drk">
+                                        <option>October 2021</option>
+                                        <option>October 2022</option>
+                                        <option>October 2023</option>
                                         <option>October 2024</option>
                                         <!-- Add other months if needed -->
                                     </select>
@@ -249,10 +264,11 @@
 
                                 <div class="stats">
                                     <div class="stat border-bottom py-4">
-                                        <div class="d-flex gap-2">
+                                        <div class="d-flex gap-3">
                                             <div>
-                                                <img src="./dist/images/revenue-chart/revenue arrow-d.png" alt="down"
-                                                    class="img-fluid">
+                                                <div class="mt-1"><i
+                                                        class="bi bi-arrow-down-left p-2 bg-primary rounded text-white fs-12"></i>
+                                                </div>
                                             </div>
                                             <div>
                                                 <p class="fs-12 text-muted">Earning this month</p>
@@ -265,10 +281,11 @@
                                         </div>
                                     </div>
                                     <div class="stat py-4">
-                                        <div class="d-flex gap-2">
+                                        <div class="d-flex gap-3">
                                             <div>
-                                                <img src="./dist/images/revenue-chart/revenue arrow-up.png" alt="up"
-                                                    class="img-fluid">
+                                                <div class="mt-1"><i
+                                                        class="bi bi-arrow-up-right p-2 bg-blue rounded text-white fs-12"></i>
+                                                </div>
                                             </div>
                                             <div>
                                                 <p class="fs-12 text-muted">Expense this month</p>
@@ -286,7 +303,7 @@
 
                     </div>
                     <div class="col-4">
-                        <div class="drk rounded p-4" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="drk rounded shadow p-4">
                             <p class="fs-16 fw-medium">Yearly backup</p>
                             <div id="YearlyBackupChart"></div>
                             <div class="d-flex justify-content-evenly align-items-center">
@@ -324,14 +341,18 @@
             <div class="container-fluid mb-4">
                 <div class="row">
                     <div class="col-4">
-                        <div class="drk rounded p-4" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="drk rounded shadow p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <div>
                                     <p class="fs-16 fw-medium">Employee salary</p>
                                     <p class="fs-12 text-muted">Every month</p>
                                 </div>
                                 <div>
-                                    <select id="month-selector" class="text-muted border-muted rounded px-1 py-1 drk">
+                                    <select id="month-selector"
+                                        class="text-muted border-muted rounded px-2 py-2 fs-14 drk">
+                                        <option>Year 2021</option>
+                                        <option>Year 2022</option>
+                                        <option>Year 2023</option>
                                         <option>Year 2024</option>
                                         <!-- Add other months if needed -->
                                     </select>
@@ -367,13 +388,17 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="drk rounded p-4" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="drk rounded shadow p-4">
                             <div class="d-flex align-items-center justify-content-between mb-5">
                                 <div>
                                     <p class="fs-16 fw-medium">Projects overview</p>
                                 </div>
                                 <div>
-                                    <select id="month-selector" class="text-muted border-muted rounded px-1 py-1 drk">
+                                    <select id="month-selector"
+                                        class="text-muted border-muted rounded px-2 py-2 fs-14 drk">
+                                        <option>All week</option>
+                                        <option>Two week</option>
+                                        <option>Last week</option>
                                         <option>This week</option>
                                         <!-- Add other months if needed -->
                                     </select>
@@ -412,7 +437,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="drk rounded p-4" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="drk rounded shadow p-4">
                             <div class="d-flex align-items-center justify-content-between mb-3">
                                 <div>
                                     <p class="fs-16 fw-medium">Monthly earning</p>
@@ -442,15 +467,18 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-8">
-                        <div class="drk rounded p-4" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="drk rounded shadow p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <div>
                                     <p class="fs-16 fw-medium">Top projects</p>
                                     <p class="fs-12 text-muted">Best employees</p>
                                 </div>
                                 <div>
-                                    <select id="month-selector" class="text-muted border-muted rounded px-1 py-1 drk">
+                                    <select id="month-selector"
+                                        class="text-muted border-muted rounded px-2 py-2 fs-14 drk">
                                         <option>Sort by</option>
+                                        <option>A-Z</option>
+                                        <option>Z-A</option>
                                         <!-- Add other months if needed -->
                                     </select>
                                 </div>
@@ -574,7 +602,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="position-relative h-100" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <div class="position-relative shadow h-100">
                             <img src="./dist/images/BestSellingProduct/BSP.png" alt="" class="img-fluid h-100">
                             <div class="position-absolute p-4 top-0">
                                 <p class="fs-16 fw-medium text-white">Best selling products</p>
