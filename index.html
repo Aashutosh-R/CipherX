@@ -13,14 +13,13 @@
 <body>
 
     <!-- Toggle button to switch LTR/RTL -->
-    <button id="toggleDirection" class="btn btn-primary position-fixed bottom-0 end-0 z-3 mb-4 me-4"><span><i
+    <button id="toggleDirection" class="btn btn-primary text-white position-fixed bottom-0 end-0 z-3 mb-4 me-4"><span><i
                 id="themeIcon2" class="bi bi-arrow-bar-left"></i></span></button>
 
     <!--  -->
     <!-- Sidebar -->
     <!--  -->
-    <div class="sidebar z-3  position-fixed top-0 start-0 overflow-y-auto vh-100  px-4 border-end"
-        style="width: 256px;">
+    <div class="sidebar z-3  position-fixed top-0 start-0 overflow-y-auto vh-100  px-4 border-end">
         <div class="d-flex align-items-center justify-content-between border-bottom py-4">
             <div class="d-flex align-items-center justify-content-center gap-2">
                 <div><img src="./dist/images/sidebar/main-logo.png" alt="logo" class="img-fluid"></div>
@@ -125,22 +124,22 @@
                 style="height: 80px;">
                 <div class="input-group" style="max-width: 350px; position: relative;">
                     <input type="text" class="form-control rounded drk" placeholder="Search"
-                        style="padding-left: 50px; position: relative; z-index: 1;">
+                        style="padding-left: 45px; position: relative; z-index: 1;">
                     <button class="btn border-0"
-                        style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 2;"
+                        style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); z-index: 2;"
                         type="button">
                         <i class="bi bi-search"></i>
                     </button>
                 </div>
                 <div class="d-flex align-items-center justify-content-center gap-4">
                     <div class="d-flex gap-4 fs-20 pe-4 border-end">
-                        <a id="themeToggle" style="cursor: pointer;"><i id="themeIcon" class="bi bi-moon-fill"></i></a>
+                        <a id="themeToggle" href="javascript:void(0)"><i id="themeIcon"></i></a>
                         <a href="#"><i class="bi bi-bell"></i></a>
                         <a href="#"><i class="bi bi-cart"></i></a>
                         <a href="#"><i class="bi bi-translate"></i></a>
                         <a href="#"><i class="bi bi-grid"></i></a>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center gap-2">
+                    <div class="d-flex align-items-center justify-content-center gap-2 user">
                         <div><img src="./dist/images/topbar/Ellipse 2.png" alt="user" class="img-fluid"></div>
                         <div>
                             <a href="#" class="text-decoration-none">
@@ -166,9 +165,9 @@
             <div class="container-fluid mb-4">
                 <div class="row">
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">
-                            <div>
-                                <i class="bi bi-person-square p-2 bg-primary rounded text-white fs-18"></i>
+                        <div class="d-flex align-items-center gap-3 p-3 rounded shadow drk">
+                            <div class="py-2 px-12 bg-blue rounded">
+                                <i class="bi bi-person-square text-white fs-18"></i>
                             </div>
                             <div>
                                 <p class="fs-18 fw-medium">96</p>
@@ -177,9 +176,9 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">
-                            <div>
-                                <i class="bi bi-briefcase p-2 bg-green rounded text-white fs-18"></i>
+                        <div class="d-flex align-items-center gap-3 p-3 rounded shadow drk">
+                            <div class="py-2 px-12 bg-green rounded">
+                                <i class="bi bi-briefcase text-white fs-18"></i>
                             </div>
                             <div>
                                 <p class="fs-18 fw-medium">3,650</p>
@@ -188,9 +187,9 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">                            
-                            <div>
-                                <i class="bi bi-clipboard2-minus p-2 bg-warning rounded text-white fs-18"></i>
+                        <div class="d-flex align-items-center gap-3 p-3 rounded shadow drk">                            
+                            <div class="py-2 px-12 bg-warning rounded">
+                                <i class="bi bi-clipboard2-minus  text-white fs-18"></i>
                             </div>
                             <div>
                                 <p class="fs-18 fw-medium">356</p>
@@ -199,9 +198,9 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">
-                            <div>
-                                <i class="bi bi-calendar2-date p-2 bg-primary rounded text-white fs-18"></i>
+                        <div class="d-flex align-items-center gap-3 p-3 rounded shadow drk">
+                            <div class="py-2 px-12 bg-primary rounded">
+                                <i class="bi bi-calendar2-date text-white fs-18"></i>
                             </div> 
                             <div>
                                 <p class="fs-18 fw-medium">696</p>
@@ -210,9 +209,9 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">
-                            <div>
-                                <i class="bi bi-coin p-2 bg-red rounded text-white fs-18"></i>
+                        <div class="d-flex align-items-center gap-3 p-3 rounded shadow drk">
+                            <div class="py-2 px-12 bg-red rounded">
+                                <i class="bi bi-coin text-white fs-18"></i>
                             </div>  
                             <div>
                                 <p class="fs-18 fw-medium">$96K</p>
@@ -220,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <!-- <div class="col">
                         <div class="d-flex align-items-center gap-2 p-3 rounded shadow drk">
                             <div>
                                 <i class="bi bi-pie-chart p-2 bg-pink rounded text-white fs-18"></i>
@@ -230,7 +229,7 @@
                                 <p class="fs-14 text-muted">Reports</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -249,7 +248,7 @@
                                 </div>
                                 <div>
                                     <select id="month-selector"
-                                        class="text-muted border-muted rounded px-2 py-2 fs-14 drk">
+                                        class="text-muted border rounded px-2 py-2 fs-14 drk">
                                         <option>October 2021</option>
                                         <option>October 2022</option>
                                         <option>October 2023</option>
@@ -266,8 +265,8 @@
                                     <div class="stat border-bottom py-4">
                                         <div class="d-flex gap-3">
                                             <div>
-                                                <div class="mt-1"><i
-                                                        class="bi bi-arrow-down-left p-2 bg-primary rounded text-white fs-12"></i>
+                                                <div class="mt-1 py-1 px-2 bg-primary rounded"><i
+                                                        class="bi bi-arrow-down-left  text-white fs-12"></i>
                                                 </div>
                                             </div>
                                             <div>
@@ -283,8 +282,8 @@
                                     <div class="stat py-4">
                                         <div class="d-flex gap-3">
                                             <div>
-                                                <div class="mt-1"><i
-                                                        class="bi bi-arrow-up-right p-2 bg-blue rounded text-white fs-12"></i>
+                                                <div class="mt-1 py-1 px-2 bg-blue rounded"><i
+                                                        class="bi bi-arrow-up-right text-white fs-12"></i>
                                                 </div>
                                             </div>
                                             <div>
@@ -314,7 +313,7 @@
                                     </div>
                                     <div>
                                         <p class="fs-12 text-muted">Previous year</p>
-                                        <p class="fs-16 fw-medium">(2023)</p>
+                                        <p class="fs-16 fw-medium">2023</p>
                                     </div>
 
                                 </div>
@@ -325,7 +324,7 @@
                                     </div>
                                     <div>
                                         <p class="fs-12 text-muted">Current year</p>
-                                        <p class="fs-16 fw-medium">(2024)</p>
+                                        <p class="fs-16 fw-medium">2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -349,7 +348,7 @@
                                 </div>
                                 <div>
                                     <select id="month-selector"
-                                        class="text-muted border-muted rounded px-2 py-2 fs-14 drk">
+                                        class="text-muted border rounded px-2 py-2 fs-14 drk">
                                         <option>Year 2021</option>
                                         <option>Year 2022</option>
                                         <option>Year 2023</option>
@@ -395,7 +394,7 @@
                                 </div>
                                 <div>
                                     <select id="month-selector"
-                                        class="text-muted border-muted rounded px-2 py-2 fs-14 drk">
+                                        class="text-muted border rounded px-2 py-2 fs-14 drk">
                                         <option>All week</option>
                                         <option>Two week</option>
                                         <option>Last week</option>
@@ -442,9 +441,12 @@
                                 <div>
                                     <p class="fs-16 fw-medium">Monthly earning</p>
                                 </div>
-                                <div>
+                                <!-- <div>
                                     <img src="./dist/images/monthly-earning-chart/mothly-earning-chart.png" alt=""
                                         class="img-fluid">
+                                </div> -->
+                                <div class="py-2 px-12 bg-blue rounded">
+                                    <i class="bi bi-coin text-white fs-18"></i>
                                 </div>
                             </div>
                             <div class="d-flex align-items-baseline gap-2">
@@ -475,7 +477,7 @@
                                 </div>
                                 <div>
                                     <select id="month-selector"
-                                        class="text-muted border-muted rounded px-2 py-2 fs-14 drk">
+                                        class="text-muted border rounded px-2 py-2 fs-14 drk">
                                         <option>Sort by</option>
                                         <option>A-Z</option>
                                         <option>Z-A</option>
@@ -526,7 +528,7 @@
                                         <p class="fs-14">Website redesign</p>
                                     </div>
                                     <div class="col-3">
-                                        <span class="badge bg-green-50 text-green fs-12">Low</span>
+                                        <span class="badge bg-green text-white fs-12">Low</span>
                                     </div>
                                     <div class="col-3">
                                         <p class="fs-14">$12,000</p>
@@ -548,7 +550,7 @@
                                         <p class="fs-14">Mobile app ui</p>
                                     </div>
                                     <div class="col-3">
-                                        <span class="badge bg-warning-50 text-warning fs-12">Medium</span>
+                                        <span class="badge bg-warning text-white fs-12">Medium</span>
                                     </div>
                                     <div class="col-3">
                                         <p class="fs-14">$8,500</p>
@@ -570,7 +572,7 @@
                                         <p class="fs-14">Database setup</p>
                                     </div>
                                     <div class="col-3">
-                                        <span class="badge bg-red-50 text-red fs-12">High</span>
+                                        <span class="badge bg-red text-white fs-12">High</span>
                                     </div>
                                     <div class="col-3">
                                         <p class="fs-14">$15,000</p>
@@ -592,7 +594,7 @@
                                         <p class="fs-14">Content strategy</p>
                                     </div>
                                     <div class="col-3">
-                                        <span class="badge bg-green-50 text-green fs-12">Low</span>
+                                        <span class="badge bg-green text-white fs-12">Low</span>
                                     </div>
                                     <div class="col-3">
                                         <p class="fs-14">$3,000</p>
@@ -661,6 +663,14 @@
             </div>
         </section>
         <!-- row 3 end -->
+
+        <!-- footer -->
+         <footer>
+            <div class="d-flex justify-content-center align-items-center py-4">
+                <p class="text-lightgray fw-medium">Design and Developed by <a href="https://adminmart.com/" target="_blank" class="text-blue">AdminMart</a></p>
+            </div>
+         </footer>
+        <!-- footer end -->
     </main>
     <!--  -->
     <!-- main end -->

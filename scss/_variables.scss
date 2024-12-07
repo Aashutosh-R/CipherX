@@ -1,5 +1,5 @@
 // font-family
-$font-family-base: 'Plus Jakarta Sans', serif;
+$font-family-base: 'Inter', sans-serif;
 // font-family end
 
 // paragraph
@@ -21,9 +21,10 @@ $red: #ef4444;
 $red-50: #ffe2e2;
 $blue: #0ea5e9;
 $lightblue: #bde0ef;
-$warning: #F59E0B;
+$warning: #f59e0b;
 $warning-50: #fff4e2;
-$pink: #EC4899;
+$pink: #ec4899;
+$lightgray: #5a6a857b;
 $theme-colors: (
   'them-lightblue': $them-lightblue,
   'primary': $primary,
@@ -39,7 +40,8 @@ $theme-colors: (
   'lightblue': $lightblue,
   'warning': $warning,
   'warning-50': $warning-50,
-  'pink': $pink 
+  'pink': $pink,
+  'lightgray': $lightgray
 ) !default;
 // colors end
 
@@ -81,6 +83,7 @@ $font-sizes: (
   16: 16px,
   18: 18px,
   20: 20px,
+  24: 24px,
 ) !default;
 $font-size-base: 1rem !default;
 // font-size end

@@ -1,7 +1,7 @@
 @import './variables';
 @import './dark';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 //-----------------------
 // container max-width
 //-----------------------
@@ -10,6 +10,77 @@
 }
 //-----------------------
 // container max-width end
+//-----------------------
+
+//-----------------------
+// Added styles for main content (body wrapper)
+//-----------------------
+.body-wrapper {
+  margin-left: 256px; /* Account for the sidebar width */
+  margin-top: 80px; /* Account for the topbar height */
+  min-height: calc(100vh - 80px); /* Ensure content stretches vertically */
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+//-----------------------
+// Added styles for main content (body wrapper) end
+//-----------------------
+
+//-----------------------
+// dark mode
+//-----------------------
+.sidebar,
+.topbar,
+.drk {
+  background-color: white;
+}
+//-----------------------
+// dark mode end
+//-----------------------
+
+// ----------------------
+// topbar
+// ----------------------
+.topbar.scrolled {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+// ----------------------
+// topbar end
+// ----------------------
+
+//-----------------------
+// user icon hover(topbar)
+//-----------------------
+.user:hover {
+  cursor: pointer;
+  & a {
+    color: #3b82f6;
+  }
+}
+//-----------------------
+// user icon hover(topbar) end
+//-----------------------
+
+//-----------------------
+// sidebar setup
+//-----------------------
+.sidebar {
+  width: 256px;
+}
+//-----------------------
+// sidebar setup end
+//-----------------------
+
+//-----------------------
+// sidebar link hover effect
+//-----------------------
+.hover-bg:hover {
+  background-color: rgba(94, 137, 254, 0.2588235294);
+}
+//-----------------------
+// sidebar link hover effect end
 //-----------------------
 
 //-----------------------
@@ -26,18 +97,9 @@
 // side-scrollbar hide end
 //-----------------------
 
-/* Added styles for main content */
-.body-wrapper {
-  margin-left: 256px; /* Account for the sidebar width */
-  margin-top: 80px; /* Account for the topbar height */
-  min-height: calc(100vh - 80px); /* Ensure content stretches vertically */
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-//
+//-----------------------
+// employee salary chart design
+//-----------------------
 .indicator {
   width: 12px;
   height: 12px;
@@ -51,19 +113,18 @@
 .indicator-expenses {
   background-color: #e2e8f0; /* Light Gray for Expenses */
 }
+//-----------------------
+// employee salary chart design end
+//-----------------------
 
-// tabel border radius
+//-----------------------
+// tabel border radius best employee
+//-----------------------
 .rounded-table {
   border: 1px solid #e2e8f0;
   border-radius: 10px; /* Adjust the value as needed */
   overflow: hidden; /* Ensure the content doesn't overflow */
 }
-
-// dark mode
-.sidebar, .topbar, .drk {
-  background-color: white;
-}
-
-.hover-bg:hover {
-  background-color: rgba(94, 137, 254, 0.2588235294);
-}
+//-----------------------
+// tabel border radius best employee end
+//-----------------------

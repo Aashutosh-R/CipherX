@@ -55,7 +55,8 @@ const applyTheme = (theme) => {
   htmlElement.setAttribute('data-bs-theme', theme) // Apply theme to <html> instead of <body>
 
   // Update icon
-  themeIcon.className = theme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'
+  themeIcon.className =
+    theme === 'light' ? 'bi bi-moon link-primary text-black fs-20' : 'bi bi-sun link-primary text-white fs-20'
 }
 
 // Check localStorage for the saved theme
@@ -80,6 +81,23 @@ toggleButton2.addEventListener('click', () => {
 })
 // --------------------------------------------
 // dark logic end
+// --------------------------------------------
+
+// --------------------------------------------
+// shadow add after scroll (topbar)
+// --------------------------------------------
+window.addEventListener('scroll', function () {
+  const navbar = document.querySelector('.topbar')
+
+  if (window.scrollY > 50) {
+    // Change 50 to any number you want for scroll threshold
+    navbar.classList.add('scrolled')
+  } else {
+    navbar.classList.remove('scrolled')
+  }
+})
+// --------------------------------------------
+// shadow add after scroll (topbar) end
 // --------------------------------------------
 
 // --------------------------------------------
@@ -234,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       },
     },
-    stroke: { width: 1, lineCap: "round" },
+    stroke: { width: 1, lineCap: 'round' },
     colors: ['#3b82f6', '#0EA5E9'], // Colors for the segments
   }
 
