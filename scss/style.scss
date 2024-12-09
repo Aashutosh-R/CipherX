@@ -86,11 +86,11 @@
 //-----------------------
 // side-scrollbar hide
 //-----------------------
-.sidebar {
+.sidebar-content {
   scrollbar-width: none; /* For Firefox */
 }
 
-.sidebar::-webkit-scrollbar {
+.sidebar-content::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Edge */
 }
 //-----------------------
