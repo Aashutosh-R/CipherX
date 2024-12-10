@@ -43,7 +43,7 @@ $theme-colors: (
   'warning': $warning,
   'warning-50': $warning-50,
   'pink': $pink,
-  'lightgray': $lightgray
+  'lightgray': $lightgray,
 ) !default;
 // colors end
 
@@ -51,6 +51,8 @@ $theme-colors: (
 // $navbar-light-color: $dark;
 // $navbar-light-hover-color: $primary;
 // Define custom colors for the navbar-links end
+
+$table-bg: var(--bs-white);
 
 // Body
 $body-bg: #f9fafb !default;

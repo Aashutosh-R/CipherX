@@ -4,14 +4,32 @@ $link-color-dark: #7c8fac !default;
 $body-secondary-color-dark: rgba($body-color-dark, 1) !default;
 $Dark-Bg: #0e1025;
 
-[data-bs-theme='dark'] {
+[data-bs-theme= dark] {
   .sidebar,
   .topbar,
   .drk {
     background-color: $Dark-Bg;
   }
 
-  a:hover{
+  a:hover {
     color: #0ea5e9;
+  }
+
+  .user {
+    color: white;
+  }
+
+  .subuser {
+    color: #7c8fac;
+  }
+
+  .user-group:hover {
+    & .user {
+      color: #0ea5e9;
+    }
+  }
+  .table {
+    --bs-table-border-color: #313e54;
+    --bs-table-bg: #0e1025;
   }
 }

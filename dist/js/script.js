@@ -56,7 +56,9 @@ const applyTheme = (theme) => {
 
   // Update icon
   themeIcon.className =
-    theme === 'light' ? 'bi bi-moon link-blue text-black fs-20' : 'bi bi-sun link-blue text-white fs-20'
+    theme === 'light'
+      ? 'bi bi-moon link-blue text-black fs-20'
+      : 'bi bi-sun link-blue text-white fs-20'
 }
 
 // Check localStorage for the saved theme
@@ -581,12 +583,29 @@ chart.render()
 // --------------------------------------------
 // Monthly earning end
 // --------------------------------------------
-// 
+//
 document.querySelector('.btn-toggle-sidebar').addEventListener('click', () => {
-  const sidebar = document.getElementById('sidebar');
-  const topbar = document.getElementById('topbar');
-  const main = document.getElementById('main');
-  sidebar.classList.toggle('collapsed');
-  topbar.classList.toggle('expand');
-  main.classList.toggle('expanded');
-});
+  const sidebar = document.getElementById('sidebar')
+  const topbar = document.getElementById('topbar')
+  const main = document.getElementById('main')
+  sidebar.classList.toggle('collapsed')
+  topbar.classList.toggle('expand')
+  main.classList.toggle('expanded')
+})
+
+//
+
+document.getElementById('themeToggle').addEventListener('click', function () {
+  // Get the body element and toggle the theme
+  const body = document.body
+  const logo = document.querySelector('.theme-img')
+
+  // Toggle between dark and light theme
+  if (body.getAttribute('data-bs-theme') === 'dark') {
+    body.setAttribute('data-bs-theme', 'light')
+    logo.src = './dist/images/BestSellingProduct/black-logo.svg' // Light theme logo
+  } else {
+    body.setAttribute('data-bs-theme', 'dark')
+    logo.src = './dist/images/BestSellingProduct/white-logo.svg' // Dark theme logo
+  }
+})

@@ -51,16 +51,13 @@
 // ----------------------
 
 //-----------------------
-// user icon hover(topbar)
+// user icon sub-text color(topbar)
 //-----------------------
-.user:hover {
-  cursor: pointer;
-  & a {
-    color: #0ea5e9;
-  }
+.subuser {
+  color: #7c8fac;
 }
 //-----------------------
-// user icon hover(topbar) end
+// user icon sub-text color(topbar) end
 //-----------------------
 
 //-----------------------
@@ -120,11 +117,10 @@
 //-----------------------
 // tabel border radius best employee
 //-----------------------
-.rounded-table {
-  border: 1px solid #e2e8f0;
-  border-radius: 10px; /* Adjust the value as needed */
-  overflow: hidden; /* Ensure the content doesn't overflow */
-}
+// .tb {
+//   border: 1px solid #3b82f6;
+//   border-radius: 20px;
+// }
 //-----------------------
 // tabel border radius best employee end
 //-----------------------
