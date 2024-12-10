@@ -56,7 +56,7 @@ const applyTheme = (theme) => {
 
   // Update icon
   themeIcon.className =
-    theme === 'light' ? 'bi bi-moon link-primary text-black fs-20' : 'bi bi-sun link-primary text-white fs-20'
+    theme === 'light' ? 'bi bi-moon link-blue text-black fs-20' : 'bi bi-sun link-blue text-white fs-20'
 }
 
 // Check localStorage for the saved theme
@@ -581,3 +581,12 @@ chart.render()
 // --------------------------------------------
 // Monthly earning end
 // --------------------------------------------
+// 
+document.querySelector('.btn-toggle-sidebar').addEventListener('click', () => {
+  const sidebar = document.getElementById('sidebar');
+  const topbar = document.getElementById('topbar');
+  const main = document.getElementById('main');
+  sidebar.classList.toggle('collapsed');
+  topbar.classList.toggle('expand');
+  main.classList.toggle('expanded');
+});

@@ -19,67 +19,67 @@
     <!--  -->
     <!-- Sidebar -->
     <!--  -->
-    <div class="sidebar z-3  position-fixed top-0 start-0 overflow-y-auto vh-100  px-4 border-end d-flex flex-column">
-        <div class="d-flex align-items-center justify-content-between border-bottom py-4 position-sticky top-0 drk">
+    <div class="sidebar z-3  position-fixed top-0 start-0 overflow-y-auto vh-100  border-end d-flex flex-column" id="sidebar">
+        <div class="d-flex align-items-center  border-bottom py-4 position-sticky top-0 drk logo">
             <div class="d-flex align-items-center justify-content-center gap-2">
                 <div><img src="./dist/images/sidebar/main-logo.png" alt="logo" class="img-fluid"></div>
-                <p class="text-center fs-20 fw-bold">CipherX</p>
+                <p class="sidebar-text text-center fs-20 fw-bold">CipherX</p>
             </div>
-            <div>
+            <!-- <div>
                 <i class="bi bi-layout-sidebar"></i>
-            </div>
+            </div> -->
         </div>
         <div class="sidebar-content flex-grow-1 overflow-auto py-4">
             <div class="py-4 border-bottom">
-                <p class="text-muted fs-14 mb-12">Dashboard</p>
-                <ul class="nav nav-pills flex-column fs-16 gap-2">
+                <p class="sidebar-text text-muted fs-14 mb-12">Dashboard</p>
+                <ul class="nav nav-pills flex-column fs-16 gap-3">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active"><i class="bi bi-bag me-1"></i> Modern</a>
+                        <a href="#" class="nav-link active"><i class="bi bi-bag me-3"></i><span class="sidebar-text">Modern</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link hover-bg">
                             <div class="d-flex justify-content-between align-items-center">
-                                <span><i class="bi bi-bar-chart me-1"></i> Analytical</span>
+                                <span><i class="bi bi-bar-chart me-3"></i> <span class="sidebar-text">Analytical</span></span>
                                 <div>
-                                    <span class="badge text-bg-primary text-white rounded-pill">9</span>
+                                    <span class="sidebar-text badge text-bg-blue text-white rounded-pill">9</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link hover-bg"> <i class="bi bi-cart me-1"></i> eCommerce</a>
+                        <a href="#" class="nav-link hover-bg"><i class="bi bi-cart me-3"></i><span class="sidebar-text">eCommerce</span></a>
                     </li>
                 </ul>
             </div>
             <div class="py-4 border-bottom">
-                <h6 class="text-muted fs-14 mb-12">Applications</h6>
-                <ul class="nav nav-pills flex-column fs-16 gap-2">
+                <h6 class="sidebar-text text-muted fs-14 mb-12">Applications</h6>
+                <ul class="nav nav-pills flex-column fs-16 gap-3">
                     <li class="nav-item">
-                        <a href="#" class="nav-link hover-bg"><i class="bi bi-chat-dots me-1"></i> Chat</a>
+                        <a href="#" class="nav-link hover-bg"><i class="bi bi-chat-dots me-3"></i><span class="sidebar-text">Chat</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link hover-bg"><i class="bi bi-people me-1"></i> Users</a>
+                        <a href="#" class="nav-link hover-bg"><i class="bi bi-people me-3"></i><span class="sidebar-text">Users</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link hover-bg"><i class="bi bi-journals me-1"></i> Note</a>
+                        <a href="#" class="nav-link hover-bg"><i class="bi bi-journals me-3"></i><span class="sidebar-text">Note</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link hover-bg"><i class="bi bi-calendar me-1"></i> Calendar</a>
+                        <a href="#" class="nav-link hover-bg"><i class="bi bi-calendar me-3"></i><span class="sidebar-text">Calendar</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link hover-bg"><i class="bi bi-x-octagon me-1"></i> Disable</a>
+                        <a href="#" class="nav-link hover-bg"><i class="bi bi-x-octagon me-3"></i><span class="sidebar-text">Disable</span></a>
                     </li>
                 </ul>
             </div>
             <div class="py-4 border-bottom">
-                <h6 class="text-muted fs-14 mb-12">Others</h6>
-                <ul class="nav nav-pills flex-column fs-16 gap-2">
+                <h6 class="sidebar-text text-muted fs-14 mb-12">Others</h6>
+                <ul class="nav nav-pills flex-column fs-16 gap-3">
                     <li class="nav-item">
                         <a href="#" class="nav-link hover-bg">
                             <div class="d-flex justify-content-between align-items-center">
-                                <span><i class="bi bi-person-circle me-1"></i> Avatar</span>
+                                <span><i class="bi bi-person-circle me-3"></i><span class="sidebar-text">Avatar</span></span>
                                 <div>
-                                    <span class="badge text-bg-primary text-white rounded-pill">coded</span>
+                                    <span class="sidebar-text badge text-bg-blue text-white rounded-pill">coded</span>
                                 </div>
                             </div>
                         </a>
@@ -87,9 +87,9 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link hover-bg">
                             <div class="d-flex justify-content-between align-items-center">
-                                <span><i class="bi bi-pencil-square me-1"></i> Outline</span>
+                                <span><i class="bi bi-pencil-square me-3"></i><span class="sidebar-text">Outline</span></span>
                                 <div>
-                                    <span class="badge border border-primary text-primary rounded-pill">outline</span>
+                                    <span class="sidebar-text badge border border-blue text-blue rounded-pill">outline</span>
                                 </div>
                             </div>
                         </a>
@@ -97,9 +97,9 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link hover-bg">
                             <div class="d-flex justify-content-between align-items-center">
-                                <span><i class="bi bi-x-diamond me-1"></i> Basic</span>
+                                <span><i class="bi bi-x-diamond me-3"></i><span class="sidebar-text">Basic</span></span>
                                 <div>
-                                    <span class="badge text-bg-primary text-white rounded-pill">9</span>
+                                    <span class="sidebar-text badge text-bg-blue text-white rounded-pill">9</span>
                                 </div>
                             </div>
                         </a>
@@ -107,9 +107,9 @@
                 </ul>
             </div>
         </div>
-        <div class="py-4 position-sticky bottom-0">
+        <div class="py-4 position-sticky bottom-0 sidebar-text">
             <div><img src="./dist/images/sidebar/Upgrade now banner.png" alt="upgrade" class="img-fluid"></div>
-            <button class="btn btn-white btn-sm rounded fw-medium position-absolute bottom-17 start-9">Upgrade
+            <button class="btn btn-outline-white btn-sm rounded fw-medium position-absolute bottom-17 start-9">Upgrade
                 now</button>
         </div>
     </div>
@@ -122,16 +122,22 @@
     <!--  -->
     <header>
         <nav>
-            <div class="topbar d-flex z-2 justify-content-between align-items-center border-bottom  position-fixed top-0 end-0 start-256 px-4 py-3"
-                style="height: 80px;">
-                <div class="input-group" style="max-width: 350px; position: relative;">
-                    <input type="text" class="form-control rounded drk" placeholder="Search"
-                        style="padding-left: 45px; position: relative; z-index: 1;">
-                    <button class="btn border-0"
-                        style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); z-index: 2;"
-                        type="button">
-                        <i class="bi bi-search"></i>
-                    </button>
+            <div class="topbar d-flex z-2 justify-content-between align-items-center border-bottom  position-fixed top-0 end-0 px-4 py-3"
+                style="height: 80px;" id="topbar">
+                <div class="d-flex align-items-center gap-4 w-50">
+                    <div>
+                        <!-- <a href="javascript:void(0)"><i class="bi bi-layout-sidebar fs-20"></i></a> -->
+                        <button class="btn btn-sm btn-toggle-sidebar"><i class="bi bi-layout-sidebar"></i></button>
+                    </div>
+                    <div class="input-group" style="max-width: 350px; position: relative;">
+                        <input type="text" class="form-control rounded drk" placeholder="Search"
+                            style="padding-left: 45px; position: relative; z-index: 1;">
+                        <button class="btn border-0"
+                            style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); z-index: 2;"
+                            type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-center gap-4">
                     <div class="d-flex gap-4 fs-20 pe-4 border-end">
@@ -161,7 +167,7 @@
     <!--  -->
     <!-- main -->
     <!--  -->
-    <main class="body-wrapper">
+    <main class="body-wrapper" id="main">
         <!-- digits -->
         <section>
             <div class="container-fluid mb-4">

@@ -20,6 +20,7 @@ $green-50: #d2ffe2;
 $red: #ef4444;
 $red-50: #ffe2e2;
 $blue: #0ea5e9;
+$blue-50: #6bb6d84d;
 $lightblue: #bde0ef;
 $warning: #f59e0b;
 $warning-50: #fff4e2;
@@ -37,6 +38,7 @@ $theme-colors: (
   'red': $red,
   'red-50': $red-50,
   'blue': $blue,
+  'blue-50': $blue-50,
   'lightblue': $lightblue,
   'warning': $warning,
   'warning-50': $warning-50,
@@ -55,13 +57,13 @@ $body-bg: #f9fafb !default;
 $body-color: black !default;
 
 // navlink-active
-$nav-pills-link-active-color: $primary;
-$nav-pills-link-active-bg: $primarylight;
+$nav-pills-link-active-color: $blue;
+$nav-pills-link-active-bg: $blue-50;
 // navlink-active end
 
 // a tag link color
 $link-color: $secondary;
-$link-hover-color: $primary;
+$link-hover-color: $blue;
 // a tag link color end
 
 // Position
