@@ -24,6 +24,15 @@
   padding-top: 16px;
   padding-bottom: 16px;
 }
+
+#main {
+  margin-left: 256px;
+  transition: margin-left 0.3s ease;
+}
+
+#main.expanded {
+  margin-left: 65px;
+}
 //-----------------------
 // Added styles for main content (body wrapper) end
 //-----------------------
@@ -60,15 +69,6 @@
 // user icon sub-text color(topbar) end
 //-----------------------
 
-//-----------------------
-// sidebar setup
-//-----------------------
-.sidebar {
-  width: 256px;
-}
-//-----------------------
-// sidebar setup end
-//-----------------------
 
 //-----------------------
 // sidebar link hover effect
@@ -115,16 +115,8 @@
 //-----------------------
 
 //-----------------------
-// tabel border radius best employee
+// Sidebar 
 //-----------------------
-// .tb {
-//   border: 1px solid #3b82f6;
-//   border-radius: 20px;
-// }
-//-----------------------
-// tabel border radius best employee end
-//-----------------------
-// 
 #sidebar {
   width: 256px;
   transition: width 0.3s ease;
@@ -155,8 +147,13 @@
   justify-content: center;
   gap: 0;
 }
+//-----------------------
+// Sidebar end
+//-----------------------
 
-// 
+//-----------------------
+// topbar 
+//-----------------------
 #topbar {
   left: 256px;
 }
@@ -164,12 +161,8 @@
 #topbar.expand {
   left: 70px;
 } 
+//-----------------------
+// topbar end 
+//-----------------------
 
-#main {
-  margin-left: 256px;
-  transition: margin-left 0.3s ease;
-}
 
-#main.expanded {
-  margin-left: 65px;
-}

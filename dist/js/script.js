@@ -102,6 +102,46 @@ window.addEventListener('scroll', function () {
 // shadow add after scroll (topbar) end
 // --------------------------------------------
 
+
+// --------------------------------------------
+// sidebar collapse
+// --------------------------------------------
+document.querySelector('.btn-toggle-sidebar').addEventListener('click', () => {
+  const sidebar = document.getElementById('sidebar')
+  const topbar = document.getElementById('topbar')
+  const main = document.getElementById('main')
+  sidebar.classList.toggle('collapsed')
+  topbar.classList.toggle('expand')
+  main.classList.toggle('expanded')
+})
+
+// --------------------------------------------
+// sidebar collapse end
+// --------------------------------------------
+
+
+// --------------------------------------------
+// Best selling product image toggle
+// --------------------------------------------
+document.getElementById('themeToggle').addEventListener('click', function () {
+  // Get the body element and toggle the theme
+  const body = document.body
+  const logo = document.querySelector('.theme-img')
+
+  // Toggle between dark and light theme
+  if (body.getAttribute('data-bs-theme') === 'dark') {
+    body.setAttribute('data-bs-theme', 'light')
+    logo.src = './dist/images/BestSellingProduct/black-logo.svg' // Light theme logo
+  } else {
+    body.setAttribute('data-bs-theme', 'dark')
+    logo.src = './dist/images/BestSellingProduct/white-logo.svg' // Dark theme logo
+  }
+})
+// --------------------------------------------
+// Best selling product image toggle end
+// --------------------------------------------
+
+
 // --------------------------------------------
 // revenueChart
 // --------------------------------------------
@@ -583,29 +623,3 @@ chart.render()
 // --------------------------------------------
 // Monthly earning end
 // --------------------------------------------
-//
-document.querySelector('.btn-toggle-sidebar').addEventListener('click', () => {
-  const sidebar = document.getElementById('sidebar')
-  const topbar = document.getElementById('topbar')
-  const main = document.getElementById('main')
-  sidebar.classList.toggle('collapsed')
-  topbar.classList.toggle('expand')
-  main.classList.toggle('expanded')
-})
-
-//
-
-document.getElementById('themeToggle').addEventListener('click', function () {
-  // Get the body element and toggle the theme
-  const body = document.body
-  const logo = document.querySelector('.theme-img')
-
-  // Toggle between dark and light theme
-  if (body.getAttribute('data-bs-theme') === 'dark') {
-    body.setAttribute('data-bs-theme', 'light')
-    logo.src = './dist/images/BestSellingProduct/black-logo.svg' // Light theme logo
-  } else {
-    body.setAttribute('data-bs-theme', 'dark')
-    logo.src = './dist/images/BestSellingProduct/white-logo.svg' // Dark theme logo
-  }
-})
