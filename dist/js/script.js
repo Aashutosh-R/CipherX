@@ -159,7 +159,6 @@ var options = {
   chart: {
     type: 'bar',
     height: 300,
-    width: 500,
     stacked: true, // Enables stacking
     toolbar: {
       show: false,
@@ -388,6 +387,83 @@ var options = {
 var chart = new ApexCharts(document.querySelector('#salary'), options)
 chart.render()
 
+// resonpsive copy of chart
+var options = {
+  chart: {
+    type: 'bar',
+    height: 200,
+    toolbar: {
+      show: false, // Hide toolbar
+    },
+  },
+  series: [
+    {
+      name: 'Salary',
+      data: [30, 50, 45, 60, 75, 55, 65], // Salary values
+    },
+    {
+      name: 'Expense',
+      data: [20, 40, 35, 50, 65, 45, 55], // Expense values
+    },
+  ],
+  plotOptions: {
+    bar: {
+      columnWidth: '50%', // Adjust width of bars
+      borderRadius: 6, // Rounded edges
+      dataLabels: {
+        position: 'top', // Position labels on top of the bars
+      },
+    },
+  },
+  colors: ['#3b82f6', '#e2e8f0'], // Colors for Salary and Expense
+  xaxis: {
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'], // Months or labels for x-axis
+    labels: {
+      show: true, // Show x-axis labels
+    },
+    axisBorder: {
+      show: false, // Hide x-axis border
+    },
+    axisTicks: {
+      show: false, // Hide x-axis ticks
+    },
+    labels: {
+      style: {
+        colors: '#aaa', // Set your desired x-axis label color here
+        fontSize: '12px', // Optional: Set font size
+      },
+    },
+  },
+  yaxis: {
+    show: false, // Show y-axis
+  },
+  grid: {
+    show: false, // Show grid for better readability
+  },
+  dataLabels: {
+    enabled: false, // Disable value labels directly on bars
+  },
+  tooltip: {
+    enabled: true, // Enable tooltips for interaction
+    theme: 'dark', // Set the tooltip theme to dark
+    style: {
+      fontSize: '12px', // Optional: Set font size for tooltip text
+      fontFamily: 'Arial, sans-serif', // Optional: Set font family
+      color: '#fff', // Text color (white)
+      background: '#333', // Background color (dark)
+      borderRadius: '4px', // Optional: Add rounded corners
+      padding: '8px', // Optional: Adjust padding inside the tooltip
+    },
+  },
+  legend: {
+    show: false, // Hide the legend that displays Salary and Expense labels
+  },
+}
+
+var chart = new ApexCharts(document.querySelector('#salary2'), options)
+chart.render()
+// resonpsive copy of chart end
+
 // --------------------------------------------
 // salary chart end
 // --------------------------------------------
@@ -398,8 +474,8 @@ chart.render()
 var options = {
   chart: {
     type: 'bar',
-    // height: 120,
-    width: 160,
+    height: 100,
+    width: 150,
     toolbar: {
       show: false, // Hide toolbar
     },
@@ -464,8 +540,8 @@ chart.render()
 var options = {
   chart: {
     type: 'bar',
-    // height: 120,
-    width: 160,
+    height: 100,
+    width: 150,
     toolbar: {
       show: false, // Hide toolbar
     },

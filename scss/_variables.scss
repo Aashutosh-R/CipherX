@@ -6,6 +6,8 @@ $font-family-base: 'Inter', sans-serif;
 $paragraph-margin-bottom: 0rem !default;
 // paragraph end
 
+$enable-negative-margins: true;
+
 $box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
 // colors
@@ -104,3 +106,14 @@ $spacers: (
   12: 12px,
 ) !default;
 // Spacer end
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1279px,
+  xxl: 1400px
+) !default;
+// scss-docs-end grid-breakpoints
