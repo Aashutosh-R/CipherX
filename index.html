@@ -196,7 +196,186 @@
     </div>
     <!-- sidebar and topbar for big screen end -->
 
-    
+    <!-- Navbar (small screen) -->
+    <nav class="snav drk d-block d-xl-none w-100 position-fixed top-0 z-3">
+        <div class="container pt-3 pb-2 ml-auto">
+
+            <ul class="d-flex list-unstyled align-items-center justify-content-between">
+                <li>
+                    <span class="fs-20"><i class="bi bi-list" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></i>
+                    </span>
+                </li>
+                <li>
+                    <div class="d-flex align-items-center drk logo">
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+                            <div><img src="./dist/images/sidebar/main-logo.png" alt="logo" class="img-fluid"></div>
+                            <p class="sidebar-text text-center fs-20 fw-bold">CipherX</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="fs-20">
+                        <i class="bi bi-three-dots" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- offcanvas content  -->
+    <div class="offcanvas offcanvas-start drk" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 256px;">
+        <div class="offcanvas-header">
+            <!-- <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5> -->
+            <div class="d-flex align-items-center py-2 position-sticky top-0 logo">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <div><img src="./dist/images/sidebar/main-logo.png" alt="logo" class="img-fluid"></div>
+                    <p class="sidebar-text text-center fs-20 fw-bold">CipherX</p>
+                </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body pb-0">
+            <div class="sidebar-content flex-grow-1 overflow-auto">
+                <div class="py-4 border-bottom">
+                    <p class="sidebar-text text-muted fs-14 mb-12">Dashboard</p>
+                    <ul class="nav nav-pills flex-column fs-16 gap-3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active"><i class="bi bi-bag me-3"></i><span
+                                    class="sidebar-text">Modern</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link hover-bg">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="bi bi-bar-chart me-3"></i> <span
+                                            class="sidebar-text">Analytical</span></span>
+                                    <div>
+                                        <span class="sidebar-text badge text-bg-blue text-white rounded-pill">9</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link hover-bg"><i class="bi bi-cart me-3"></i><span
+                                    class="sidebar-text">eCommerce</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="py-4 border-bottom">
+                    <h6 class="sidebar-text text-muted fs-14 mb-12">Applications</h6>
+                    <ul class="nav nav-pills flex-column fs-16 gap-3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link hover-bg"><i class="bi bi-chat-dots me-3"></i><span
+                                    class="sidebar-text">Chat</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link hover-bg"><i class="bi bi-people me-3"></i><span
+                                    class="sidebar-text">Users</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link hover-bg"><i class="bi bi-journals me-3"></i><span
+                                    class="sidebar-text">Note</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link hover-bg"><i class="bi bi-calendar me-3"></i><span
+                                    class="sidebar-text">Calendar</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link hover-bg"><i class="bi bi-x-octagon me-3"></i><span
+                                    class="sidebar-text">Disable</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="py-4 border-bottom">
+                    <h6 class="sidebar-text text-muted fs-14 mb-12">Others</h6>
+                    <ul class="nav nav-pills flex-column fs-16 gap-3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link hover-bg">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="bi bi-person-circle me-3"></i><span
+                                            class="sidebar-text">Avatar</span></span>
+                                    <div>
+                                        <span
+                                            class="sidebar-text badge text-bg-blue text-white rounded-pill">coded</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link hover-bg">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="bi bi-pencil-square me-3"></i><span
+                                            class="sidebar-text">Outline</span></span>
+                                    <div>
+                                        <span
+                                            class="sidebar-text badge border border-blue text-blue rounded-pill">outline</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link hover-bg">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="bi bi-x-diamond me-3"></i><span
+                                            class="sidebar-text">Basic</span></span>
+                                    <div>
+                                        <span class="sidebar-text badge text-bg-blue text-white rounded-pill">9</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="py-3 position-sticky bottom-0 sidebar-text drk">
+                <div>
+                    <div class="rounded p-3"
+                        style="background-image: url('./dist/images/sidebar/footer\ image.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px; width: 100%;">
+                        <div><img src="./dist/images/sidebar/Simplification.svg" alt="" class="img-fluid"></div>
+                        <div class="my-3">
+                            <p class="fs-14 text-white">Get unlimited access and 10% off on your first purchase</p>
+                        </div>
+                        <button
+                            class="btn btn-outline-white btn-sm rounded fw-medium position-absolute bottom-17 start-9">Upgrade
+                            now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas content end  -->
+
+    <!-- navbar collapse content -->
+    <div class="collapse navbar-collapse drk position-fixed z-3 w-100" id="navbarSupportedContent" style="top: 70px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div class="d-flex align-items-center justify-content-center gap-3 px-3 py-3">
+            <div class="d-flex gap-4 fs-20 pe-4 border-end">
+                <a id="SthemeToggle" href="javascript:void(0)"><i id="SthemeIcon" class="bi bi-moon"></i></a>
+                <a href="#"><i class="bi bi-bell"></i></a>
+                <a href="#"><i class="bi bi-cart"></i></a>
+                <a href="#"><i class="bi bi-translate"></i></a>
+                <a href="#"><i class="bi bi-grid"></i></a>
+            </div>
+            <div class="user-group">
+                <a href="#" class="text-decoration-none">
+                    <div class="d-flex align-items-center justify-content-center gap-2 user">
+                        <div><img src="./dist/images/topbar/Ellipse 2.png" alt="user" class="img-fluid">
+                        </div>
+                        <div>
+                            <p class="fs-14 fw-medium user">Chedo Nasevski</p>
+                            <p class="fs-12 subuser">Busniess</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- navbar collapse content end -->
+
+
+    <!-- Navbar end (small screen) -->
 
     <!--  -->
     <!-- main -->
@@ -488,7 +667,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center gap-3 border rounded mb-4 px-3">
+                            <div class="d-flex flex-md-row flex-column align-items-center justify-content-center justify-content-lg-start gap-md-3 border rounded mb-4 px-md-3 py-3 py-md-0">
                                 <div>
                                     <div class="d-flex align-items-center gap-2">
                                         <p class="fs-20 fw-medium">$36,358</p>
@@ -503,7 +682,7 @@
                                     <div id="customer" class=""></div>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center gap-4 border rounded px-3">
+                            <div class="d-flex flex-md-row flex-column align-items-center justify-content-center justify-content-lg-start gap-md-4 border rounded px-md-3 py-3 py-md-0">
                                 <div>
                                     <div class="d-flex align-items-center gap-2">
                                         <p class="fs-20 fw-medium">78,298</p>
@@ -565,149 +744,151 @@
                                     </select>
                                 </div>
                             </div>
-                            <table class="table border w-100" style="vertical-align: middle;">
-                                <thead>
-                                    <tr>
-                                        <th class="py-3">
-                                            <div class="d-flex gap-2 align-items-center fs-12 text-muted">
-                                                <i class="bi bi-person-fill"></i>
-                                                <p>Employee</p>
-                                            </div>
-                                        </th>
-                                        <th class="py-3">
-                                            <div
-                                                class="d-flex gap-2 align-items-center justify-content-center fs-12 text-muted">
-                                                <i class="bi bi-grid"></i>
-                                                <p>Projects</p>
-                                            </div>
-                                        </th>
-                                        <th class="py-3">
-                                            <div
-                                                class="d-flex gap-2 align-items-center justify-content-center fs-12 text-muted">
-                                                <i class="bi bi-arrow-down-circle-fill"></i>
-                                                <p>Priority</p>
-                                            </div>
-                                        </th>
-                                        <th class="py-3">
-                                            <div
-                                                class="d-flex gap-2 align-items-center justify-content-end fs-12 text-muted">
-                                                <i class="bi bi-coin"></i>
-                                                <p>Amount</p>
-                                            </div>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="py-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <div><img src="./dist/images/top-projects/ajit.png" alt="ajit"
-                                                        class="img-fluid"></div>
-                                                <div>
-                                                    <p class="fs-14 fw-medium">Ajit Kumar</p>
-                                                    <p class="fs-12 text-muted">Web Designer</p>
+                            <div class="tbl">
+                                <table class="table border w-100" style="vertical-align: middle;">
+                                    <thead>
+                                        <tr>
+                                            <th class="py-3">
+                                                <div class="d-flex gap-2 align-items-center fs-12 text-muted">
+                                                    <i class="bi bi-person-fill"></i>
+                                                    <p>Employee</p>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-center">
-                                                <p class="fs-14">Website redesign</p>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-center">
-                                                <span class="badge bg-green text-white fs-12">Low</span>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-end">
-                                                <p class="fs-14">$12,000</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <div><img src="./dist/images/top-projects/priya.png" alt="priya"
-                                                        class="img-fluid"></div>
-                                                <div>
-                                                    <p class="fs-14 fw-medium">Priya Mehta</p>
-                                                    <p class="fs-12 text-muted">Frontend Dev</p>
+                                            </th>
+                                            <th class="py-3">
+                                                <div
+                                                    class="d-flex gap-2 align-items-center justify-content-center fs-12 text-muted">
+                                                    <i class="bi bi-grid"></i>
+                                                    <p>Projects</p>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-center">
-                                                <p class="fs-14">Mobile app ui</p>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-center">
-                                                <span class="badge bg-warning text-white fs-12">Medium</span>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-end">
-                                                <p class="fs-14">$8,500</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <div><img src="./dist/images/top-projects/rohan.png" alt="rohan"
-                                                        class="img-fluid"></div>
-                                                <div>
-                                                    <p class="fs-14 fw-medium">Rohan Verma</p>
-                                                    <p class="fs-12 text-muted">Backend Dev</p>
+                                            </th>
+                                            <th class="py-3">
+                                                <div
+                                                    class="d-flex gap-2 align-items-center justify-content-center fs-12 text-muted">
+                                                    <i class="bi bi-arrow-down-circle-fill"></i>
+                                                    <p>Priority</p>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-center">
-                                                <p class="fs-14">Database setup</p>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-center">
-                                                <span class="badge bg-red text-white fs-12">High</span>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-end">
-                                                <p class="fs-14">$15,000</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <div><img src="./dist/images/top-projects/kavita.png" alt="kavita"
-                                                        class="img-fluid"></div>
-                                                <div>
-                                                    <p class="fs-14 fw-medium">Kavita Nair</p>
-                                                    <p class="fs-12 text-muted">Digital Marketing</p>
+                                            </th>
+                                            <th class="py-3">
+                                                <div
+                                                    class="d-flex gap-2 align-items-center justify-content-end fs-12 text-muted">
+                                                    <i class="bi bi-coin"></i>
+                                                    <p>Amount</p>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-center">
-                                                <p class="fs-14">Content strategy</p>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-center">
-                                                <span class="badge bg-green text-white fs-12">Low</span>
-                                            </div>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="text-end">
-                                                <p class="fs-14">$3,000</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-3">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div><img src="./dist/images/top-projects/ajit.png" alt="ajit">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fs-14 fw-medium">Ajit Kumar</p>
+                                                        <p class="fs-12 text-muted">Web Designer</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-center">
+                                                    <p class="fs-14">Website redesign</p>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-center">
+                                                    <span class="badge bg-green text-white fs-12">Low</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-end">
+                                                    <p class="fs-14">$12,000</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div><img src="./dist/images/top-projects/priya.png" alt="priya">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fs-14 fw-medium">Priya Mehta</p>
+                                                        <p class="fs-12 text-muted">Frontend Dev</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-center">
+                                                    <p class="fs-14">Mobile app ui</p>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-center">
+                                                    <span class="badge bg-warning text-white fs-12">Medium</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-end">
+                                                    <p class="fs-14">$8,500</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div><img src="./dist/images/top-projects/rohan.png" alt="rohan">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fs-14 fw-medium">Rohan Verma</p>
+                                                        <p class="fs-12 text-muted">Backend Dev</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-center">
+                                                    <p class="fs-14">Database setup</p>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-center">
+                                                    <span class="badge bg-red text-white fs-12">High</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-end">
+                                                    <p class="fs-14">$15,000</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div><img src="./dist/images/top-projects/kavita.png" alt="kavita">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fs-14 fw-medium">Kavita Nair</p>
+                                                        <p class="fs-12 text-muted">Digital Marketing</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-center">
+                                                    <p class="fs-14">Content strategy</p>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-center">
+                                                    <span class="badge bg-green text-white fs-12">Low</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="text-end">
+                                                    <p class="fs-14">$3,000</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                         </div>
                     </div>

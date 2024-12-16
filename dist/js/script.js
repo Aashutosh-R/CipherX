@@ -47,7 +47,9 @@ toggleButton.addEventListener('click', function () {
 // dark logic
 // --------------------------------------------
 const toggleButton2 = document.getElementById('themeToggle')
+const toggleButton3 = document.getElementById('SthemeToggle')
 const themeIcon = document.getElementById('themeIcon')
+const themeIcon3 = document.getElementById('SthemeIcon')
 const htmlElement = document.documentElement // Target the <html> tag instead of <body>
 
 // Function to apply the theme
@@ -56,6 +58,11 @@ const applyTheme = (theme) => {
 
   // Update icon
   themeIcon.className =
+    theme === 'light'
+      ? 'bi bi-moon link-blue text-black fs-20'
+      : 'bi bi-sun link-blue text-white fs-20'
+  // Update icon
+  themeIcon3.className =
     theme === 'light'
       ? 'bi bi-moon link-blue text-black fs-20'
       : 'bi bi-sun link-blue text-white fs-20'
@@ -81,6 +88,18 @@ toggleButton2.addEventListener('click', () => {
   // Save the user's choice in localStorage
   localStorage.setItem('theme', newTheme)
 })
+// 
+// Add event listener to the toggle button
+toggleButton3.addEventListener('click', () => {
+  const currentTheme = htmlElement.getAttribute('data-bs-theme') // Get theme from <html> tag
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light'
+
+  // Apply the new theme
+  applyTheme(newTheme)
+
+  // Save the user's choice in localStorage
+  localStorage.setItem('theme', newTheme)
+})
 // --------------------------------------------
 // dark logic end
 // --------------------------------------------
@@ -90,12 +109,15 @@ toggleButton2.addEventListener('click', () => {
 // --------------------------------------------
 window.addEventListener('scroll', function () {
   const navbar = document.querySelector('.topbar')
+  const navbar2 = document.querySelector('.snav')
 
   if (window.scrollY > 50) {
     // Change 50 to any number you want for scroll threshold
     navbar.classList.add('scrolled')
+    navbar2.classList.add('scrolled')
   } else {
     navbar.classList.remove('scrolled')
+    navbar2.classList.remove('scrolled')
   }
 })
 // --------------------------------------------
@@ -124,6 +146,21 @@ document.querySelector('.btn-toggle-sidebar').addEventListener('click', () => {
 // Best selling product image toggle
 // --------------------------------------------
 document.getElementById('themeToggle').addEventListener('click', function () {
+  // Get the body element and toggle the theme
+  const body = document.body
+  const logo = document.querySelector('.theme-img')
+
+  // Toggle between dark and light theme
+  if (body.getAttribute('data-bs-theme') === 'dark') {
+    body.setAttribute('data-bs-theme', 'light')
+    logo.src = './dist/images/BestSellingProduct/black-logo.svg' // Light theme logo
+  } else {
+    body.setAttribute('data-bs-theme', 'dark')
+    logo.src = './dist/images/BestSellingProduct/white-logo.svg' // Dark theme logo
+  }
+})
+// 
+document.getElementById('SthemeToggle').addEventListener('click', function () {
   // Get the body element and toggle the theme
   const body = document.body
   const logo = document.querySelector('.theme-img')
