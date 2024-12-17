@@ -562,6 +562,89 @@ var options = {
   dataLabels: {
     enabled: false, // Hides the numbers on top of the bars
   },
+  responsive: [
+    {
+      breakpoint: 1369,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 120,
+        },
+      },
+    },
+    {
+      breakpoint: 1290,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 90,
+        },
+      },
+    },
+    {
+      breakpoint: 1025,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 250,
+        },
+      },
+    },
+    {
+      breakpoint: 914,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 200,
+        },
+      },
+    },
+    {
+      breakpoint: 825,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 120,
+        },
+      },
+    },
+    {
+      breakpoint: 780,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 100,
+        },
+      },
+    },
+    {
+      breakpoint: 550,
+      options: {
+        chart: {
+          height: 120, // Set smaller height for tablets
+          width: 350,
+        },
+      },
+    },
+    {
+      breakpoint: 440,
+      options: {
+        chart: {
+          height: 120, // Set smaller height for tablets
+          width: 300,
+        },
+      },
+    },
+    {
+      breakpoint: 380,
+      options: {
+        chart: {
+          height: 120, // Set smaller height for tablets
+          width: 230,
+        },
+      },
+    },    
+  ],
 }
 
 var chart = new ApexCharts(document.querySelector('#customer'), options)
@@ -628,6 +711,89 @@ var options = {
   dataLabels: {
     enabled: false, // Hides the numbers on top of the bars
   },
+  responsive: [
+    {
+      breakpoint: 1369,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 120,
+        },
+      },
+    },
+    {
+      breakpoint: 1290,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 95,
+        },
+      },
+    },
+    {
+      breakpoint: 1025,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 250,
+        },
+      },
+    },
+    {
+      breakpoint: 914,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 200,
+        },
+      },
+    },
+    {
+      breakpoint: 825,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 120,
+        },
+      },
+    },
+    {
+      breakpoint: 780,
+      options: {
+        chart: {
+          height: 100, // Set smaller height for tablets
+          width: 100,
+        },
+      },
+    },
+    {
+      breakpoint: 550,
+      options: {
+        chart: {
+          height: 120, // Set smaller height for tablets
+          width: 350,
+        },
+      },
+    },
+    {
+      breakpoint: 440,
+      options: {
+        chart: {
+          height: 120, // Set smaller height for tablets
+          width: 300,
+        },
+      },
+    },
+    {
+      breakpoint: 380,
+      options: {
+        chart: {
+          height: 120, // Set smaller height for tablets
+          width: 230,
+        },
+      },
+    },    
+  ],
 }
 
 var chart = new ApexCharts(document.querySelector('#project'), options)
