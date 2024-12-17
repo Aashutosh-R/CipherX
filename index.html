@@ -197,182 +197,185 @@
     <!-- sidebar and topbar for big screen end -->
 
     <!-- Navbar (small screen) -->
-    <nav class="snav drk d-block d-xl-none w-100 position-fixed top-0 z-3">
-        <div class="container pt-3 pb-2 ml-auto">
+     <div class="d-block d-xl-none">
 
-            <ul class="d-flex list-unstyled align-items-center justify-content-between">
-                <li>
-                    <span class="fs-28"><i class="bi bi-list" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></i>
-                    </span>
-                </li>
-                <li>
-                    <div class="d-flex align-items-center drk logo">
-                        <div class="d-flex align-items-center justify-content-center gap-2">
-                            <div><img src="./dist/images/sidebar/main-logo.png" alt="logo" class="img-fluid"></div>
-                            <p class="sidebar-text text-center fs-20 fw-bold">CipherX</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <span class="fs-28">
-                        <i class="bi bi-three-dots" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false"
-                            aria-label="Toggle navigation"></i>
-                    </span>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- offcanvas content  -->
-    <div class="offcanvas offcanvas-start drk" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-        aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 256px;">
-        <div class="offcanvas-header">
-            <!-- <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5> -->
-            <div class="d-flex align-items-center py-2 position-sticky top-0 logo">
-                <div class="d-flex align-items-center justify-content-center gap-2">
-                    <div><img src="./dist/images/sidebar/main-logo.png" alt="logo" class="img-fluid"></div>
-                    <p class="sidebar-text text-center fs-20 fw-bold">CipherX</p>
-                </div>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body pb-0">
-            <div class="sidebar-content flex-grow-1 overflow-auto">
-                <div class="py-4 border-bottom">
-                    <p class="sidebar-text text-muted fs-14 mb-12">Dashboard</p>
-                    <ul class="nav nav-pills flex-column fs-16 gap-3">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active"><i class="bi bi-bag me-3"></i><span
-                                    class="sidebar-text">Modern</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link hover-bg">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span><i class="bi bi-bar-chart me-3"></i> <span
-                                            class="sidebar-text">Analytical</span></span>
-                                    <div>
-                                        <span class="sidebar-text badge text-bg-blue text-white rounded-pill">9</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link hover-bg"><i class="bi bi-cart me-3"></i><span
-                                    class="sidebar-text">eCommerce</span></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="py-4 border-bottom">
-                    <h6 class="sidebar-text text-muted fs-14 mb-12">Applications</h6>
-                    <ul class="nav nav-pills flex-column fs-16 gap-3">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link hover-bg"><i class="bi bi-chat-dots me-3"></i><span
-                                    class="sidebar-text">Chat</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link hover-bg"><i class="bi bi-people me-3"></i><span
-                                    class="sidebar-text">Users</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link hover-bg"><i class="bi bi-journals me-3"></i><span
-                                    class="sidebar-text">Note</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link hover-bg"><i class="bi bi-calendar me-3"></i><span
-                                    class="sidebar-text">Calendar</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link hover-bg"><i class="bi bi-x-octagon me-3"></i><span
-                                    class="sidebar-text">Disable</span></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="py-4 border-bottom">
-                    <h6 class="sidebar-text text-muted fs-14 mb-12">Others</h6>
-                    <ul class="nav nav-pills flex-column fs-16 gap-3">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link hover-bg">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span><i class="bi bi-person-circle me-3"></i><span
-                                            class="sidebar-text">Avatar</span></span>
-                                    <div>
-                                        <span
-                                            class="sidebar-text badge text-bg-blue text-white rounded-pill">coded</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link hover-bg">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span><i class="bi bi-pencil-square me-3"></i><span
-                                            class="sidebar-text">Outline</span></span>
-                                    <div>
-                                        <span
-                                            class="sidebar-text badge border border-blue text-blue rounded-pill">outline</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link hover-bg">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span><i class="bi bi-x-diamond me-3"></i><span
-                                            class="sidebar-text">Basic</span></span>
-                                    <div>
-                                        <span class="sidebar-text badge text-bg-blue text-white rounded-pill">9</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="py-3 position-sticky bottom-0 sidebar-text drk">
-                <div>
-                    <div class="rounded p-3"
-                        style="background-image: url('./dist/images/sidebar/footer\ image.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px; width: 100%;">
-                        <div><img src="./dist/images/sidebar/Simplification.svg" alt="" class="img-fluid"></div>
-                        <div class="my-3">
-                            <p class="fs-14 text-white">Get unlimited access and 10% off on your first purchase</p>
-                        </div>
-                        <button
-                            class="btn btn-outline-white btn-sm rounded fw-medium position-absolute bottom-17 start-9">Upgrade
-                            now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- offcanvas content end  -->
-
-    <!-- navbar collapse content -->
-    <div class="collapse navbar-collapse drk position-fixed z-3 w-100" id="navbarSupportedContent" style="top: 70px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-        <div class="d-flex align-items-center justify-content-center gap-3 px-3 py-3">
-            <div class="d-flex gap-4 fs-20 pe-4 border-end">
-                <a id="SthemeToggle" href="javascript:void(0)"><i id="SthemeIcon" class="bi bi-moon"></i></a>
-                <a href="#"><i class="bi bi-bell"></i></a>
-                <a href="#"><i class="bi bi-cart"></i></a>
-                <a href="#"><i class="bi bi-translate"></i></a>
-                <a href="#"><i class="bi bi-grid"></i></a>
-            </div>
-            <div class="user-group">
-                <a href="#" class="text-decoration-none">
-                    <div class="d-flex align-items-center justify-content-center gap-2 user">
-                        <div><img src="./dist/images/topbar/Ellipse 2.png" alt="user" class="img-fluid">
-                        </div>
-                        <div>
-                            <p class="fs-14 fw-medium user">Chedo Nasevski</p>
-                            <p class="fs-12 subuser">Busniess</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- navbar collapse content end -->
+         <nav class="snav drk  w-100 position-fixed top-0 z-3">
+             <div class="container pt-3 pb-2 ml-auto">
+     
+                 <ul class="d-flex list-unstyled align-items-center justify-content-between">
+                     <li>
+                         <span class="fs-28"><i class="bi bi-list" data-bs-toggle="offcanvas"
+                                 data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></i>
+                         </span>
+                     </li>
+                     <li>
+                         <div class="d-flex align-items-center drk logo">
+                             <div class="d-flex align-items-center justify-content-center gap-2">
+                                 <div><img src="./dist/images/sidebar/main-logo.png" alt="logo" class="img-fluid"></div>
+                                 <p class="sidebar-text text-center fs-20 fw-bold">CipherX</p>
+                             </div>
+                         </div>
+                     </li>
+                     <li>
+                         <span class="fs-28">
+                             <i class="bi bi-three-dots" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                                 aria-controls="navbarSupportedContent" aria-expanded="false"
+                                 aria-label="Toggle navigation"></i>
+                         </span>
+                     </li>
+                 </ul>
+             </div>
+         </nav>
+     
+         <!-- offcanvas content  -->
+         <div class="offcanvas offcanvas-start drk" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+             aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 256px;">
+             <div class="offcanvas-header">
+                 <!-- <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5> -->
+                 <div class="d-flex align-items-center py-2 position-sticky top-0 logo">
+                     <div class="d-flex align-items-center justify-content-center gap-2">
+                         <div><img src="./dist/images/sidebar/main-logo.png" alt="logo" class="img-fluid"></div>
+                         <p class="sidebar-text text-center fs-20 fw-bold">CipherX</p>
+                     </div>
+                 </div>
+                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+             </div>
+             <div class="offcanvas-body pb-0">
+                 <div class="sidebar-content flex-grow-1 overflow-auto">
+                     <div class="py-4 border-bottom">
+                         <p class="sidebar-text text-muted fs-14 mb-12">Dashboard</p>
+                         <ul class="nav nav-pills flex-column fs-16 gap-3">
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link active"><i class="bi bi-bag me-3"></i><span
+                                         class="sidebar-text">Modern</span></a>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link hover-bg">
+                                     <div class="d-flex justify-content-between align-items-center">
+                                         <span><i class="bi bi-bar-chart me-3"></i> <span
+                                                 class="sidebar-text">Analytical</span></span>
+                                         <div>
+                                             <span class="sidebar-text badge text-bg-blue text-white rounded-pill">9</span>
+                                         </div>
+                                     </div>
+                                 </a>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link hover-bg"><i class="bi bi-cart me-3"></i><span
+                                         class="sidebar-text">eCommerce</span></a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="py-4 border-bottom">
+                         <h6 class="sidebar-text text-muted fs-14 mb-12">Applications</h6>
+                         <ul class="nav nav-pills flex-column fs-16 gap-3">
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link hover-bg"><i class="bi bi-chat-dots me-3"></i><span
+                                         class="sidebar-text">Chat</span></a>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link hover-bg"><i class="bi bi-people me-3"></i><span
+                                         class="sidebar-text">Users</span></a>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link hover-bg"><i class="bi bi-journals me-3"></i><span
+                                         class="sidebar-text">Note</span></a>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link hover-bg"><i class="bi bi-calendar me-3"></i><span
+                                         class="sidebar-text">Calendar</span></a>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link hover-bg"><i class="bi bi-x-octagon me-3"></i><span
+                                         class="sidebar-text">Disable</span></a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="py-4 border-bottom">
+                         <h6 class="sidebar-text text-muted fs-14 mb-12">Others</h6>
+                         <ul class="nav nav-pills flex-column fs-16 gap-3">
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link hover-bg">
+                                     <div class="d-flex justify-content-between align-items-center">
+                                         <span><i class="bi bi-person-circle me-3"></i><span
+                                                 class="sidebar-text">Avatar</span></span>
+                                         <div>
+                                             <span
+                                                 class="sidebar-text badge text-bg-blue text-white rounded-pill">coded</span>
+                                         </div>
+                                     </div>
+                                 </a>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link hover-bg">
+                                     <div class="d-flex justify-content-between align-items-center">
+                                         <span><i class="bi bi-pencil-square me-3"></i><span
+                                                 class="sidebar-text">Outline</span></span>
+                                         <div>
+                                             <span
+                                                 class="sidebar-text badge border border-blue text-blue rounded-pill">outline</span>
+                                         </div>
+                                     </div>
+                                 </a>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="#" class="nav-link hover-bg">
+                                     <div class="d-flex justify-content-between align-items-center">
+                                         <span><i class="bi bi-x-diamond me-3"></i><span
+                                                 class="sidebar-text">Basic</span></span>
+                                         <div>
+                                             <span class="sidebar-text badge text-bg-blue text-white rounded-pill">9</span>
+                                         </div>
+                                     </div>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="py-3 position-sticky bottom-0 sidebar-text drk">
+                     <div>
+                         <div class="rounded p-3"
+                             style="background-image: url('./dist/images/sidebar/footer\ image.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px; width: 100%;">
+                             <div><img src="./dist/images/sidebar/Simplification.svg" alt="" class="img-fluid"></div>
+                             <div class="my-3">
+                                 <p class="fs-14 text-white">Get unlimited access and 10% off on your first purchase</p>
+                             </div>
+                             <button
+                                 class="btn btn-outline-white btn-sm rounded fw-medium position-absolute bottom-17 start-9">Upgrade
+                                 now</button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!-- offcanvas content end  -->
+     
+         <!-- navbar collapse content -->
+         <div class="collapse navbar-collapse drk position-fixed z-3 w-100" id="navbarSupportedContent" style="top: 70px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+             <div class="d-flex align-items-center justify-content-center gap-3 px-3 py-3">
+                 <div class="d-flex gap-4 fs-20 pe-4 border-end">
+                     <a id="SthemeToggle" href="javascript:void(0)"><i id="SthemeIcon" class="bi bi-moon"></i></a>
+                     <a href="#"><i class="bi bi-bell"></i></a>
+                     <a href="#"><i class="bi bi-cart"></i></a>
+                     <a href="#"><i class="bi bi-translate"></i></a>
+                     <a href="#"><i class="bi bi-grid"></i></a>
+                 </div>
+                 <div class="user-group">
+                     <a href="#" class="text-decoration-none">
+                         <div class="d-flex align-items-center justify-content-center gap-2 user">
+                             <div><img src="./dist/images/topbar/Ellipse 2.png" alt="user" class="img-fluid">
+                             </div>
+                             <div>
+                                 <p class="fs-14 fw-medium user">Chedo Nasevski</p>
+                                 <p class="fs-12 subuser">Busniess</p>
+                             </div>
+                         </div>
+                     </a>
+                 </div>
+             </div>
+         </div>
+         <!-- navbar collapse content end -->
+     </div>
 
 
     <!-- Navbar end (small screen) -->
