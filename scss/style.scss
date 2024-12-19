@@ -17,8 +17,8 @@
 //-----------------------
 .body-wrapper {
   // margin-left: 256px; /* Account for the sidebar width */
-  margin-top: 80px; /* Account for the topbar height */
-  min-height: calc(100vh - 80px); /* Ensure content stretches vertically */
+  margin-top: 90px; /* Account for the topbar height */
+  min-height: calc(100vh - 90px); /* Ensure content stretches vertically */
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 16px;
@@ -81,7 +81,6 @@
 // user icon sub-text color(topbar) end
 //-----------------------
 
-
 //-----------------------
 // sidebar link hover effect
 //-----------------------
@@ -127,7 +126,7 @@
 //-----------------------
 
 //-----------------------
-// Sidebar 
+// Sidebar
 //-----------------------
 #sidebar {
   width: 256px;
@@ -137,7 +136,7 @@
 }
 
 #sidebar ul.nav .nav-link i {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 #sidebar.collapsed {
@@ -168,7 +167,7 @@
 //-----------------------
 
 //-----------------------
-// topbar 
+// topbar
 //-----------------------
 #topbar {
   left: 256px;
@@ -176,11 +175,10 @@
 
 #topbar.expand {
   left: 70px;
-} 
+}
 //-----------------------
-// topbar end 
+// topbar end
 //-----------------------
-
 
 // table
 .tbl {
@@ -190,8 +188,12 @@
 }
 
 .table {
-  @media (max-width:540px) {
+  @media (max-width: 540px) {
     white-space: nowrap;
   }
 }
 // table end
+
+.useroffc:hover {
+  background-color: rgba(63, 131, 248, 0.046);
+}

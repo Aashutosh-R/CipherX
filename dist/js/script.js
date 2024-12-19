@@ -88,7 +88,7 @@ toggleButton2.addEventListener('click', () => {
   // Save the user's choice in localStorage
   localStorage.setItem('theme', newTheme)
 })
-// 
+//
 // Add event listener to the toggle button
 toggleButton3.addEventListener('click', () => {
   const currentTheme = htmlElement.getAttribute('data-bs-theme') // Get theme from <html> tag
@@ -124,7 +124,6 @@ window.addEventListener('scroll', function () {
 // shadow add after scroll (topbar) end
 // --------------------------------------------
 
-
 // --------------------------------------------
 // sidebar collapse
 // --------------------------------------------
@@ -140,7 +139,6 @@ document.querySelector('.btn-toggle-sidebar').addEventListener('click', () => {
 // --------------------------------------------
 // sidebar collapse end
 // --------------------------------------------
-
 
 // --------------------------------------------
 // Best selling product image toggle
@@ -159,7 +157,7 @@ document.getElementById('themeToggle').addEventListener('click', function () {
     logo.src = './dist/images/BestSellingProduct/white-logo.svg' // Dark theme logo
   }
 })
-// 
+//
 document.getElementById('SthemeToggle').addEventListener('click', function () {
   // Get the body element and toggle the theme
   const body = document.body
@@ -177,7 +175,6 @@ document.getElementById('SthemeToggle').addEventListener('click', function () {
 // --------------------------------------------
 // Best selling product image toggle end
 // --------------------------------------------
-
 
 // --------------------------------------------
 // revenueChart
@@ -643,7 +640,7 @@ var options = {
           width: 230,
         },
       },
-    },    
+    },
   ],
 }
 
@@ -792,7 +789,7 @@ var options = {
           width: 230,
         },
       },
-    },    
+    },
   ],
 }
 
