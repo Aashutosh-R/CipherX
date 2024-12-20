@@ -167,7 +167,7 @@
                             <a href="#"><i class="bi bi-grid"></i></a>
                         </div>
                         <div class="user-group">
-                            <a href="#" class="text-decoration-none">
+                            <a href="javascript:void(0)" class="text-decoration-none">
                                 <div class="d-flex align-items-center justify-content-center gap-2 user"
                                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasuser"
                                     aria-controls="offcanvasuser">
@@ -353,7 +353,7 @@
                     <a href="#"><i class="bi bi-grid"></i></a>
                 </div>
                 <div class="user-group">
-                    <a href="#" class="text-decoration-none">
+                    <a href="javascript:void(0)" class="text-decoration-none">
                         <div class="d-flex align-items-center justify-content-center gap-2 user"
                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasuser" aria-controls="offcanvasuser">
                             <div><img src="./dist/images/topbar/user_img.svg" alt="user" class="img-fluid">
@@ -796,11 +796,12 @@
                                     <p class="fs-12 text-muted">Best employees</p>
                                 </div>
                                 <div>
-                                    <select id="month-selector" class="text-muted border rounded px-2 py-2 fs-14 drk">
-                                        <option>Sort by</option>
-                                        <option>A-Z</option>
-                                        <option>Z-A</option>
-                                        <!-- Add other months if needed -->
+                                    <select id="sortDropdown" class="text-muted border rounded px-2 py-2 fs-14 drk">
+                                        <option value="">Sort by</option>
+                                        <option value="priority-high">Priority: High to Low</option>
+                                        <option value="priority-low">Priority: Low to High</option>
+                                        <option value="amount-high">Amount: High to Low</option>
+                                        <option value="amount-low">Amount: Low to High</option>
                                     </select>
                                 </div>
                             </div>
@@ -837,8 +838,8 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
+                                    <tbody id="employeeTable">
+                                        <tr data-priority="low" data-amount="12000">
                                             <td class="py-3">
                                                 <div class="d-flex align-items-center gap-2">
                                                     <div><img src="./dist/images/top-projects/ajit.png" alt="ajit">
@@ -865,7 +866,7 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr data-priority="medium" data-amount="8500">
                                             <td class="py-3">
                                                 <div class="d-flex align-items-center gap-2">
                                                     <div><img src="./dist/images/top-projects/priya.png" alt="priya">
@@ -892,7 +893,7 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr data-priority="high" data-amount="15000">
                                             <td class="py-3">
                                                 <div class="d-flex align-items-center gap-2">
                                                     <div><img src="./dist/images/top-projects/rohan.png" alt="rohan">
@@ -919,7 +920,7 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr data-priority="low" data-amount="3000">
                                             <td class="py-3">
                                                 <div class="d-flex align-items-center gap-2">
                                                     <div><img src="./dist/images/top-projects/kavita.png" alt="kavita">

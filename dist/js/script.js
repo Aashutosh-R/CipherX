@@ -141,6 +141,35 @@ document.querySelector('.btn-toggle-sidebar').addEventListener('click', () => {
 // --------------------------------------------
 
 // --------------------------------------------
+// tabel data sort logic
+// --------------------------------------------
+document.getElementById("sortDropdown").addEventListener("change", function () {
+  const sortValue = this.value;
+  const tableBody = document.getElementById("employeeTable");
+  const rows = Array.from(tableBody.querySelectorAll("tr"));
+
+  rows.sort((a, b) => {
+    if (sortValue.includes("priority")) {
+      const priorityOrder = { high: 3, medium: 2, low: 1 };
+      return sortValue === "priority-high"
+        ? priorityOrder[b.dataset.priority] - priorityOrder[a.dataset.priority]
+        : priorityOrder[a.dataset.priority] - priorityOrder[b.dataset.priority];
+    } else if (sortValue.includes("amount")) {
+      const amountA = parseInt(a.dataset.amount);
+      const amountB = parseInt(b.dataset.amount);
+      return sortValue === "amount-high" ? amountB - amountA : amountA - amountB;
+    }
+    return 0;
+  });
+
+  rows.forEach(row => tableBody.appendChild(row));
+});
+
+// --------------------------------------------
+// tabel data sort logic end
+// --------------------------------------------
+
+// --------------------------------------------
 // Best selling product image toggle
 // --------------------------------------------
 document.getElementById('themeToggle').addEventListener('click', function () {
