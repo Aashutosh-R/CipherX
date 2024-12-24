@@ -60,12 +60,12 @@ const applyTheme = (theme) => {
   themeIcon.className =
     theme === 'light'
       ? 'bi bi-moon link-blue text-black fs-20'
-      : 'bi bi-sun link-blue text-white fs-20'
+      : 'bi bi-sun link-blue text-gray fs-20'
   // Update icon
   themeIcon3.className =
     theme === 'light'
       ? 'bi bi-moon link-blue text-black fs-20'
-      : 'bi bi-sun link-blue text-white fs-20'
+      : 'bi bi-sun link-blue text-gray fs-20'
 }
 
 // Check localStorage for the saved theme

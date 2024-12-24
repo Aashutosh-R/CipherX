@@ -197,3 +197,8 @@
 .useroffc:hover {
   background-color: rgba(63, 131, 248, 0.046);
 }
+
+.btn-outline-blue {
+  --bs-btn-hover-color: white;
+  --bs-btn-active-color: white;
+}

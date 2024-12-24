@@ -1,3 +1,7 @@
+// dropdown(user)
+$dropdown-min-width: 20rem;
+// dropdown(user) end
+
 // font-family
 $font-family-base: 'Inter', sans-serif;
 // font-family end
@@ -6,9 +10,13 @@ $font-family-base: 'Inter', sans-serif;
 $paragraph-margin-bottom: 0rem !default;
 // paragraph end
 
+// Enable negative margin
 $enable-negative-margins: true;
+// Enable negative margin end
 
+// Box shadow set
 $box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+// Box shadow set end
 
 // colors
 $them-lightblue: #f9fafb;
@@ -28,6 +36,7 @@ $warning: #f59e0b;
 $warning-50: #fff4e2;
 $pink: #ec4899;
 $lightgray: #5a6a857b;
+$gray: #7c8fac;
 $theme-colors: (
   'them-lightblue': $them-lightblue,
   'primary': $primary,
@@ -46,6 +55,7 @@ $theme-colors: (
   'warning-50': $warning-50,
   'pink': $pink,
   'lightgray': $lightgray,
+  'gray': $gray,
 ) !default;
 // colors end
 
