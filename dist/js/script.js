@@ -1,4 +1,22 @@
 // --------------------------------------------
+// Language flag change
+// --------------------------------------------
+// Select all buttons inside the dropdown
+ document.querySelectorAll('.dropdown-menu button').forEach(button => {
+  button.addEventListener('click', function() {
+      // Get the flag image source
+      const flagSrc = this.querySelector('img').src;
+
+      // Update the flag at the top of the dropdown
+      document.getElementById('selected-flag').src = flagSrc;
+      document.getElementById('sselected-flag').src = flagSrc; //this for small screen
+  });
+});
+// --------------------------------------------
+// Language flag change end
+// --------------------------------------------
+
+// --------------------------------------------
 // RTL logic
 // --------------------------------------------
 

@@ -204,3 +204,18 @@
   --bs-btn-active-color: white;
 }
 // user offcanvas outline button color change end
+
+// lng dropdown
+.lng {
+  --bs-dropdown-min-width: 12rem;
+}
+
+.lang {
+  color: #5a6a85;
+}
+
+.lang:hover {
+  background-color: rgba(63, 131, 248, 0.046);
+  color: $blue;
+}
+// lng dropdown end
