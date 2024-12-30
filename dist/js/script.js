@@ -1,3 +1,57 @@
+// Predefined options
+const links = ["Home", "Contact", "About", "Services", "Blog", "FAQ", "Support"];
+
+// Dropdown elements
+const searchInput = document.getElementById("search-input");
+const dropdownMenu = document.getElementById("dropdown-menu");
+
+// Function to populate the dropdown with all links or filtered results
+function populateDropdown(query = "") {
+    // Clear previous results (but keep the header)
+    dropdownMenu.innerHTML = `<li class="dropdown-header fs-20 fw-semibold">Quick Search Links</li><li><hr class="dropdown-divider"></li>`;
+
+    // If there's a query, filter matching options, otherwise show all links
+    const filteredOptions = query 
+        ? links.filter(option => option.toLowerCase().includes(query)) 
+        : links;
+
+    // If there are matches (or all links), display them
+    if (filteredOptions.length > 0) {
+        filteredOptions.forEach(option => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a class="dropdown-item my-2 Qlink" href="#">${option}</a>`;
+            dropdownMenu.appendChild(li);
+        });
+    } else {
+        // If no matches, display "No results" option
+        const li = document.createElement("li");
+        li.innerHTML = `<a class="dropdown-item text-center" href="#">No results found</a>`;
+        dropdownMenu.appendChild(li);
+    }
+
+    // Show the dropdown menu
+    dropdownMenu.classList.add("show");
+}
+
+// Event listener for input field
+searchInput.addEventListener("input", function () {
+    const query = searchInput.value.toLowerCase().trim();
+    populateDropdown(query);
+});
+
+// Show all links when the input field is focused (clicked into)
+searchInput.addEventListener("focus", function () {
+    populateDropdown(); // Show all links when the field is focused
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function (event) {
+    if (!searchInput.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.remove("show");
+    }
+});
+
+
 // --------------------------------------------
 // Language flag change
 // --------------------------------------------

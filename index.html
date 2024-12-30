@@ -143,56 +143,80 @@
             <nav>
                 <div class="topbar d-flex z-2 justify-content-between align-items-center border-bottom  position-fixed top-0 end-0 px-4 py-3"
                     style="height: 80px;" id="topbar">
-                    <div class="d-flex align-items-center gap-4 w-50">
+                    <div class="d-flex align-items-center gap-4">
                         <div>
                             <button class="btn btn-sm btn-toggle-sidebar"><i
                                     class="bi bi-layout-sidebar fs-20"></i></button>
                         </div>
                         <div class="input-group" style="max-width: 350px; position: relative;">
-                            <input type="text" class="form-control rounded drk" placeholder="Search"
-                                style="padding-left: 45px; position: relative; z-index: 1;">
-                            <button class="btn border-0"
-                                style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); z-index: 2;"
-                                type="button">
-                                <i class="bi bi-search"></i>
-                            </button>
+                            <div class="dropdown-center">
+                                <input type="text" class="form-control rounded drk" id="search-input"
+                                    placeholder="Search" style="padding-left: 45px; position: relative; z-index: 1;"
+                                    aria-expanded="false">
+                                <button class="btn border-0"
+                                    style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); z-index: 2;"
+                                    type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                                <ul class="dropdown-menu drk mt-3 py-1 sidebar-content" id="dropdown-menu" style="max-height: 250px; overflow-y: scroll;">
+                                                                            
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-center gap-4">
                         <div class="d-flex gap-4 fs-20 pe-4 border-end">
                             <a id="themeToggle" href="javascript:void(0)"><i id="themeIcon"></i></a>
-                             <div class="dropdown-center">
-                                 <a href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                                    <img id="selected-flag" src="./dist/images/Language/uk.svg" alt="uk" class="rounded object-fit-cover mb-1" style="height: 18px;">
+                            <div class="dropdown-center">
+                                <a href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                    aria-expanded="false">
+                                    <img id="selected-flag" src="./dist/images/Language/uk.svg" alt="uk"
+                                        class="rounded object-fit-cover mb-1" style="height: 18px;">
                                 </a>
-                                 <ul class="dropdown-menu lng drk mt-3 py-0" style="width: 40px;">
+                                <ul class="dropdown-menu lng drk mt-3 py-0" style="width: 40px;">
                                     <li>
-                                        <button type="button" class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang" data-lang="uk">
-                                            <img src="./dist/images/Language/uk.svg" alt="uk" class="rounded-circle object-fit-cover" style="height: 20px; width: 20px;">
+                                        <button type="button"
+                                            class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang"
+                                            data-lang="uk">
+                                            <img src="./dist/images/Language/uk.svg" alt="uk"
+                                                class="rounded-circle object-fit-cover"
+                                                style="height: 20px; width: 20px;">
                                             <span class="fs-14">English (UK)</span>
                                         </button>
                                     </li>
                                     <li>
-                                        <button type="button" class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang" data-lang="china">
-                                            <img src="./dist/images/Language/china.svg" alt="chn" class="rounded-circle object-fit-cover"  style="height: 20px; width: 20px;">
+                                        <button type="button"
+                                            class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang"
+                                            data-lang="china">
+                                            <img src="./dist/images/Language/china.svg" alt="chn"
+                                                class="rounded-circle object-fit-cover"
+                                                style="height: 20px; width: 20px;">
                                             <span class="fs-14">中国人 (Chinese)</span>
                                         </button>
                                     </li>
                                     <li>
-                                        <button type="button" class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang" data-lang="frn">
-                                            <img src="./dist/images/Language/french.svg" alt="frn" class="rounded-circle object-fit-cover" style="height: 20px; width: 20px;">
+                                        <button type="button"
+                                            class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang"
+                                            data-lang="frn">
+                                            <img src="./dist/images/Language/french.svg" alt="frn"
+                                                class="rounded-circle object-fit-cover"
+                                                style="height: 20px; width: 20px;">
                                             <span class="fs-14">français (French)</span>
                                         </button>
                                     </li>
                                     <li>
-                                        <button type="button" class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang" data-lang="arb">
-                                            <img src="./dist/images/Language/arabic.svg" alt="arb" class="rounded-circle object-fit-cover" style="height: 20px; width: 20px;">
+                                        <button type="button"
+                                            class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang"
+                                            data-lang="arb">
+                                            <img src="./dist/images/Language/arabic.svg" alt="arb"
+                                                class="rounded-circle object-fit-cover"
+                                                style="height: 20px; width: 20px;">
                                             <span class="fs-14">عربي (Arabic)</span>
                                         </button>
                                     </li>
                                 </ul>
-                             </div>
-                             <div class="dropdown-center">
+                            </div>
+                            <div class="dropdown-center">
                                 <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="bi bi-bell"></i></a>
                                 <ul class="dropdown-menu drk mt-3 py-0" style="height: 450px;">
@@ -209,8 +233,8 @@
                                                 <li>
                                                     <a href="#" class="text-decoration-none">
                                                         <div class="d-flex align-items-center gap-3 p-3 useroffc">
-                                                            <div><img src="./dist/images/top-projects/Ajit.svg" alt="ajit"
-                                                                    height="50" width="50">
+                                                            <div><img src="./dist/images/top-projects/Ajit.svg"
+                                                                    alt="ajit" height="50" width="50">
                                                             </div>
                                                             <div>
                                                                 <p class="fs-16 fw-medium user">Ajit Kumar</p>
@@ -222,8 +246,8 @@
                                                 <li>
                                                     <a href="#" class="text-decoration-none">
                                                         <div class="d-flex align-items-center gap-3 p-3 useroffc">
-                                                            <div><img src="./dist/images/top-projects/Kavita.svg" alt="kavita"
-                                                                    height="50" width="50">
+                                                            <div><img src="./dist/images/top-projects/Kavita.svg"
+                                                                    alt="kavita" height="50" width="50">
                                                             </div>
                                                             <div>
                                                                 <p class="fs-16 fw-medium user">New message</p>
@@ -235,8 +259,8 @@
                                                 <li>
                                                     <a href="#" class="text-decoration-none">
                                                         <div class="d-flex align-items-center gap-3 p-3 useroffc">
-                                                            <div><img src="./dist/images/top-projects/Rohan.svg" alt="rohan"
-                                                                    height="50" width="50">
+                                                            <div><img src="./dist/images/top-projects/Rohan.svg"
+                                                                    alt="rohan" height="50" width="50">
                                                             </div>
                                                             <div>
                                                                 <p class="fs-16 fw-medium user">Jolly completed task</p>
@@ -262,7 +286,8 @@
                                 <div class="d-flex align-items-center justify-content-center gap-2 user"
                                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasuser"
                                     aria-controls="offcanvasuser">
-                                    <div class=""><img src="./dist/images/topbar/user-1.webp" alt="user" class="img-fluid rounded-circle" width="35">
+                                    <div class=""><img src="./dist/images/topbar/user-1.webp" alt="user"
+                                            class="img-fluid rounded-circle" width="35">
                                     </div>
                                     <div>
                                         <p class="fs-14 fw-medium user">Chedo Nasevski</p>
@@ -440,35 +465,49 @@
 
                     <a id="SthemeToggle" href="javascript:void(0)"><i id="SthemeIcon" class="bi bi-moon"></i></a>
                     <div class="dropdown-center">
-                        <a href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                           <img id="sselected-flag" src="./dist/images/Language/uk.svg" alt="uk" class="rounded object-fit-cover mb-1" style="height: 18px;">
-                       </a>
+                        <a href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            aria-expanded="false">
+                            <img id="sselected-flag" src="./dist/images/Language/uk.svg" alt="uk"
+                                class="rounded object-fit-cover mb-1" style="height: 18px;">
+                        </a>
                         <ul class="dropdown-menu lng drk mt-3 py-0" style="width: 40px;">
-                           <li>
-                               <button type="button" class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang" data-lang="uk">
-                                   <img src="./dist/images/Language/uk.svg" alt="uk" class="rounded-circle object-fit-cover" style="height: 20px; width: 20px;">
-                                   <span class="fs-14">English (UK)</span>
-                               </button>
-                           </li>
-                           <li>
-                               <button type="button" class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang" data-lang="china">
-                                   <img src="./dist/images/Language/china.svg" alt="chn" class="rounded-circle object-fit-cover"  style="height: 20px; width: 20px;">
-                                   <span class="fs-14">中国人 (Chinese)</span>
-                               </button>
-                           </li>
-                           <li>
-                               <button type="button" class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang" data-lang="frn">
-                                   <img src="./dist/images/Language/french.svg" alt="frn" class="rounded-circle object-fit-cover" style="height: 20px; width: 20px;">
-                                   <span class="fs-14">français (French)</span>
-                               </button>
-                           </li>
-                           <li>
-                               <button type="button" class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang" data-lang="arb">
-                                   <img src="./dist/images/Language/arabic.svg" alt="arb" class="rounded-circle object-fit-cover" style="height: 20px; width: 20px;">
-                                   <span class="fs-14">عربي (Arabic)</span>
-                               </button>
-                           </li>
-                       </ul>
+                            <li>
+                                <button type="button"
+                                    class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang"
+                                    data-lang="uk">
+                                    <img src="./dist/images/Language/uk.svg" alt="uk"
+                                        class="rounded-circle object-fit-cover" style="height: 20px; width: 20px;">
+                                    <span class="fs-14">English (UK)</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button"
+                                    class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang"
+                                    data-lang="china">
+                                    <img src="./dist/images/Language/china.svg" alt="chn"
+                                        class="rounded-circle object-fit-cover" style="height: 20px; width: 20px;">
+                                    <span class="fs-14">中国人 (Chinese)</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button"
+                                    class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang"
+                                    data-lang="frn">
+                                    <img src="./dist/images/Language/french.svg" alt="frn"
+                                        class="rounded-circle object-fit-cover" style="height: 20px; width: 20px;">
+                                    <span class="fs-14">français (French)</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button"
+                                    class="btn d-flex gap-3 justify-content-start align-items-center w-100 py-2 lang"
+                                    data-lang="arb">
+                                    <img src="./dist/images/Language/arabic.svg" alt="arb"
+                                        class="rounded-circle object-fit-cover" style="height: 20px; width: 20px;">
+                                    <span class="fs-14">عربي (Arabic)</span>
+                                </button>
+                            </li>
+                        </ul>
                     </div>
                     <div class="dropdown-center">
                         <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -539,7 +578,8 @@
                     <a href="javascript:void(0)" class="text-decoration-none">
                         <div class="d-flex align-items-center justify-content-center gap-2 user"
                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasuser" aria-controls="offcanvasuser">
-                            <div><img src="./dist/images/topbar/user-1.webp" alt="user" class="img-fluid rounded-circle" width="35">
+                            <div><img src="./dist/images/topbar/user-1.webp" alt="user" class="img-fluid rounded-circle"
+                                    width="35">
                             </div>
                             <div>
                                 <p class="fs-14 fw-medium user">Chedo Nasevski</p>
@@ -561,7 +601,8 @@
             <div class="border-bottom pb-3">
                 <h5>User Profile</h5>
                 <div class="d-flex align-items-center justify-content-center gap-3 user mt-4">
-                    <div><img src="./dist/images/topbar/user-1.webp" alt="user" class="img-fluid rounded-circle" width="80">
+                    <div><img src="./dist/images/topbar/user-1.webp" alt="user" class="img-fluid rounded-circle"
+                            width="80">
                     </div>
                     <div>
                         <p class="fs-14 fw-medium user">Chedo Nasevski</p>
@@ -1198,7 +1239,7 @@
             </div>
         </section>
         <!-- row 3 end -->
-        
+
         <!-- footer -->
         <footer>
             <div class="d-flex justify-content-center align-items-center py-4">
