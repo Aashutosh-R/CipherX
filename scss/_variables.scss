@@ -1,4 +1,3 @@
-$btn-focus-box-shadow: none;
 // dropdown(user)
 $dropdown-min-width: 20rem;
 // dropdown(user) end
@@ -59,11 +58,6 @@ $theme-colors: (
   'gray': $gray,
 ) !default;
 // colors end
-
-// Define custom colors for the navbar-links
-// $navbar-light-color: $dark;
-// $navbar-light-hover-color: $primary;
-// Define custom colors for the navbar-links end
 
 $table-bg: var(--bs-white);
 
