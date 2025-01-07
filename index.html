@@ -141,7 +141,7 @@
         <!--  -->
         <header>
             <nav>
-                <div class="topbar d-flex z-2 justify-content-between align-items-center border-bottom  position-fixed top-0 end-0 px-4 py-3"
+                <div class="topbar d-flex z-2 justify-content-between align-items-center   position-fixed top-0 end-0 px-4 py-3"
                     style="height: 80px;" id="topbar">
                     <div class="d-flex align-items-center gap-4">
                         <div>
@@ -746,10 +746,10 @@
                                 </div>
                                 <div>
                                     <select id="month-selector" class="text-muted border rounded px-2 py-2 fs-14 drk">
-                                        <option>November 2024</option>
-                                        <option>October 2024</option>
-                                        <option>September 2024</option>
-                                        <option>August 2024</option>
+                                        <option value="november">November 2024</option>
+                                        <option value="october">October 2024</option>
+                                        <option value="september">September 2024</option>
+                                        <option value="august">August 2024</option>
                                         <!-- Add other months if needed -->
                                     </select>
                                 </div>
@@ -835,66 +835,9 @@
                                     <p class="fs-12 text-muted">Every month</p>
                                 </div>
                                 <div>
-                                    <select id="month-selector" class="text-muted border rounded px-2 py-2 fs-14 drk">
-                                        <option>Year 2021</option>
-                                        <option>Year 2022</option>
-                                        <option>Year 2023</option>
-                                        <option>Year 2024</option>
-                                        <!-- Add other months if needed -->
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="d-flex gap-4">
-                                <div class="d-flex flex-column align-items-start">
-                                    <div class="d-flex align-items-baseline mb-1">
-                                        <div>
-                                            <span class="indicator indicator-sales"></span>
-                                        </div>
-                                        <div>
-                                            <span class="fs-12 text-muted">Total sales</span>
-                                            <div class="fs-20 fw-medium">$36,358</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- Expenses -->
-                                <div class="d-flex flex-column align-items-start">
-                                    <div class="d-flex align-items-baseline mb-1">
-                                        <div>
-                                            <span class="indicator indicator-expenses"></span>
-                                        </div>
-                                        <div>
-                                            <span class="fs-12 text-muted">Expenses</span>
-                                            <div class="fs-20 fw-medium">$5,296</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="salary"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- chart row 1 end -->
-
-        <!-- chart row 2 -->
-        <section>
-            <div class="container-fluid mb-4">
-                <div class="row gy-4 gy-xl-0">
-                    <div class="d-none d-xl-block col-xl-4">
-                        <div class="drk rounded shadow p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <div>
-                                    <p class="fs-16 fw-medium">Employee salary</p>
-                                    <p class="fs-12 text-muted">Every month</p>
-                                </div>
-                                <div>
-                                    <select id="month-selector" class="text-muted border rounded px-2 py-2 fs-14 drk">
-                                        <option>Year 2021</option>
-                                        <option>Year 2022</option>
-                                        <option>Year 2023</option>
-                                        <option>Year 2024</option>
+                                    <select id="syear-selector-salary" class="text-muted border rounded px-2 py-2 fs-14 drk">
+                                        <option value="2024">Year 2024</option>
+                                        <option value="2023">Year 2023</option>
                                         <!-- Add other months if needed -->
                                     </select>
                                 </div>
@@ -928,6 +871,59 @@
                             <div id="salary2"></div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- chart row 1 end -->
+
+        <!-- chart row 2 -->
+        <section>
+            <div class="container-fluid mb-4">
+                <div class="row gy-4 gy-xl-0">
+                    <div class="d-none d-xl-block col-xl-4">
+                        <div class="drk rounded shadow p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div>
+                                    <p class="fs-16 fw-medium">Employee salary</p>
+                                    <p class="fs-12 text-muted">Every month</p>
+                                </div>
+                                <div>
+                                    <select id="year-selector-salary" class="text-muted border rounded px-2 py-2 fs-14 drk">
+                                        <option value="2024">Year 2024</option>
+                                        <option value="2023">Year 2023</option>
+                                        <!-- Add other months if needed -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-4">
+                                <div class="d-flex flex-column align-items-start">
+                                    <div class="d-flex align-items-baseline mb-1">
+                                        <div>
+                                            <span class="indicator indicator-sales"></span>
+                                        </div>
+                                        <div>
+                                            <span class="fs-12 text-muted">Total sales</span>
+                                            <div class="fs-20 fw-medium">$36,358</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- Expenses -->
+                                <div class="d-flex flex-column align-items-start">
+                                    <div class="d-flex align-items-baseline mb-1">
+                                        <div>
+                                            <span class="indicator indicator-expenses"></span>
+                                        </div>
+                                        <div>
+                                            <span class="fs-12 text-muted">Expenses</span>
+                                            <div class="fs-20 fw-medium">$5,296</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="salary"></div>
+                        </div>
+                    </div>
                     <div class="col-xl-4 col-md-6 col-12">
                         <div class="drk rounded shadow p-4">
                             <div class="d-flex align-items-center justify-content-between mb-5">
@@ -935,11 +931,9 @@
                                     <p class="fs-16 fw-medium">Projects overview</p>
                                 </div>
                                 <div>
-                                    <select id="month-selector" class="text-muted border rounded px-2 py-2 fs-14 drk">
-                                        <option>All week</option>
-                                        <option>Two week</option>
-                                        <option>Last week</option>
-                                        <option>This week</option>
+                                    <select id="time-range-selector" class="text-muted border rounded px-2 py-2 fs-14 drk">
+                                        <option value="week">This week</option>
+                                        <option value="month">This Month</option>
                                         <!-- Add other months if needed -->
                                     </select>
                                 </div>
@@ -949,7 +943,7 @@
                                 <div
                                     class="d-flex align-items-center align-items-sm-baseline justify-content-between justify-content-sm-start px-2 w-100 gap-md-2">
                                     <div class="">
-                                        <p class="fs-20 fw-medium">$36,358</p>
+                                        <p id="dynamic-Custvalue" class="fs-20 fw-medium">$36,358</p>
                                         <p class="fs-12 text-muted">Customers</p>
                                     </div>
                                     <div>
@@ -966,7 +960,7 @@
                                 <div
                                     class="d-flex align-items-center align-items-sm-baseline justify-content-between justify-content-sm-start px-2 w-100 gap-md-2">
                                     <div class="">
-                                        <p class="fs-20 fw-medium">78,298</p>
+                                        <p id="dynamic-Projvalue" class="fs-20 fw-medium">28,298</p>
                                         <p class="fs-12 text-muted">Projects</p>
 
                                     </div>

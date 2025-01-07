@@ -1,71 +1,73 @@
 // Predefined options
-const links = ["Home", "Contact", "About", "Services", "Blog", "FAQ", "Support"];
+const links = ['Home', 'Contact', 'About', 'Services', 'Blog', 'FAQ', 'Support']
 
 // Dropdown elements
-const searchInput = document.getElementById("search-input");
-const dropdownMenu = document.getElementById("dropdown-menu");
+const searchInput = document.getElementById('search-input')
+const dropdownMenu = document.getElementById('dropdown-menu')
 
 // Function to populate the dropdown with all links or filtered results
-function populateDropdown(query = "") {
-    // Clear previous results (but keep the header)
-    dropdownMenu.innerHTML = `<li class="dropdown-header fs-20 fw-semibold">Quick Search Links</li><li><hr class="dropdown-divider"></li>`;
+function populateDropdown(query = '') {
+  // Clear previous results (but keep the header)
+  dropdownMenu.innerHTML = `<li class="dropdown-header fs-20 fw-semibold">Quick Search Links</li><li><hr class="dropdown-divider"></li>`
 
-    // If there's a query, filter matching options, otherwise show all links
-    const filteredOptions = query 
-        ? links.filter(option => option.toLowerCase().includes(query)) 
-        : links;
+  // If there's a query, filter matching options, otherwise show all links
+  const filteredOptions = query
+    ? links.filter((option) => option.toLowerCase().includes(query))
+    : links
 
-    // If there are matches (or all links), display them
-    if (filteredOptions.length > 0) {
-        filteredOptions.forEach(option => {
-            const li = document.createElement("li");
-            li.innerHTML = `<a class="dropdown-item my-2 Qlink" href="#">${option}</a>`;
-            dropdownMenu.appendChild(li);
-        });
-    } else {
-        // If no matches, display "No results" option
-        const li = document.createElement("li");
-        li.innerHTML = `<a class="dropdown-item text-center" href="#">No results found</a>`;
-        dropdownMenu.appendChild(li);
-    }
+  // If there are matches (or all links), display them
+  if (filteredOptions.length > 0) {
+    filteredOptions.forEach((option) => {
+      const li = document.createElement('li')
+      li.innerHTML = `<a class="dropdown-item my-2 Qlink" href="#">${option}</a>`
+      dropdownMenu.appendChild(li)
+    })
+  } else {
+    // If no matches, display "No results" option
+    const li = document.createElement('li')
+    li.innerHTML = `<a class="dropdown-item text-center" href="#">No results found</a>`
+    dropdownMenu.appendChild(li)
+  }
 
-    // Show the dropdown menu
-    dropdownMenu.classList.add("show");
+  // Show the dropdown menu
+  dropdownMenu.classList.add('show')
 }
 
 // Event listener for input field
-searchInput.addEventListener("input", function () {
-    const query = searchInput.value.toLowerCase().trim();
-    populateDropdown(query);
-});
+searchInput.addEventListener('input', function () {
+  const query = searchInput.value.toLowerCase().trim()
+  populateDropdown(query)
+})
 
 // Show all links when the input field is focused (clicked into)
-searchInput.addEventListener("focus", function () {
-    populateDropdown(); // Show all links when the field is focused
-});
+searchInput.addEventListener('focus', function () {
+  populateDropdown() // Show all links when the field is focused
+})
 
 // Close dropdown when clicking outside
-document.addEventListener("click", function (event) {
-    if (!searchInput.contains(event.target) && !dropdownMenu.contains(event.target)) {
-        dropdownMenu.classList.remove("show");
-    }
-});
-
+document.addEventListener('click', function (event) {
+  if (
+    !searchInput.contains(event.target) &&
+    !dropdownMenu.contains(event.target)
+  ) {
+    dropdownMenu.classList.remove('show')
+  }
+})
 
 // --------------------------------------------
 // Language flag change
 // --------------------------------------------
 // Select all buttons inside the dropdown
- document.querySelectorAll('.dropdown-menu button').forEach(button => {
-  button.addEventListener('click', function() {
-      // Get the flag image source
-      const flagSrc = this.querySelector('img').src;
+document.querySelectorAll('.dropdown-menu button').forEach((button) => {
+  button.addEventListener('click', function () {
+    // Get the flag image source
+    const flagSrc = this.querySelector('img').src
 
-      // Update the flag at the top of the dropdown
-      document.getElementById('selected-flag').src = flagSrc;
-      document.getElementById('sselected-flag').src = flagSrc; //this for small screen
-  });
-});
+    // Update the flag at the top of the dropdown
+    document.getElementById('selected-flag').src = flagSrc
+    document.getElementById('sselected-flag').src = flagSrc //this for small screen
+  })
+})
 // --------------------------------------------
 // Language flag change end
 // --------------------------------------------
@@ -215,27 +217,27 @@ document.querySelector('.btn-toggle-sidebar').addEventListener('click', () => {
 // --------------------------------------------
 // tabel data sort logic
 // --------------------------------------------
-document.getElementById("sortDropdown").addEventListener("change", function () {
-  const sortValue = this.value;
-  const tableBody = document.getElementById("employeeTable");
-  const rows = Array.from(tableBody.querySelectorAll("tr"));
+document.getElementById('sortDropdown').addEventListener('change', function () {
+  const sortValue = this.value
+  const tableBody = document.getElementById('employeeTable')
+  const rows = Array.from(tableBody.querySelectorAll('tr'))
 
   rows.sort((a, b) => {
-    if (sortValue.includes("priority")) {
-      const priorityOrder = { high: 3, medium: 2, low: 1 };
-      return sortValue === "priority-high"
+    if (sortValue.includes('priority')) {
+      const priorityOrder = { high: 3, medium: 2, low: 1 }
+      return sortValue === 'priority-high'
         ? priorityOrder[b.dataset.priority] - priorityOrder[a.dataset.priority]
-        : priorityOrder[a.dataset.priority] - priorityOrder[b.dataset.priority];
-    } else if (sortValue.includes("amount")) {
-      const amountA = parseInt(a.dataset.amount);
-      const amountB = parseInt(b.dataset.amount);
-      return sortValue === "amount-high" ? amountB - amountA : amountA - amountB;
+        : priorityOrder[a.dataset.priority] - priorityOrder[b.dataset.priority]
+    } else if (sortValue.includes('amount')) {
+      const amountA = parseInt(a.dataset.amount)
+      const amountB = parseInt(b.dataset.amount)
+      return sortValue === 'amount-high' ? amountB - amountA : amountA - amountB
     }
-    return 0;
-  });
+    return 0
+  })
 
-  rows.forEach(row => tableBody.appendChild(row));
-});
+  rows.forEach((row) => tableBody.appendChild(row))
+})
 
 // --------------------------------------------
 // tabel data sort logic end
@@ -280,7 +282,17 @@ document.getElementById('SthemeToggle').addEventListener('click', function () {
 // --------------------------------------------
 // revenueChart
 // --------------------------------------------
-var options = {
+
+var revchart
+
+// Initialize the chart with default data for November
+var revoptions = {
+  chart: {
+    type: 'bar',
+    height: 300,
+    stacked: true,
+    toolbar: { show: false },
+  },
   series: [
     {
       name: 'Earnings',
@@ -291,99 +303,188 @@ var options = {
       data: [-1000, -1100, -1400, -950, -1200, -1000, -950, -1100, -1050, -980],
     },
   ],
-  chart: {
-    type: 'bar',
-    height: 300,
-    stacked: true, // Enables stacking
-    toolbar: {
-      show: false,
-    },
-  },
   grid: {
-    show: true, // Enable the grid
-    borderColor: '#e0e0e0', // Color of the grid lines
-    strokeDashArray: 0, // Dashed grid lines (use 0 for solid lines)
+    show: true,
+    borderColor: '#e0e0e0',
+    strokeDashArray: 0, // Solid grid lines
     xaxis: {
-      lines: {
-        show: true, // Show vertical grid lines
-      },
+      lines: { show: true }, // Enable grid lines on x-axis
     },
     yaxis: {
-      lines: {
-        show: true, // Show horizontal grid lines
-      },
+      lines: { show: true }, // Enable grid lines on y-axis
     },
   },
   plotOptions: {
-    bar: {
-      horizontal: false, // Vertical bars
-      borderRadius: 6,
-      columnWidth: '30%',
-    },
+    bar: { horizontal: false, borderRadius: 6, columnWidth: '30%' },
   },
-  dataLabels: {
-    enabled: false, // Disable the digits on bars
-  },
+  dataLabels: { enabled: false },
   xaxis: {
     categories: [
-      '1 Oct',
-      '2 Oct',
-      '3 Oct',
-      '4 Oct',
-      '5 Oct',
-      '6 Oct',
-      '7 Oct',
-      '8 Oct',
-      '9 Oct',
-      '10 Oct',
+      '1 Nov',
+      '2 Nov',
+      '3 Nov',
+      '4 Nov',
+      '5 Nov',
+      '6 Nov',
+      '7 Nov',
+      '8 Nov',
+      '9 Nov',
+      '10 Nov',
     ],
-    labels: {
-      style: {
-        colors: '#aaa', // Set your desired x-axis label color here
-        fontSize: '12px', // Optional: Set font size
-      },
-    },
+    labels: { style: { colors: '#aaa', fontSize: '12px' } },
   },
   yaxis: {
-    min: -3000, // Set minimum value
-    max: 3000, // Set maximum value
-    tickAmount: 4, // Control the number of ticks (4 ticks = 5 values)
+    min: -3000,
+    max: 3000,
+    tickAmount: 4,
     labels: {
       formatter: function (value) {
-        // Custom formatter to display values as -3.0k, -1.5k, 0, 1.5k, 3.0k
         return `${(value / 1000).toFixed(1)}k`
       },
-      style: {
-        colors: '#aaa', // Customize label color
-        fontSize: '12px',
-      },
+      style: { colors: '#aaa', fontSize: '12px' },
     },
   },
   tooltip: {
     y: {
       formatter: function (value) {
-        return `$${(value / 1000).toFixed(1)}k` // Tooltip formatting
+        return `$${(value / 1000).toFixed(1)}k`
       },
     },
-    theme: 'dark', // Set the tooltip theme to dark
-    style: {
-      fontSize: '12px', // Optional: Set font size for tooltip text
-      fontFamily: 'Arial, sans-serif', // Optional: Set font family
-      color: '#fff', // Text color (white)
-      background: '#333', // Background color (dark)
-      borderRadius: '4px', // Optional: Add rounded corners
-      padding: '8px', // Optional: Adjust padding inside the tooltip
-    },
+    theme: 'dark',
   },
-  colors: ['#3b82f6', '#0EA5E9'], // Custom colors for Earnings and Expenses
-  legend: {
-    // position: 'top'
-    show: false,
-  },
+  colors: ['#3b82f6', '#0EA5E9'],
+  legend: { show: false },
 }
 
-var chart = new ApexCharts(document.querySelector('#revenueChart'), options)
-chart.render()
+// Initialize the chart with default data for November
+revchart = new ApexCharts(document.querySelector('#revenueChart'), revoptions)
+revchart.render()
+
+// Update chart based on selected month
+document
+  .getElementById('month-selector')
+  .addEventListener('change', function (e) {
+    const selectedMonth = e.target.value
+
+    let newEarningsData = []
+    let newExpensesData = []
+    let newCategories = []
+
+    switch (selectedMonth) {
+      case 'november':
+        newEarningsData = [
+          1600, 2300, 1400, 2100, 2700, 1800, 2100, 1600, 2100, 1800,
+        ]
+        newExpensesData = [
+          -1100, -1200, -1500, -1050, -1300, -1100, -1050, -1200, -1150, -1080,
+        ]
+        newCategories = [
+          '1 Nov',
+          '2 Nov',
+          '3 Nov',
+          '4 Nov',
+          '5 Nov',
+          '6 Nov',
+          '7 Nov',
+          '8 Nov',
+          '9 Nov',
+          '10 Nov',
+        ]
+        break
+      case 'october':
+        newEarningsData = [
+          1500, 2200, 1300, 2000, 2600, 1700, 2000, 1500, 2000, 1700,
+        ]
+        newExpensesData = [
+          -1000, -1100, -1400, -950, -1200, -1000, -950, -1100, -1050, -980,
+        ]
+        newCategories = [
+          '1 Oct',
+          '2 Oct',
+          '3 Oct',
+          '4 Oct',
+          '5 Oct',
+          '6 Oct',
+          '7 Oct',
+          '8 Oct',
+          '9 Oct',
+          '10 Oct',
+        ]
+        break
+      case 'september':
+        newEarningsData = [
+          1400, 2100, 1200, 1900, 2500, 1600, 1900, 1400, 1900, 1600,
+        ]
+        newExpensesData = [
+          -900, -1000, -1300, -850, -1100, -900, -850, -1000, -950, -880,
+        ]
+        newCategories = [
+          '1 Sep',
+          '2 Sep',
+          '3 Sep',
+          '4 Sep',
+          '5 Sep',
+          '6 Sep',
+          '7 Sep',
+          '8 Sep',
+          '9 Sep',
+          '10 Sep',
+        ]
+        break
+      case 'august':
+        newEarningsData = [
+          1300, 2000, 1100, 1800, 2400, 1500, 1800, 1300, 1800, 1500,
+        ]
+        newExpensesData = [
+          -800, -900, -1200, -750, -1000, -800, -750, -900, -850, -780,
+        ]
+        newCategories = [
+          '1 Aug',
+          '2 Aug',
+          '3 Aug',
+          '4 Aug',
+          '5 Aug',
+          '6 Aug',
+          '7 Aug',
+          '8 Aug',
+          '9 Aug',
+          '10 Aug',
+        ]
+        break
+      default:
+        // Default data for November if no specific month is selected
+        newEarningsData = [
+          1500, 2200, 1300, 2000, 2600, 1700, 2000, 1500, 2000, 1700,
+        ]
+        newExpensesData = [
+          -1000, -1100, -1400, -950, -1200, -1000, -950, -1100, -1050, -980,
+        ]
+        newCategories = [
+          '1 Nov',
+          '2 Nov',
+          '3 Nov',
+          '4 Nov',
+          '5 Nov',
+          '6 Nov',
+          '7 Nov',
+          '8 Nov',
+          '9 Nov',
+          '10 Nov',
+        ]
+        break
+    }
+
+    // Update the chart with new data and categories without re-rendering
+    revchart.updateSeries([
+      { name: 'Earnings', data: newEarningsData },
+      { name: 'Expenses', data: newExpensesData },
+    ])
+
+    revchart.updateOptions({
+      xaxis: { categories: newCategories },
+    })
+  })
+//
 
 // --------------------------------------------
 // revenueChart end
@@ -447,157 +548,176 @@ document.addEventListener('DOMContentLoaded', function () {
 // salary chart
 // --------------------------------------------
 
-var options = {
+var salaryoptions = {
   chart: {
     type: 'bar',
     height: 200,
-    toolbar: {
-      show: false, // Hide toolbar
-    },
+    toolbar: { show: false },
   },
   series: [
-    {
-      name: 'Salary',
-      data: [30, 50, 45, 60, 75, 55, 65], // Salary values
-    },
-    {
-      name: 'Expense',
-      data: [20, 40, 35, 50, 65, 45, 55], // Expense values
-    },
+    { name: 'Salary', data: [30, 50, 45, 60, 75, 55, 65] }, // Initial salary values
+    { name: 'Expense', data: [20, 40, 35, 50, 65, 45, 55] }, // Initial expense values
   ],
   plotOptions: {
     bar: {
-      columnWidth: '50%', // Adjust width of bars
-      borderRadius: 6, // Rounded edges
-      dataLabels: {
-        position: 'top', // Position labels on top of the bars
-      },
+      columnWidth: '50%',
+      borderRadius: 6,
+      dataLabels: { position: 'top' },
     },
   },
-  colors: ['#3b82f6', '#e2e8f0'], // Colors for Salary and Expense
+  colors: ['#3b82f6', '#e2e8f0'],
   xaxis: {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'], // Months or labels for x-axis
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+    labels: { show: false },
+    axisBorder: { show: false },
+    axisTicks: { show: false },
     labels: {
-      show: true, // Show x-axis labels
-    },
-    axisBorder: {
-      show: false, // Hide x-axis border
-    },
-    axisTicks: {
-      show: false, // Hide x-axis ticks
-    },
-    labels: {
-      style: {
-        colors: '#aaa', // Set your desired x-axis label color here
-        fontSize: '12px', // Optional: Set font size
-      },
+      style: { colors: '#aaa', fontSize: '12px' },
     },
   },
-  yaxis: {
-    show: false, // Show y-axis
-  },
-  grid: {
-    show: false, // Show grid for better readability
-  },
-  dataLabels: {
-    enabled: false, // Disable value labels directly on bars
-  },
+  yaxis: { show: false },
+  grid: { show: false },
+  dataLabels: { enabled: false },
   tooltip: {
-    enabled: true, // Enable tooltips for interaction
-    theme: 'dark', // Set the tooltip theme to dark
+    enabled: true,
+    theme: 'dark',
     style: {
-      fontSize: '12px', // Optional: Set font size for tooltip text
-      fontFamily: 'Arial, sans-serif', // Optional: Set font family
-      color: '#fff', // Text color (white)
-      background: '#333', // Background color (dark)
-      borderRadius: '4px', // Optional: Add rounded corners
-      padding: '8px', // Optional: Adjust padding inside the tooltip
+      fontSize: '12px',
+      fontFamily: 'Arial, sans-serif',
+      color: '#fff',
+      background: '#333',
+      borderRadius: '4px',
+      padding: '8px',
     },
   },
-  legend: {
-    show: false, // Hide the legend that displays Salary and Expense labels
-  },
+  legend: { show: false },
 }
 
-var chart = new ApexCharts(document.querySelector('#salary'), options)
-chart.render()
+var salarychart = new ApexCharts(
+  document.querySelector('#salary'),
+  salaryoptions
+)
+salarychart.render()
 
-// resonpsive copy of chart
-var options = {
+// Event listener for year selection
+document
+  .getElementById('year-selector-salary')
+  .addEventListener('change', function (e) {
+    const selectedYear = e.target.value
+    updateChartData(selectedYear)
+  })
+
+// Function to update chart data based on selected year
+function updateChartData(year) {
+  let newSalaryData = []
+  let newExpenseData = []
+  let newCategories = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'] // Static categories for all months
+
+  if (year === '2024') {
+    newSalaryData = [30, 50, 45, 60, 75, 55, 65] // Data for 2024
+    newExpenseData = [20, 40, 35, 50, 65, 45, 55] // Data for 2024
+  } else if (year === '2023') {
+    newSalaryData = [15, 25, 20, 25, 40, 20, 30] // Data for 2023
+    newExpenseData = [8, 18, 23, 28, 33, 23, 23] // Data for 2023
+  }
+
+  // Update the salary chart with the new data
+  salarychart.updateSeries([
+    { name: 'Salary', data: newSalaryData },
+    { name: 'Expense', data: newExpenseData },
+  ])
+
+  // Update the categories (months) in the x-axis
+  salarychart.updateOptions({
+    xaxis: { categories: newCategories },
+  })
+}
+// -----------------small screen----------------------------
+var ssalaryoptions = {
   chart: {
     type: 'bar',
     height: 200,
-    toolbar: {
-      show: false, // Hide toolbar
-    },
+    toolbar: { show: false },
   },
   series: [
-    {
-      name: 'Salary',
-      data: [30, 50, 45, 60, 75, 55, 65], // Salary values
-    },
-    {
-      name: 'Expense',
-      data: [20, 40, 35, 50, 65, 45, 55], // Expense values
-    },
+    { name: 'Salary', data: [30, 50, 45, 60, 75, 55, 65] }, // Initial salary values
+    { name: 'Expense', data: [20, 40, 35, 50, 65, 45, 55] }, // Initial expense values
   ],
   plotOptions: {
     bar: {
-      columnWidth: '50%', // Adjust width of bars
-      borderRadius: 6, // Rounded edges
-      dataLabels: {
-        position: 'top', // Position labels on top of the bars
-      },
+      columnWidth: '50%',
+      borderRadius: 6,
+      dataLabels: { position: 'top' },
     },
   },
-  colors: ['#3b82f6', '#e2e8f0'], // Colors for Salary and Expense
+  colors: ['#3b82f6', '#e2e8f0'],
   xaxis: {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'], // Months or labels for x-axis
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+    labels: { show: false },
+    axisBorder: { show: false },
+    axisTicks: { show: false },
     labels: {
-      show: true, // Show x-axis labels
-    },
-    axisBorder: {
-      show: false, // Hide x-axis border
-    },
-    axisTicks: {
-      show: false, // Hide x-axis ticks
-    },
-    labels: {
-      style: {
-        colors: '#aaa', // Set your desired x-axis label color here
-        fontSize: '12px', // Optional: Set font size
-      },
+      style: { colors: '#aaa', fontSize: '12px' },
     },
   },
-  yaxis: {
-    show: false, // Show y-axis
-  },
-  grid: {
-    show: false, // Show grid for better readability
-  },
-  dataLabels: {
-    enabled: false, // Disable value labels directly on bars
-  },
+  yaxis: { show: false },
+  grid: { show: false },
+  dataLabels: { enabled: false },
   tooltip: {
-    enabled: true, // Enable tooltips for interaction
-    theme: 'dark', // Set the tooltip theme to dark
+    enabled: true,
+    theme: 'dark',
     style: {
-      fontSize: '12px', // Optional: Set font size for tooltip text
-      fontFamily: 'Arial, sans-serif', // Optional: Set font family
-      color: '#fff', // Text color (white)
-      background: '#333', // Background color (dark)
-      borderRadius: '4px', // Optional: Add rounded corners
-      padding: '8px', // Optional: Adjust padding inside the tooltip
+      fontSize: '12px',
+      fontFamily: 'Arial, sans-serif',
+      color: '#fff',
+      background: '#333',
+      borderRadius: '4px',
+      padding: '8px',
     },
   },
-  legend: {
-    show: false, // Hide the legend that displays Salary and Expense labels
-  },
+  legend: { show: false },
 }
 
-var chart = new ApexCharts(document.querySelector('#salary2'), options)
-chart.render()
-// resonpsive copy of chart end
+var ssalarychart = new ApexCharts(
+  document.querySelector('#salary2'),
+  ssalaryoptions
+)
+ssalarychart.render()
+
+// Event listener for year selection
+document
+  .getElementById('syear-selector-salary')
+  .addEventListener('change', function (e) {
+    const sselectedYear = e.target.value
+    supdateChartData(sselectedYear)
+  })
+
+// Function to update chart data based on selected year
+function supdateChartData(year) {
+  let newSalaryData = []
+  let newExpenseData = []
+  let newCategories = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'] // Static categories for all months
+
+  if (year === '2024') {
+    newSalaryData = [30, 50, 45, 60, 75, 55, 65] // Data for 2024
+    newExpenseData = [20, 40, 35, 50, 65, 45, 55] // Data for 2024
+  } else if (year === '2023') {
+    newSalaryData = [15, 25, 20, 25, 40, 20, 30] // Data for 2023
+    newExpenseData = [8, 18, 23, 28, 33, 23, 23] // Data for 2023
+  }
+
+  // Update the salary chart with the new data
+  ssalarychart.updateSeries([
+    { name: 'Salary', data: newSalaryData },
+    { name: 'Expense', data: newExpenseData },
+  ])
+
+  // Update the categories (months) in the x-axis
+  ssalarychart.updateOptions({
+    xaxis: { categories: newCategories },
+  })
+}
+// -----------------small screen end------------------------
 
 // --------------------------------------------
 // salary chart end
@@ -606,7 +726,7 @@ chart.render()
 // --------------------------------------------
 // Customer chart
 // --------------------------------------------
-var options = {
+var customeroptions = {
   chart: {
     type: 'bar',
     height: 100,
@@ -745,8 +865,40 @@ var options = {
   ],
 }
 
-var chart = new ApexCharts(document.querySelector('#customer'), options)
-chart.render()
+var customerchart = new ApexCharts(
+  document.querySelector('#customer'),
+  customeroptions
+)
+customerchart.render()
+
+
+// Event listener for the dropdown
+document.getElementById('time-range-selector').addEventListener('change', function (e) {
+  const selectedRange = e.target.value;
+
+  // Map for values based on the dropdown selection
+  const CustvalueMap = {
+    week: "$36,358",  // Value for "This Week"
+    month: "$78,358", // Value for "This Month"
+  };
+
+  const newCustValue = CustvalueMap[selectedRange]; // Get the corresponding value from the map
+  let newCustData = [];
+
+  if (selectedRange === 'week') {
+    // Data for "This Week"
+    newCustData = [40, 70, 60, 30, 50, 80];
+  } else if (selectedRange === 'month') {
+    // Data for "This Month"
+    newCustData = [100, 120, 150, 130, 110, 140];
+  }
+
+  // Update chart data and categories
+  customerchart.updateSeries([{ data: newCustData }]);
+
+   // Update the paragraph with the new value
+   document.getElementById("dynamic-Custvalue").textContent = newCustValue;
+});
 
 // --------------------------------------------
 // Customer chart end
@@ -755,7 +907,7 @@ chart.render()
 // --------------------------------------------
 // project chart
 // --------------------------------------------
-var options = {
+var projectoptions = {
   chart: {
     type: 'bar',
     height: 100,
@@ -894,8 +1046,40 @@ var options = {
   ],
 }
 
-var chart = new ApexCharts(document.querySelector('#project'), options)
-chart.render()
+var projectchart = new ApexCharts(
+  document.querySelector('#project'),
+  projectoptions
+)
+projectchart.render()
+
+// Event listener for the dropdown
+document.getElementById('time-range-selector').addEventListener('change', function (e) {
+  const selectedRange = e.target.value;
+
+  // Map for values based on the dropdown selection
+  const ProjvalueMap = {
+    week: "28,358",  // Value for "This Week"
+    month: "68,358", // Value for "This Month"
+  };
+
+  const newProjValue = ProjvalueMap[selectedRange]; // Get the corresponding value from the map
+
+  let newProjData = [];
+
+  if (selectedRange === 'week') {
+    // Data for "This Week"
+    newProjData = [40, 70, 60, 30, 50, 80];
+  } else if (selectedRange === 'month') {
+    // Data for "This Month"
+    newProjData = [120, 100, 150, 180, 140, 110];
+  }
+
+  // Update chart data and categories
+  projectchart.updateSeries([{ data: newProjData }]);
+
+  // Update the paragraph with the new value
+  document.getElementById("dynamic-Projvalue").textContent = newProjValue;
+});
 
 // --------------------------------------------
 // project chart end
@@ -904,7 +1088,7 @@ chart.render()
 // --------------------------------------------
 // Monthly earning
 // --------------------------------------------
-var options = {
+var Monthlyoptions = {
   chart: {
     type: 'area',
     height: 240,
@@ -994,8 +1178,11 @@ var options = {
   },
 }
 
-var chart = new ApexCharts(document.querySelector('#mearning'), options)
-chart.render()
+var Monthlychart = new ApexCharts(
+  document.querySelector('#mearning'),
+  Monthlyoptions
+)
+Monthlychart.render()
 
 // --------------------------------------------
 // Monthly earning end
