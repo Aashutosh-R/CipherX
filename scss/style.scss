@@ -220,11 +220,20 @@
 }
 // lng dropdown end
 
-.Qlink:hover {
-  color: $blue;
-  background-color: transparent;
-}
+
+// controller btn customization
 
 .active {
   --bs-btn-active-color: #0ea5e9;
 }
+
+.control-btn{
+  transition: transform 0.5s ease;
+}
+
+.control-btn:hover {
+  color: #0ea5e9;
+  transform: scale(1.1);
+}
+
+// controller btn customization end
