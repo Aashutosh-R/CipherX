@@ -10,12 +10,7 @@
     <link rel="stylesheet" href="./dist/font/bootstrap-icons.css">
 </head>
 
-<body>
-
-    <!-- Toggle button to switch LTR/RTL -->
-    <button id="toggleDirection" class="btn btn-primary text-white position-fixed bottom-0 end-0 z-3 mb-4 me-4"><span><i
-                id="themeIcon2" class="bi bi-arrow-bar-left"></i></span>
-    </button>
+<body>    
 
     <!-- sidebar and topbar for big screen -->
     <div class="d-none d-xl-block">
@@ -158,8 +153,9 @@
                                     type="button">
                                     <i class="bi bi-search"></i>
                                 </button>
-                                <ul class="dropdown-menu drk mt-3 py-1 sidebar-content" id="dropdown-menu" style="max-height: 250px; overflow-y: scroll;">
-                                                                            
+                                <ul class="dropdown-menu drk mt-3 py-1 sidebar-content" id="dropdown-menu"
+                                    style="max-height: 250px; overflow-y: scroll;">
+
                                 </ul>
                             </div>
                         </div>
@@ -665,6 +661,75 @@
     </div>
     <!-- user offcanvas end -->
 
+    <!-- Controller -->
+    <button class="btn btn-blue rounded-circle fs-20 px-3 py-6 text-white position-fixed bottom-0 end-0 z-3 mb-4 me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasControl"
+    aria-controls="offcanvasControl">
+        <span><i class="bi bi-gear"></i></span>
+    </button>
+    <!-- Controller end -->
+
+    <!-- Controller offcanvas -->
+     <div class="offcanvas offcanvas-end drk" data-bs-scroll="true" tabindex="-1" id="offcanvasControl"
+     style="width: 21rem;">
+        <div class="offcanvas-header justify-content-start border-bottom">
+            <h4 class="fs-20 fw-semibold">Settings</h4>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Dark / light theme -->
+            <div class="mb-8">
+                <h5 class="fs-16 fw-semibold">Theme Option</h5>
+                <div class="d-flex gap-3">
+                    <button id="CthemeToggleL" type="button" class="btn border py-6 px-4 fs-14">
+                        <span class="d-flex gap-2 justify-content-center align-items-center">
+                            <span class="fs-20"><i class="bi bi-brightness-high"></i></span>Light
+                        </span>
+                    </button>
+                    <button id="CthemeToggleD" type="button" class="btn border py-6 px-4 fs-14">
+                        <span class="d-flex gap-2 justify-content-center align-items-center">
+                            <span class="fs-20"><i class="bi bi-moon"></i></span>Dark
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- Dark / light theme end -->
+            <!-- LTR / RTL -->
+            <div class="mb-8">
+                <h5 class="fs-16 fw-semibold">Theme Direction</h5>
+                <div class="d-flex gap-3">
+                    <button id="ltrDirection" type="button" class="btn border py-6 px-4 fs-14">
+                        <span class="d-flex gap-2 justify-content-center align-items-center">
+                            <span class="fs-20"><i class="bi bi-arrow-bar-right"></i></span>LTR
+                        </span>
+                    </button>
+                    <button id="rtlDirection" type="button" class="btn border py-6 px-4 fs-14">
+                        <span class="d-flex gap-2 justify-content-center align-items-center">
+                            <span class="fs-20"><i class="bi bi-arrow-bar-left"></i></span>RTL
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- LTR / RTL end -->
+            <!-- Sidebar collapse -->
+            <div>
+                <h5 class="fs-16 fw-semibold">Sidebar Type</h5>
+                <div class="d-flex gap-3">
+                    <button id="Fulls" type="button" class="btn border py-6 px-4 fs-14">
+                        <span class="d-flex gap-2 justify-content-center align-items-center">
+                            <span class="fs-20"><i class="bi bi-layout-sidebar-inset"></i></span>Full
+                        </span>
+                    </button>
+                    <button id="Colls" type="button" class="btn border py-6 px-4 fs-14">
+                        <span class="d-flex gap-2 justify-content-center align-items-center">
+                            <span class="fs-20"><i class="bi bi-layout-sidebar"></i></span>Collapse
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- Sidebar collapse end -->
+        </div>
+    </div>
+    <!-- Controller offcanvas end -->
+
     <!--  -->
     <!-- main -->
     <!--  -->
@@ -835,7 +900,8 @@
                                     <p class="fs-12 text-muted">Every month</p>
                                 </div>
                                 <div>
-                                    <select id="syear-selector-salary" class="text-muted border rounded px-2 py-2 fs-14 drk">
+                                    <select id="syear-selector-salary"
+                                        class="text-muted border rounded px-2 py-2 fs-14 drk">
                                         <option value="2024">Year 2024</option>
                                         <option value="2023">Year 2023</option>
                                         <!-- Add other months if needed -->
@@ -888,7 +954,8 @@
                                     <p class="fs-12 text-muted">Every month</p>
                                 </div>
                                 <div>
-                                    <select id="year-selector-salary" class="text-muted border rounded px-2 py-2 fs-14 drk">
+                                    <select id="year-selector-salary"
+                                        class="text-muted border rounded px-2 py-2 fs-14 drk">
                                         <option value="2024">Year 2024</option>
                                         <option value="2023">Year 2023</option>
                                         <!-- Add other months if needed -->
@@ -931,7 +998,8 @@
                                     <p class="fs-16 fw-medium">Projects overview</p>
                                 </div>
                                 <div>
-                                    <select id="time-range-selector" class="text-muted border rounded px-2 py-2 fs-14 drk">
+                                    <select id="time-range-selector"
+                                        class="text-muted border rounded px-2 py-2 fs-14 drk">
                                         <option value="week">This week</option>
                                         <option value="month">This Month</option>
                                         <!-- Add other months if needed -->

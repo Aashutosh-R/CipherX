@@ -1,3 +1,7 @@
+// ----------------------------------------------------------------------
+// ---------------- search bar fuctinality of filter --------------------
+// ----------------------------------------------------------------------
+
 // Predefined options
 const links = ['Home', 'Contact', 'About', 'Services', 'Blog', 'FAQ', 'Support']
 
@@ -54,9 +58,14 @@ document.addEventListener('click', function (event) {
   }
 })
 
+// ----------------------------------------------------------------------
+// ---------------- search bar fuctinality of filter end ----------------
+// ----------------------------------------------------------------------
+
 // --------------------------------------------
 // Language flag change
 // --------------------------------------------
+
 // Select all buttons inside the dropdown
 document.querySelectorAll('.dropdown-menu button').forEach((button) => {
   button.addEventListener('click', function () {
@@ -68,6 +77,7 @@ document.querySelectorAll('.dropdown-menu button').forEach((button) => {
     document.getElementById('sselected-flag').src = flagSrc //this for small screen
   })
 })
+
 // --------------------------------------------
 // Language flag change end
 // --------------------------------------------
@@ -77,41 +87,49 @@ document.querySelectorAll('.dropdown-menu button').forEach((button) => {
 // --------------------------------------------
 
 // Get the button and the link to the CSS file
-const toggleButton = document.getElementById('toggleDirection')
 const themeLink = document.getElementById('theme-style')
-const themeIcon2 = document.getElementById('themeIcon2')
+const ltrBtn = document.getElementById('ltrDirection')
+const rtlBtn = document.getElementById('rtlDirection')
 
 // Check if there's already a saved theme preference in localStorage
 let isRtl = localStorage.getItem('rtl') === 'true'
 
-// Set the initial direction and icon based on the stored preference
+// Set the initial direction and theme style based on the stored preference
 if (isRtl) {
   document.documentElement.setAttribute('dir', 'rtl')
   themeLink.href = 'dist/css/style-rtl.css'
-  themeIcon2.classList.replace('bi-arrow-bar-left', 'bi-arrow-bar-right')
+  rtlBtn.classList.add('active') // Set RTL button as active
 } else {
   document.documentElement.setAttribute('dir', 'ltr')
   themeLink.href = 'dist/css/style-ltr.css'
-  themeIcon2.classList.replace('bi-arrow-bar-right', 'bi-arrow-bar-left')
+  ltrBtn.classList.add('active') // Set LTR button as active
 }
 
-// Toggle the direction and save the preference in localStorage
-toggleButton.addEventListener('click', function () {
-  isRtl = !isRtl // Toggle RTL/LTR
+// Function to apply RTL layout, save preference, and toggle active state
+function applyRtl() {
+  document.documentElement.setAttribute('dir', 'rtl')
+  themeLink.href = 'dist/css/style-rtl.css'
+  localStorage.setItem('rtl', 'true') // Save the preference as RTL
 
-  if (isRtl) {
-    document.documentElement.setAttribute('dir', 'rtl')
-    themeLink.href = 'dist/css/style-rtl.css'
-    themeIcon2.classList.replace('bi-arrow-bar-left', 'bi-arrow-bar-right')
-  } else {
-    document.documentElement.setAttribute('dir', 'ltr')
-    themeLink.href = 'dist/css/style-ltr.css'
-    themeIcon2.classList.replace('bi-arrow-bar-right', 'bi-arrow-bar-left')
-  }
+  // Toggle active class
+  rtlBtn.classList.add('active')
+  ltrBtn.classList.remove('active')
+}
 
-  // Save the user preference in localStorage
-  localStorage.setItem('rtl', isRtl)
-})
+// Function to apply LTR layout, save preference, and toggle active state
+function applyLtr() {
+  document.documentElement.setAttribute('dir', 'ltr')
+  themeLink.href = 'dist/css/style-ltr.css'
+  localStorage.setItem('rtl', 'false') // Save the preference as LTR
+
+  // Toggle active class
+  ltrBtn.classList.add('active')
+  rtlBtn.classList.remove('active')
+}
+
+// Add event listeners for the RTL and LTR buttons
+rtlBtn.addEventListener('click', applyRtl)
+ltrBtn.addEventListener('click', applyLtr)
 
 // --------------------------------------------
 // RTL logic end
@@ -120,60 +138,81 @@ toggleButton.addEventListener('click', function () {
 // --------------------------------------------
 // dark logic
 // --------------------------------------------
-const toggleButton2 = document.getElementById('themeToggle')
-const toggleButton3 = document.getElementById('SthemeToggle')
+
+const toggleButtons = [
+  document.getElementById('themeToggle'),
+  document.getElementById('SthemeToggle'),
+  document.getElementById('CthemeToggleL'),
+  document.getElementById('CthemeToggleD'),
+]
+
 const themeIcon = document.getElementById('themeIcon')
 const themeIcon3 = document.getElementById('SthemeIcon')
-const htmlElement = document.documentElement // Target the <html> tag instead of <body>
+const logo = document.querySelector('.theme-img')
+const themehtmlElement = document.documentElement // Target <html> tag instead of <body>
 
 // Function to apply the theme
 const applyTheme = (theme) => {
-  htmlElement.setAttribute('data-bs-theme', theme) // Apply theme to <html> instead of <body>
+  themehtmlElement.setAttribute('data-bs-theme', theme) // Apply theme to <html>
 
-  // Update icon
-  themeIcon.className =
+  // Update both icons to the corresponding theme class
+  const iconClass =
     theme === 'light'
       ? 'bi bi-moon link-blue text-black fs-20'
       : 'bi bi-sun link-blue text-gray fs-20'
-  // Update icon
-  themeIcon3.className =
+  themeIcon.className = iconClass
+  themeIcon3.className = iconClass
+
+  // Update active state for the buttons
+  document
+    .getElementById('CthemeToggleL')
+    .classList.toggle('active', theme === 'light')
+  document
+    .getElementById('CthemeToggleD')
+    .classList.toggle('active', theme === 'dark')
+
+  // Update logo based on the selected theme
+  logo.src =
     theme === 'light'
-      ? 'bi bi-moon link-blue text-black fs-20'
-      : 'bi bi-sun link-blue text-gray fs-20'
+      ? './dist/images/BestSellingProduct/black-logo.svg'
+      : './dist/images/BestSellingProduct/white-logo.svg'
 }
 
-// Check localStorage for the saved theme
-const savedTheme = localStorage.getItem('theme')
-if (savedTheme) {
-  applyTheme(savedTheme) // Apply the saved theme
-} else {
-  // Default to 'light' theme if no preference is saved
-  applyTheme('light')
+// Check localStorage for the saved theme or default to 'light'
+const savedTheme = localStorage.getItem('theme') || 'light'
+applyTheme(savedTheme)
+
+// Function to toggle theme
+const toggleTheme = () => {
+  const currentTheme = themehtmlElement.getAttribute('data-bs-theme')
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light'
+
+  applyTheme(newTheme)
+  localStorage.setItem('theme', newTheme)
 }
 
-// Add event listener to the toggle button
-toggleButton2.addEventListener('click', () => {
-  const currentTheme = htmlElement.getAttribute('data-bs-theme') // Get theme from <html> tag
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light'
-
-  // Apply the new theme
-  applyTheme(newTheme)
-
-  // Save the user's choice in localStorage
-  localStorage.setItem('theme', newTheme)
+// Attach the event listener to toggle buttons
+toggleButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Special logic for light/dark specific buttons
+    if (
+      button.id === 'CthemeToggleL' &&
+      themehtmlElement.getAttribute('data-bs-theme') === 'dark'
+    ) {
+      applyTheme('light')
+      localStorage.setItem('theme', 'light')
+    } else if (
+      button.id === 'CthemeToggleD' &&
+      themehtmlElement.getAttribute('data-bs-theme') === 'light'
+    ) {
+      applyTheme('dark')
+      localStorage.setItem('theme', 'dark')
+    } else if (button.id !== 'CthemeToggleL' && button.id !== 'CthemeToggleD') {
+      toggleTheme()
+    }
+  })
 })
-//
-// Add event listener to the toggle button
-toggleButton3.addEventListener('click', () => {
-  const currentTheme = htmlElement.getAttribute('data-bs-theme') // Get theme from <html> tag
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light'
 
-  // Apply the new theme
-  applyTheme(newTheme)
-
-  // Save the user's choice in localStorage
-  localStorage.setItem('theme', newTheme)
-})
 // --------------------------------------------
 // dark logic end
 // --------------------------------------------
@@ -181,6 +220,7 @@ toggleButton3.addEventListener('click', () => {
 // --------------------------------------------
 // shadow add after scroll (topbar)
 // --------------------------------------------
+
 window.addEventListener('scroll', function () {
   const navbar = document.querySelector('.topbar')
   const navbar2 = document.querySelector('.snav')
@@ -194,6 +234,7 @@ window.addEventListener('scroll', function () {
     navbar2.classList.remove('scrolled')
   }
 })
+
 // --------------------------------------------
 // shadow add after scroll (topbar) end
 // --------------------------------------------
@@ -201,14 +242,55 @@ window.addEventListener('scroll', function () {
 // --------------------------------------------
 // sidebar collapse
 // --------------------------------------------
+
+const sidebar = document.getElementById('sidebar')
+const topbar = document.getElementById('topbar')
+const main = document.getElementById('main')
+const colls = document.getElementById('Colls')
+const fulls = document.getElementById('Fulls')
+const sidebarhtmlElement = document.documentElement
+
+// Function to apply sidebar changes based on the type
+const applySidebar = (sidebarType) => {
+  sidebarhtmlElement.setAttribute('data-sidebar-type', sidebarType)
+
+  // Toggle active classes based on the sidebar type
+  colls.classList.toggle('active', sidebarType === 'mini-sidebar')
+  fulls.classList.toggle('active', sidebarType === 'full-sidebar')
+}
+
+// Function to handle sidebar toggle between types
+const toggleSidebar = (newSidebarType) => {
+  const currentSidebarT = sidebarhtmlElement.getAttribute('data-sidebar-type')
+  if (currentSidebarT === newSidebarType) return
+
+  applySidebar(newSidebarType)
+
+  // Toggle sidebar, topbar, and main classes
+  const isMiniSidebar = newSidebarType === 'mini-sidebar'
+  sidebar.classList.toggle('collapsed', isMiniSidebar)
+  topbar.classList.toggle('expand', isMiniSidebar)
+  main.classList.toggle('expanded', isMiniSidebar)
+
+  localStorage.setItem('sidebarType', newSidebarType)
+}
+
+// Restore the sidebar type from localStorage on load
+const savedSidebarT = localStorage.getItem('sidebarType')
+if (savedSidebarT) applySidebar('full-sidebar')
+
+// Event listener to toggle sidebar on button click
 document.querySelector('.btn-toggle-sidebar').addEventListener('click', () => {
-  const sidebar = document.getElementById('sidebar')
-  const topbar = document.getElementById('topbar')
-  const main = document.getElementById('main')
-  sidebar.classList.toggle('collapsed')
-  topbar.classList.toggle('expand')
-  main.classList.toggle('expanded')
+  const newSidebarType =
+    sidebarhtmlElement.getAttribute('data-sidebar-type') === 'full-sidebar'
+      ? 'mini-sidebar'
+      : 'full-sidebar'
+  toggleSidebar(newSidebarType)
 })
+
+// Event listeners for manual switching between sidebar types
+colls.addEventListener('click', () => toggleSidebar('mini-sidebar'))
+fulls.addEventListener('click', () => toggleSidebar('full-sidebar'))
 
 // --------------------------------------------
 // sidebar collapse end
@@ -217,6 +299,7 @@ document.querySelector('.btn-toggle-sidebar').addEventListener('click', () => {
 // --------------------------------------------
 // tabel data sort logic
 // --------------------------------------------
+
 document.getElementById('sortDropdown').addEventListener('change', function () {
   const sortValue = this.value
   const tableBody = document.getElementById('employeeTable')
@@ -241,42 +324,6 @@ document.getElementById('sortDropdown').addEventListener('change', function () {
 
 // --------------------------------------------
 // tabel data sort logic end
-// --------------------------------------------
-
-// --------------------------------------------
-// Best selling product image toggle
-// --------------------------------------------
-document.getElementById('themeToggle').addEventListener('click', function () {
-  // Get the body element and toggle the theme
-  const body = document.body
-  const logo = document.querySelector('.theme-img')
-
-  // Toggle between dark and light theme
-  if (body.getAttribute('data-bs-theme') === 'dark') {
-    body.setAttribute('data-bs-theme', 'light')
-    logo.src = './dist/images/BestSellingProduct/black-logo.svg' // Light theme logo
-  } else {
-    body.setAttribute('data-bs-theme', 'dark')
-    logo.src = './dist/images/BestSellingProduct/white-logo.svg' // Dark theme logo
-  }
-})
-//
-document.getElementById('SthemeToggle').addEventListener('click', function () {
-  // Get the body element and toggle the theme
-  const body = document.body
-  const logo = document.querySelector('.theme-img')
-
-  // Toggle between dark and light theme
-  if (body.getAttribute('data-bs-theme') === 'dark') {
-    body.setAttribute('data-bs-theme', 'light')
-    logo.src = './dist/images/BestSellingProduct/black-logo.svg' // Light theme logo
-  } else {
-    body.setAttribute('data-bs-theme', 'dark')
-    logo.src = './dist/images/BestSellingProduct/white-logo.svg' // Dark theme logo
-  }
-})
-// --------------------------------------------
-// Best selling product image toggle end
 // --------------------------------------------
 
 // --------------------------------------------
@@ -871,34 +918,35 @@ var customerchart = new ApexCharts(
 )
 customerchart.render()
 
-
 // Event listener for the dropdown
-document.getElementById('time-range-selector').addEventListener('change', function (e) {
-  const selectedRange = e.target.value;
+document
+  .getElementById('time-range-selector')
+  .addEventListener('change', function (e) {
+    const selectedRange = e.target.value
 
-  // Map for values based on the dropdown selection
-  const CustvalueMap = {
-    week: "$36,358",  // Value for "This Week"
-    month: "$78,358", // Value for "This Month"
-  };
+    // Map for values based on the dropdown selection
+    const CustvalueMap = {
+      week: '$36,358', // Value for "This Week"
+      month: '$78,358', // Value for "This Month"
+    }
 
-  const newCustValue = CustvalueMap[selectedRange]; // Get the corresponding value from the map
-  let newCustData = [];
+    const newCustValue = CustvalueMap[selectedRange] // Get the corresponding value from the map
+    let newCustData = []
 
-  if (selectedRange === 'week') {
-    // Data for "This Week"
-    newCustData = [40, 70, 60, 30, 50, 80];
-  } else if (selectedRange === 'month') {
-    // Data for "This Month"
-    newCustData = [100, 120, 150, 130, 110, 140];
-  }
+    if (selectedRange === 'week') {
+      // Data for "This Week"
+      newCustData = [40, 70, 60, 30, 50, 80]
+    } else if (selectedRange === 'month') {
+      // Data for "This Month"
+      newCustData = [100, 120, 150, 130, 110, 140]
+    }
 
-  // Update chart data and categories
-  customerchart.updateSeries([{ data: newCustData }]);
+    // Update chart data and categories
+    customerchart.updateSeries([{ data: newCustData }])
 
-   // Update the paragraph with the new value
-   document.getElementById("dynamic-Custvalue").textContent = newCustValue;
-});
+    // Update the paragraph with the new value
+    document.getElementById('dynamic-Custvalue').textContent = newCustValue
+  })
 
 // --------------------------------------------
 // Customer chart end
@@ -1053,33 +1101,35 @@ var projectchart = new ApexCharts(
 projectchart.render()
 
 // Event listener for the dropdown
-document.getElementById('time-range-selector').addEventListener('change', function (e) {
-  const selectedRange = e.target.value;
+document
+  .getElementById('time-range-selector')
+  .addEventListener('change', function (e) {
+    const selectedRange = e.target.value
 
-  // Map for values based on the dropdown selection
-  const ProjvalueMap = {
-    week: "28,358",  // Value for "This Week"
-    month: "68,358", // Value for "This Month"
-  };
+    // Map for values based on the dropdown selection
+    const ProjvalueMap = {
+      week: '28,358', // Value for "This Week"
+      month: '68,358', // Value for "This Month"
+    }
 
-  const newProjValue = ProjvalueMap[selectedRange]; // Get the corresponding value from the map
+    const newProjValue = ProjvalueMap[selectedRange] // Get the corresponding value from the map
 
-  let newProjData = [];
+    let newProjData = []
 
-  if (selectedRange === 'week') {
-    // Data for "This Week"
-    newProjData = [40, 70, 60, 30, 50, 80];
-  } else if (selectedRange === 'month') {
-    // Data for "This Month"
-    newProjData = [120, 100, 150, 180, 140, 110];
-  }
+    if (selectedRange === 'week') {
+      // Data for "This Week"
+      newProjData = [40, 70, 60, 30, 50, 80]
+    } else if (selectedRange === 'month') {
+      // Data for "This Month"
+      newProjData = [120, 100, 150, 180, 140, 110]
+    }
 
-  // Update chart data and categories
-  projectchart.updateSeries([{ data: newProjData }]);
+    // Update chart data and categories
+    projectchart.updateSeries([{ data: newProjData }])
 
-  // Update the paragraph with the new value
-  document.getElementById("dynamic-Projvalue").textContent = newProjValue;
-});
+    // Update the paragraph with the new value
+    document.getElementById('dynamic-Projvalue').textContent = newProjValue
+  })
 
 // --------------------------------------------
 // project chart end
