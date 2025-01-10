@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./dist/font/bootstrap-icons.css">
 </head>
 
-<body>    
+<body>
 
     <!-- sidebar and topbar for big screen -->
     <div class="d-none d-xl-block">
@@ -275,7 +275,176 @@
                                     </div>
                                 </ul>
                             </div>
-                            <a href="#"><i class="bi bi-grid"></i></a>
+                            <a href="javascript:void(0)" id="quickLinkButton"><i class="bi bi-grid"></i></a>
+                            <!-- Qlinks div  -->
+                            <div id="quickLinks" class="quick-link d-none border position-absolute start-12 top-66 p-4 drk"
+                                style="width: 55rem;">
+                                <div class="row">
+                                    <div class="col-8 border-end">
+                                        <div class="d-flex align-items-center gap-9 border-bottom">
+                                            <!-- Link 1 -->
+                                            <div>
+                                                <div>
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2 mb-4 Ql-grp">
+                                                            <div class="p-2 bg-lightblue rounded">
+                                                                <img src="./dist/images/Quick-links/chatApp.svg"
+                                                                    alt="chatApp">
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="fs-14 fw-semibold mb-1 Qlink">Chat Application
+                                                                </h6>
+                                                                <p class="fs-12 text-lightgray">New messages arrived</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2 mb-4 Ql-grp">
+                                                            <div class="p-2 bg-lightblue rounded">
+                                                                <img src="./dist/images/Quick-links/notesApp.svg"
+                                                                    alt="notesApp">
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="fs-14 fw-semibold mb-1 Qlink">Notes App</h6>
+                                                                <p class="fs-12 text-lightgray">To-do and Daily tasks</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2 mb-4 Ql-grp">
+                                                            <div class="p-2 bg-lightblue rounded">
+                                                                <img src="./dist/images/Quick-links/contactApp.svg"
+                                                                    alt="contactApp">
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="fs-14 fw-semibold mb-1 Qlink">Contact Application
+                                                                </h6>
+                                                                <p class="fs-12 text-lightgray">2 Unsaved Contacts</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2 mb-4 Ql-grp">
+                                                            <div class="p-2 bg-lightblue rounded">
+                                                                <img src="./dist/images/Quick-links/emailApp.svg"
+                                                                    alt="emailApp">
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="fs-14 fw-semibold mb-1 Qlink">Email App</h6>
+                                                                <p class="fs-12 text-lightgray">Get new emails</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- Link 1 end -->
+    
+                                            <!-- link 2 -->
+                                            <div>
+                                                <div>
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2 mb-4 Ql-grp">
+                                                            <div class="p-2 bg-lightblue rounded">
+                                                                <img src="./dist/images/Quick-links/ecommerceApp.svg"
+                                                                    alt="ecommerceApp">
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="fs-14 fw-semibold mb-1 Qlink">eCommerce App</h6>
+                                                                <p class="fs-12 text-lightgray">New stock available</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2 mb-4 Ql-grp">
+                                                            <div class="p-2 bg-lightblue rounded">
+                                                                <img src="./dist/images/Quick-links/calendarApp.svg"
+                                                                    alt="calendarApp">
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="fs-14 fw-semibold mb-1 Qlink">Calendar App</h6>
+                                                                <p class="fs-12 text-lightgray">Get dates</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2 mb-4 Ql-grp">
+                                                            <div class="p-2 bg-lightblue rounded">
+                                                                <img src="./dist/images/Quick-links/ticketsApp.svg"
+                                                                    alt="ticketsApp">
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="fs-14 fw-semibold mb-1 Qlink">Tickets App</h6>
+                                                                <p class="fs-12 text-lightgray">Submit tickets</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2 mb-4 Ql-grp">
+                                                            <div class="p-2 bg-lightblue rounded">
+                                                                <img src="./dist/images/Quick-links/blogApp.svg"
+                                                                    alt="blogApp">
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="fs-14 fw-semibold mb-1 Qlink">Blog App</h6>
+                                                                <p class="fs-12 text-lightgray">added new blog</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- link 2 end -->
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center pt-4">
+                                            <div>
+                                                <a href="#" class="text-decoration-none">
+                                                    <p class="fs-14 fw-semibold"><span class="me-2"><i
+                                                                class="bi bi-question-circle"></i></span>Frequently Asked
+                                                        Questions</p>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-blue text-white fs-14">Check</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="ps-2">
+                                            <h5 class="fs-20 fw-semibold mb-4">Quick Links</h5>
+                                            <ul class="ps-0">
+                                                <li class="list-unstyled fs-14 fw-semibold mb-3"><a href="#"
+                                                        class="text-decoration-none">Pricing Page</a></li>
+                                                <li class="list-unstyled fs-14 fw-semibold mb-3"><a href="#"
+                                                        class="text-decoration-none">Authentication Design</a></li>
+                                                <li class="list-unstyled fs-14 fw-semibold mb-3"><a href="#"
+                                                        class="text-decoration-none">Register Now</a></li>
+                                                <li class="list-unstyled fs-14 fw-semibold mb-3"><a href="#"
+                                                        class="text-decoration-none">404 Error Page</a></li>
+                                                <li class="list-unstyled fs-14 fw-semibold mb-3"><a href="#"
+                                                        class="text-decoration-none">Kanban App</a></li>
+                                                <li class="list-unstyled fs-14 fw-semibold mb-3"><a href="#"
+                                                        class="text-decoration-none">User Application</a></li>
+                                                <li class="list-unstyled fs-14 fw-semibold mb-3"><a href="#"
+                                                        class="text-decoration-none">Blog Design</a></li>
+                                                <li class="list-unstyled fs-14 fw-semibold mb-3"><a href="#"
+                                                        class="text-decoration-none">Shopping Cart</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Qlinks div end -->
                         </div>
                         <div class="user-group">
                             <a href="javascript:void(0)" class="text-decoration-none">
@@ -662,15 +831,15 @@
     <!-- user offcanvas end -->
 
     <!-- Controller -->
-    <button class="btn btn-blue rounded-circle fs-20 px-3 py-6 text-white position-fixed bottom-0 end-0 z-3 mb-4 me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasControl"
-    aria-controls="offcanvasControl">
+    <button class="btn btn-blue rounded-circle fs-20 px-3 py-6 text-white position-fixed bottom-0 end-0 z-3 mb-4 me-4"
+        data-bs-toggle="offcanvas" data-bs-target="#offcanvasControl" aria-controls="offcanvasControl">
         <span><i class="bi bi-gear"></i></span>
     </button>
     <!-- Controller end -->
 
     <!-- Controller offcanvas -->
-     <div class="offcanvas offcanvas-end drk" data-bs-scroll="true" tabindex="-1" id="offcanvasControl"
-     style="width: 21rem;">
+    <div class="offcanvas offcanvas-end drk" data-bs-scroll="true" tabindex="-1" id="offcanvasControl"
+        style="width: 21rem;">
         <div class="offcanvas-header justify-content-start border-bottom">
             <h4 class="fs-20 fw-semibold">Settings</h4>
         </div>

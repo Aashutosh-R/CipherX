@@ -326,6 +326,43 @@ document.getElementById('sortDropdown').addEventListener('change', function () {
 // tabel data sort logic end
 // --------------------------------------------
 
+
+// --------------------------------------------
+// Qlinks display on hover logic 
+// --------------------------------------------
+
+// Get the button and the quick links div
+const quickLinkButton = document.getElementById('quickLinkButton');
+const quickLinksDiv = document.getElementById('quickLinks');
+
+// Show the quick links when mouse is over the button
+quickLinkButton.addEventListener('mouseover', function() {
+    quickLinksDiv.classList.add('d-block');
+    quickLinksDiv.classList.remove('d-none');
+});
+
+// Hide the quick links when mouse leaves the button or the div
+quickLinkButton.addEventListener('mouseout', function() {
+    quickLinksDiv.classList.add('d-none');
+    quickLinksDiv.classList.remove('d-block');
+});
+
+quickLinksDiv.addEventListener('mouseover', function() {
+  quickLinksDiv.classList.add('d-block');
+  quickLinksDiv.classList.remove('d-none');
+});
+
+quickLinksDiv.addEventListener('mouseout', function() {
+  quickLinksDiv.classList.add('d-none');
+  quickLinksDiv.classList.remove('d-block');
+});
+
+// --------------------------------------------
+// Qlinks display on hover logic end 
+// --------------------------------------------
+
+
+
 // --------------------------------------------
 // revenueChart
 // --------------------------------------------

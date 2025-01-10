@@ -80,9 +80,11 @@ $position-values: (
   0: 0,
   50: 50%,
   100: 100%,
+  12: 12%,
   17: 17%,
   3: 3.5%,
   9: 9%,
+  66: 66%,
   256: 256px,
 );
 // Position end
@@ -112,6 +114,7 @@ $spacers: (
   6: $spacer * 0.75,
   7: $spacer * 1.25,
   8: $spacer * 1.75,
+  9: $spacer * 6,
   12: 12px,
 ) !default;
 // Spacer end

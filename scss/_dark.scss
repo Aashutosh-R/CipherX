@@ -35,4 +35,14 @@ $Dark-Bg: #0e1025;
   .lang {
     color: #7c8fac;
   }
+
+  .Qlink {
+    color: white;    
+  } 
+
+  .Ql-grp:hover {
+    & .Qlink {
+      color: #0ea5e9;
+    }
+  }
 }
