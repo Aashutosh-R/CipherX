@@ -224,7 +224,7 @@
 // controller btn customization
 
 .active {
-  --bs-btn-active-color: $primary;
+  --bs-btn-active-color: var(--bs-primary);
 }
 
 .control-btn{
