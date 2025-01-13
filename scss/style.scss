@@ -75,7 +75,7 @@
 // user icon sub-text color(topbar)
 //-----------------------
 .subuser {
-  color: #7c8fac;
+  color: $gray;
 }
 //-----------------------
 // user icon sub-text color(topbar) end
@@ -85,7 +85,7 @@
 // sidebar link hover effect
 //-----------------------
 .hover-bg:hover {
-  background-color: $blue-50;
+  background-color: $primary-50;
 }
 //-----------------------
 // sidebar link hover effect end
@@ -116,7 +116,7 @@
   margin-right: 6px;
 }
 .indicator-sales {
-  background-color: #3b82f6; /* Blue for Total Sales */
+  background-color: $secondary; /* Blue for Total Sales */
 }
 .indicator-expenses {
   background-color: #e2e8f0; /* Light Gray for Expenses */
@@ -216,7 +216,7 @@
 
 .lang:hover {
   background-color: rgba(63, 131, 248, 0.046);
-  color: $blue;
+  color: $primary;
 }
 // lng dropdown end
 
@@ -224,7 +224,7 @@
 // controller btn customization
 
 .active {
-  --bs-btn-active-color: #0ea5e9;
+  --bs-btn-active-color: $primary;
 }
 
 .control-btn{
@@ -232,7 +232,7 @@
 }
 
 .control-btn:hover {
-  color: #0ea5e9;
+  color: $primary;
   transform: scale(1.1);
 }
 

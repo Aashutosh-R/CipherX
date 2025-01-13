@@ -158,8 +158,8 @@ const applyTheme = (theme) => {
   // Update both icons to the corresponding theme class
   const iconClass =
     theme === 'light'
-      ? 'bi bi-moon link-blue text-black fs-20'
-      : 'bi bi-sun link-blue text-gray fs-20'
+      ? 'bi bi-moon link-primary text-black fs-20'
+      : 'bi bi-sun link-primary text-gray fs-20'
   themeIcon.className = iconClass
   themeIcon3.className = iconClass
 
@@ -326,42 +326,39 @@ document.getElementById('sortDropdown').addEventListener('change', function () {
 // tabel data sort logic end
 // --------------------------------------------
 
-
 // --------------------------------------------
-// Qlinks display on hover logic 
+// Qlinks display on hover logic
 // --------------------------------------------
 
 // Get the button and the quick links div
-const quickLinkButton = document.getElementById('quickLinkButton');
-const quickLinksDiv = document.getElementById('quickLinks');
+const quickLinkButton = document.getElementById('quickLinkButton')
+const quickLinksDiv = document.getElementById('quickLinks')
 
 // Show the quick links when mouse is over the button
-quickLinkButton.addEventListener('mouseover', function() {
-    quickLinksDiv.classList.add('d-block');
-    quickLinksDiv.classList.remove('d-none');
-});
+quickLinkButton.addEventListener('mouseover', function () {
+  quickLinksDiv.classList.add('d-block')
+  quickLinksDiv.classList.remove('d-none')
+})
 
 // Hide the quick links when mouse leaves the button or the div
-quickLinkButton.addEventListener('mouseout', function() {
-    quickLinksDiv.classList.add('d-none');
-    quickLinksDiv.classList.remove('d-block');
-});
+quickLinkButton.addEventListener('mouseout', function () {
+  quickLinksDiv.classList.add('d-none')
+  quickLinksDiv.classList.remove('d-block')
+})
 
-quickLinksDiv.addEventListener('mouseover', function() {
-  quickLinksDiv.classList.add('d-block');
-  quickLinksDiv.classList.remove('d-none');
-});
+quickLinksDiv.addEventListener('mouseover', function () {
+  quickLinksDiv.classList.add('d-block')
+  quickLinksDiv.classList.remove('d-none')
+})
 
-quickLinksDiv.addEventListener('mouseout', function() {
-  quickLinksDiv.classList.add('d-none');
-  quickLinksDiv.classList.remove('d-block');
-});
+quickLinksDiv.addEventListener('mouseout', function () {
+  quickLinksDiv.classList.add('d-none')
+  quickLinksDiv.classList.remove('d-block')
+})
 
 // --------------------------------------------
-// Qlinks display on hover logic end 
+// Qlinks display on hover logic end
 // --------------------------------------------
-
-
 
 // --------------------------------------------
 // revenueChart
@@ -389,7 +386,7 @@ var revoptions = {
   ],
   grid: {
     show: true,
-    borderColor: '#e0e0e0',
+    borderColor: '#7a8699',
     strokeDashArray: 0, // Solid grid lines
     xaxis: {
       lines: { show: true }, // Enable grid lines on x-axis
@@ -436,7 +433,7 @@ var revoptions = {
     },
     theme: 'dark',
   },
-  colors: ['#3b82f6', '#0EA5E9'],
+  colors: ['var(--bs-secondary)', 'var(--bs-primary)'],
   legend: { show: false },
 }
 
@@ -614,7 +611,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     },
     stroke: { width: 1, lineCap: 'round' },
-    colors: ['#3b82f6', '#0EA5E9'], // Colors for the segments
+    colors: ['var(--bs-secondary)', 'var(--bs-primary)'], // Colors for the segments
   }
 
   const chart = new ApexCharts(
@@ -1211,7 +1208,7 @@ var Monthlyoptions = {
   },
   grid: {
     show: true,
-    borderColor: '#eaeaea', // Faint grid line color
+    borderColor: '#7a8699', // Faint grid line color
     strokeDashArray: 0,
     xaxis: {
       lines: {

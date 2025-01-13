@@ -25,7 +25,7 @@ $Dark-Bg: #0e1025;
 
   .user-group:hover {
     & .user {
-      color: #0ea5e9;
+      color: $primary;
     }
   }
   .table {
@@ -33,7 +33,7 @@ $Dark-Bg: #0e1025;
     --bs-table-bg: #0e1025;
   }
   .lang {
-    color: #7c8fac;
+    color: $gray;
   }
 
   .Qlink {
@@ -42,7 +42,19 @@ $Dark-Bg: #0e1025;
 
   .Ql-grp:hover {
     & .Qlink {
-      color: #0ea5e9;
+      color: $primary;
     }
+  }
+
+  .shadow {
+    --bs-box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+
+  .topbar.scrolled {
+    box-shadow: 0 1px 6px rgba(255, 255, 255, 0.1);
+  }
+  
+  .snav.scrolled {
+    box-shadow: 0 1px 6px rgba(255, 255, 255, 0.1);
   }
 }
