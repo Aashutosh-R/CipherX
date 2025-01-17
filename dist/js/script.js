@@ -156,10 +156,7 @@ const applyTheme = (theme) => {
   themehtmlElement.setAttribute('data-bs-theme', theme) // Apply theme to <html>
 
   // Update both icons to the corresponding theme class
-  const iconClass =
-    theme === 'light'
-      ? 'bi bi-moon link-primary text-black fs-20'
-      : 'bi bi-sun link-primary text-gray fs-20'
+  const iconClass = theme === 'light' ? 'bi bi-moon fs-20' : 'bi bi-sun fs-20'
   themeIcon.className = iconClass
   themeIcon3.className = iconClass
 
@@ -358,6 +355,118 @@ quickLinksDiv.addEventListener('mouseout', function () {
 
 // --------------------------------------------
 // Qlinks display on hover logic end
+// --------------------------------------------
+
+// --------------------------------------------
+// Color theme toggle
+// --------------------------------------------
+
+// const colorButtons = document.querySelectorAll('.clrsbtn');
+// const arrowIcons = document.querySelectorAll('.tick');
+
+// // Loop through each button
+// colorButtons.forEach((button, index) => {
+//   button.addEventListener('click', function () {
+//     // Get the data-theme value and set it on the html element
+//     const colorTheme = this.getAttribute('data-theme');
+//     document.documentElement.setAttribute('data-color-theme', colorTheme);
+
+//     const mainTheme = document.documentElement.getAttribute('data-color-theme');
+
+//     // Loop through all arrow icons
+//     arrowIcons.forEach((icon, iconIndex) => {
+//       if (iconIndex === index) {
+//         // Show the corresponding arrow icon
+//         icon.classList.remove('d-none');
+//         icon.classList.add('d-block');
+//       } else {
+//         // Hide the other arrow icons
+//         icon.classList.remove('d-block');
+//         icon.classList.add('d-none');
+//       }
+//     });
+//   });
+// });
+
+// ------------------------------------------------------------------------------
+// const colorButtons = document.querySelectorAll('.clrsbtn');
+// const arrowIcons = document.querySelectorAll('.tick');
+
+// // Set the default selected theme and icon on page load (for example, the first button)
+// document.addEventListener('DOMContentLoaded', () => {
+//   const defaultColorTheme = colorButtons[0].getAttribute('data-theme');
+//   document.documentElement.setAttribute('data-color-theme', defaultColorTheme);
+
+//   // Show the first arrow icon and hide others
+//   arrowIcons.forEach((icon, index) => {
+//     if (index === 0) { // Set the first arrow icon to visible by default
+//       icon.classList.remove('d-none');
+//       icon.classList.add('d-block');
+//     } else { // Hide other icons
+//       icon.classList.remove('d-block');
+//       icon.classList.add('d-none');
+//     }
+//   });
+// });
+
+// // Loop through each button to handle click events
+// colorButtons.forEach((button, index) => {
+//   button.addEventListener('click', function () {
+//     // Get the data-theme value and set it on the html element
+//     const colorTheme = this.getAttribute('data-theme');
+//     document.documentElement.setAttribute('data-color-theme', colorTheme);
+
+//     const mainTheme = document.documentElement.getAttribute('data-color-theme');
+
+//     // Loop through all arrow icons and show the corresponding one
+//     arrowIcons.forEach((icon, iconIndex) => {
+//       if (iconIndex === index) {
+//         // Show the corresponding arrow icon
+//         icon.classList.remove('d-none');
+//         icon.classList.add('d-block');
+//       } else {
+//         // Hide other arrow icons
+//         icon.classList.remove('d-block');
+//         icon.classList.add('d-none');
+//       }
+//     });
+//   });
+// });
+
+// ------------------------------------------------------------------------------
+// 
+// ------------------------------------------------------------------------------
+const colorButtons = document.querySelectorAll('.clrsbtn');
+const arrowIcons = document.querySelectorAll('.tick');
+
+// Set the default selected theme and icon on page load
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize the first button as the default selected theme
+  updateThemeAndIcons(0); // 0 corresponds to the first button by default
+});
+
+// Function to update theme and arrow icons based on the selected index
+function updateThemeAndIcons(index) {
+  const colorTheme = colorButtons[index].getAttribute('data-theme');
+  document.documentElement.setAttribute('data-color-theme', colorTheme);
+
+  // Show the selected arrow icon and hide the others
+  arrowIcons.forEach((icon, iconIndex) => {
+    icon.classList.toggle('d-block', iconIndex === index);  // Show only the selected one
+    icon.classList.toggle('d-none', iconIndex !== index);   // Hide the others
+  });
+}
+
+// Loop through each button to handle click events
+colorButtons.forEach((button, index) => {
+  button.addEventListener('click', () => updateThemeAndIcons(index));
+});
+
+// ------------------------------------------------------------------------------
+
+
+// --------------------------------------------
+// Color theme toggle end
 // --------------------------------------------
 
 // --------------------------------------------
@@ -646,7 +755,7 @@ var salaryoptions = {
       dataLabels: { position: 'top' },
     },
   },
-  colors: ['#3b82f6', '#e2e8f0'],
+  colors: ['var(--bs-secondary)', 'var(--bs-primary)'],
   xaxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
     labels: { show: false },
@@ -827,7 +936,7 @@ var customeroptions = {
       borderRadius: 4,
     },
   },
-  colors: ['#4285F4'], // Blue color for the bars
+  colors: ['var(--bs-primary)'], // Blue color for the bars
   xaxis: {
     categories: ['A', 'B', 'C', 'D', 'E', 'F'], // Example categories
     labels: {
@@ -1009,7 +1118,7 @@ var projectoptions = {
       borderRadius: 4,
     },
   },
-  colors: ['#0EA5E9'], // Blue color for the bars
+  colors: ['var(--bs-secondary)'], // Blue color for the bars
   xaxis: {
     categories: ['A', 'B', 'C', 'D', 'E', 'F'], // Example categories
     labels: {

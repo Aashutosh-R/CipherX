@@ -1,5 +1,11 @@
 @import './variables';
 @import './dark';
+@import './theme-blue';
+@import './theme-aqua';
+@import './theme-purple';
+@import './theme-green';
+@import './theme-cyan';
+@import './theme-orange';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 //-----------------------
@@ -45,6 +51,12 @@
 // Added styles for main content (body wrapper) end
 //-----------------------
 
+// 
+.bg-primarylight{
+  --bs-bg-opacity: .1;
+}
+// 
+
 //-----------------------
 // dark mode
 //-----------------------
@@ -85,7 +97,12 @@
 // sidebar link hover effect
 //-----------------------
 .hover-bg:hover {
-  background-color: $primary-50;
+  color: var(--bs-primary);
+  background-color: var(--bs-light-primary);
+}
+
+a:hover {
+  color: var(--bs-primary);
 }
 //-----------------------
 // sidebar link hover effect end
@@ -116,10 +133,10 @@
   margin-right: 6px;
 }
 .indicator-sales {
-  background-color: $secondary; /* Blue for Total Sales */
+  background-color: var(--bs-secondary); /* Blue for Total Sales */
 }
 .indicator-expenses {
-  background-color: #e2e8f0; /* Light Gray for Expenses */
+  background-color: var(--bs-primary); /* Light Gray for Expenses */
 }
 //-----------------------
 // employee salary chart design end
@@ -180,7 +197,9 @@
 // topbar end
 //-----------------------
 
+//-----------------------
 // table
+//-----------------------
 .tbl {
   @media (max-width: 540px) {
     overflow-x: scroll;
@@ -192,20 +211,25 @@
     white-space: nowrap;
   }
 }
+//-----------------------
 // table end
+//-----------------------
 
+//-----------------------
 // user offcanvas outline button color change
+//-----------------------
+
 .useroffc:hover {
-  background-color: rgba(63, 131, 248, 0.046);
+  background-color: var(--bs-light-primary);
 }
 
-.btn-outline-blue {
-  --bs-btn-hover-color: white;
-  --bs-btn-active-color: white;
-}
+//-----------------------
 // user offcanvas outline button color change end
+//-----------------------
 
+//-----------------------
 // lng dropdown
+//-----------------------
 .lng {
   --bs-dropdown-min-width: 12rem;
 }
@@ -215,25 +239,62 @@
 }
 
 .lang:hover {
-  background-color: rgba(63, 131, 248, 0.046);
-  color: $primary;
+  background-color: var(--bs-light-primary);
+  color: var(--bs-primary);
 }
+//-----------------------
 // lng dropdown end
+//-----------------------
 
-
+//-----------------------
 // controller btn customization
+//-----------------------
 
 .active {
   --bs-btn-active-color: var(--bs-primary);
 }
 
 .control-btn{
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .control-btn:hover {
-  color: $primary;
+  color: var(--bs-primary);
   transform: scale(1.1);
 }
 
+//-----------------------
 // controller btn customization end
+//-----------------------
+
+//-----------------------
+// custom background color of icon's div
+//-----------------------
+
+.custom-bg {
+  background-color: var(--bs-light-primary);
+}
+
+//-----------------------
+// custom background color of icon's div end
+//-----------------------
+
+
+//-----------------------
+// btn color modify
+//-----------------------
+
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-hover-color: white;
+  --bs-btn-active-color: white;
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+}
+ 
+//-----------------------
+// btn color modify end
+//-----------------------

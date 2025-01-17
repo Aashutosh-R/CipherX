@@ -12,7 +12,7 @@ $Dark-Bg: #0e1025;
   }
 
   a:hover {
-    color: #0ea5e9;
+    color: var(--bs-primary);
   }
 
   .user {
@@ -25,7 +25,7 @@ $Dark-Bg: #0e1025;
 
   .user-group:hover {
     & .user {
-      color: $primary;
+      color: var(--bs-primary);
     }
   }
   .table {
@@ -42,7 +42,7 @@ $Dark-Bg: #0e1025;
 
   .Ql-grp:hover {
     & .Qlink {
-      color: $primary;
+      color: var(--bs-primary);
     }
   }
 

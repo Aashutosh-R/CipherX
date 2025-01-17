@@ -1,0 +1,39 @@
+[data-bs-theme="light"][data-color-theme="aqua_theme"],
+[data-bs-theme="dark"][data-color-theme="aqua_theme"] {
+
+    $primary: #0074ba;
+    $primarylight: rgba($primary, 0.1);
+    $secondary: #47d7bc;
+    $secondarylight: rgba($secondary, 0.1);
+
+  &:root {
+    --bs-primary: #{$primary};
+    --bs-primary-rgb: 0, 116, 186;
+    --bs-light-primary: #{$primarylight};
+    --bs-primary-bg-subtle: #{$primarylight};
+
+    --bs-secondary: #{$secondary};
+    --bs-secondary-rgb: 71, 215, 188;
+    --bs-light-secondary: #{$secondarylight};
+    --bs-secondary-bg-subtle: #{$secondarylight};
+  }
+
+  .btn-primary {
+    --bs-btn-bg: #{$primary};
+    --bs-btn-border-color: #{$primary};
+    --bs-btn-hover-bg: #015487;
+    --bs-btn-hover-border-color: #015487;
+    --bs-btn-active-bg: #0094ef;
+    --bs-btn-active-border-color: #0094ef;
+  }
+
+  .btn-secondary {
+    --bs-btn-bg: #{$secondary};
+    --bs-btn-border-color: #{$secondary};
+    --bs-btn-hover-bg: #319482;
+    --bs-btn-hover-border-color: #319482;
+    --bs-btn-active-bg: #54f3d6;
+    --bs-btn-active-border-color: #54f3d6;
+  }
+
+}

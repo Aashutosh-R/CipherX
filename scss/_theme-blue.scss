@@ -1,0 +1,39 @@
+[data-bs-theme="light"][data-color-theme="blue_theme"],
+[data-bs-theme="dark"][data-color-theme="blue_theme"] {
+
+    $primary: #0ea5e9;
+    $primarylight: rgba($primary, 0.1);
+    $secondary: #5e88fe;
+    $secondarylight: rgba($secondary, 0.1);
+
+  &:root {
+    --bs-primary: #{$primary};
+    --bs-primary-rgb: 14, 165, 233;
+    --bs-light-primary: #{$primarylight};
+    --bs-primary-bg-subtle: #{$primarylight};
+
+    --bs-secondary: #{$secondary};
+    --bs-secondary-rgb: 94, 136, 254;
+    --bs-light-secondary: #{$secondarylight};
+    --bs-secondary-bg-subtle: #{$secondarylight};
+  }
+
+  .btn-primary {
+    --bs-btn-bg: #{$primary};
+    --bs-btn-border-color: #{$primary};
+    --bs-btn-hover-bg: #3ea2d9;
+    --bs-btn-hover-border-color: #3a98cc;
+    --bs-btn-active-bg: #3eb7ed;
+    --bs-btn-active-border-color: #3eb7ed;
+  }
+
+  .btn-secondary {
+    --bs-btn-bg: #{$secondary};
+    --bs-btn-border-color: #{$secondary};
+    --bs-btn-hover-bg: #4f73d9;
+    --bs-btn-hover-border-color: #4f73d9;
+    --bs-btn-active-bg: #5c86f8;
+    --bs-btn-active-border-color: #5c86f8;
+  }
+
+}
