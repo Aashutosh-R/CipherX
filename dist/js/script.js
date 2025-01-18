@@ -762,7 +762,7 @@ var ssalaryoptions = {
       dataLabels: { position: 'top' },
     },
   },
-  colors: ['#3b82f6', '#e2e8f0'],
+  colors: ['var(--bs-secondary)', 'var(--bs-primary)'],
   xaxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
     labels: { show: false },
