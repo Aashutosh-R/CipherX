@@ -67,7 +67,7 @@ document.addEventListener('click', function (event) {
 // --------------------------------------------
 
 // Select all buttons inside the dropdown
-document.querySelectorAll('.dropdown-menu button').forEach((button) => {
+document.querySelectorAll('.lng button').forEach((button) => {
   button.addEventListener('click', function () {
     // Get the flag image source
     const flagSrc = this.querySelector('img').src
@@ -389,6 +389,98 @@ colorButtons.forEach((button, index) => {
 
 // --------------------------------------------
 // Color theme toggle end
+// --------------------------------------------
+
+// --------------------------------------------
+// notification clear
+// --------------------------------------------
+
+// Sample notification data structure
+let notifications = [
+  { id: 1, user: 'Ajit Kumar', message: 'Web Designer', imageUrl: './dist/images/top-projects/Ajit.svg' },
+  { id: 2, user: 'New message', message: 'sam sent you a new message', imageUrl: './dist/images/top-projects/Kavita.svg' },
+  { id: 3, user: 'Jolly completed task', message: 'Assign him new task', imageUrl: './dist/images/top-projects/Rohan.svg' },
+  // Add more notifications as needed
+];
+
+// Function to render notifications in both desktop and tablet views
+function renderNotifications() {
+  const desktopContainer = document.getElementById('desktop-notifications');
+  const tabletContainer = document.getElementById('tablet-notifications');
+  
+  // Clear existing notifications
+  desktopContainer.innerHTML = '';
+  tabletContainer.innerHTML = '';
+  
+  notifications.forEach(notification => {
+      const notificationHTML = `
+          <li class="notification" data-id="${notification.id}">
+              <a href="#" class="text-decoration-none">
+                  <div class="d-flex align-items-center justify-content-between px-3 py-2 useroffc">
+                      <div class="d-flex align-items-center gap-3">
+                          <div><img src="${notification.imageUrl}" alt="${notification.user}" height="50" width="50"></div>
+                          <div>
+                              <p class="fs-16 fw-medium">${notification.user}</p>
+                              <p class="fs-12">${notification.message}</p>
+                          </div>
+                      </div>
+                      <div>
+                          <button onclick="clearNotification(${notification.id})" type="button" class="btn fs-28">
+                              <i class="bi bi-x"></i>
+                          </button>
+                      </div>
+                  </div>
+              </a>
+          </li>
+      `;
+      
+      // Append notification to both desktop and tablet containers
+      desktopContainer.innerHTML += notificationHTML;
+      tabletContainer.innerHTML += notificationHTML;
+  });
+
+  updateNotificationCount();
+}
+
+// Function to clear notification by id
+function clearNotification(id) {
+  // Remove the notification from the array
+  notifications = notifications.filter(notification => notification.id !== id);
+  
+  // Re-render the notifications
+  renderNotifications();
+}
+
+// Function to update notification count on both views
+function updateNotificationCount() {
+  const remainingNotifications = notifications.length;
+
+  // Update both desktop and tablet notification counts
+  updateBadge('notification-badge', 'notification-count', remainingNotifications);
+  updateBadge('tablet-notification-badge', 'tablet-notification-count', remainingNotifications);
+}
+
+// Function to update badge visibility and count
+function updateBadge(badgeId, countId, count) {
+  const badge = document.getElementById(badgeId);
+  const countElement = document.getElementById(countId);
+
+  if (count === 0) {
+      badge.classList.add('d-none');
+      badge.classList.remove('d-block');
+      countElement.textContent = "No New";
+  } else {
+      badge.classList.remove('d-none');
+      badge.classList.add('d-block');
+      countElement.textContent = `${count} New`;
+  }
+}
+
+// Initial rendering of notifications when the page loads
+document.addEventListener('DOMContentLoaded', renderNotifications);
+
+// --------------------------------------------
+// notification clear end
 // --------------------------------------------
 
 // --------------------------------------------
