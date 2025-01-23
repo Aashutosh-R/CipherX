@@ -57,4 +57,12 @@ $Dark-Bg: #0e1025;
   .snav.scrolled {
     box-shadow: 0 1px 6px rgba(255, 255, 255, 0.1);
   }
+
+  .brandLogo {
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
 }

@@ -33,7 +33,7 @@
 
 #main {
   margin-left: 256px;
-  transition: margin-left 0.3s ease;
+  transition: margin-left 0.3s ease-in-out;
 
   @media (max-width: 1279px) {
     margin-left: auto;
@@ -42,6 +42,7 @@
 
 #main.expanded {
   margin-left: 65px;
+  transition: margin-left 0.3s ease-in-out;
 
   @media (max-width: 1279px) {
     margin-left: auto;
@@ -151,7 +152,7 @@ a:hover {
 //-----------------------
 #sidebar {
   width: 256px;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
@@ -162,6 +163,7 @@ a:hover {
 
 #sidebar.collapsed {
   width: 70px;
+  transition: width 0.3s ease-in-out;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
@@ -192,10 +194,12 @@ a:hover {
 //-----------------------
 #topbar {
   left: 256px;
+  transition: left 0.3s ease-in-out;
 }
 
 #topbar.expand {
   left: 70px;
+  transition: left 0.3s ease-in-out;
 }
 //-----------------------
 // topbar end
@@ -302,3 +306,11 @@ a:hover {
 //-----------------------
 // btn color modify end
 //-----------------------
+
+.brandLogo {
+  color: black;
+
+  &:hover {
+    color: black;
+  }
+}
