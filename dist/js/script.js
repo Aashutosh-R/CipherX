@@ -425,7 +425,7 @@ function renderNotifications() {
                           </div>
                       </div>
                       <div>
-                          <button onclick="clearNotification(${notification.id})" type="button" class="btn fs-28">
+                          <button onclick="clearNotification(${notification.id})" type="button" class="btn border-0 fs-28">
                               <i class="bi bi-x"></i>
                           </button>
                       </div>
